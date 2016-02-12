@@ -1,5 +1,15 @@
 # Calcite+Bootstrap CHANGELOG
 
+## v0.2.10
+### Bugs
+- Fixed bug that was causing redundant calls to fast.fonts for the Calcite font-famlies.
+
+## v0.2.9
+- Temp Release
+
+## v0.2.8
+- Temp Release
+
 ## v0.2.7
 - Calcite Dark colors finalized
 - Consolidated custom variable definitions into `_variables.scss` file.
