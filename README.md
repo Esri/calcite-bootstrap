@@ -148,7 +148,8 @@ Most of the process is automated, but we have left two manual steps to ensure th
 
 1. increment the version number in `package.json` This will usually mean bumping the PATCH number (major.minor.patch). This version number will be used in the TAG that the next step will create @ github.
 1. run `sh bin/release.sh` This will create a branch, build the css, and pushes a release. NOTE: You can only push to the same version once. Re-release on the same version, you must manually destroy the release @ github.
-1. run `npm publish` - this will notify npm of the updated version.
+1. Got to the release @ github [https://github.com/Esri/calcite-bootstrap/releases](https://github.com/Esri/calcite-bootstrap/releases) and copy the url to the tar.gz source code file.
+1. run `npm publish <url to tar.gz file>` - this will push the update to npm.
 
 ## Licensing
 Copyright 2015 Esri
