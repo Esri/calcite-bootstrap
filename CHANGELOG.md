@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## .0.2.10
+### Changed
+- Removed scss file for Calcite fonts and replaced import with direct fast.fonts url.
+
 ## v0.2.9 
 ### Added
 - Calcite Dark colors finalized
