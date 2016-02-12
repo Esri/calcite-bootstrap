@@ -1,26 +1,30 @@
 # Calcite+Bootstrap CHANGELOG
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
 ## v0.2.10
 ### Bugs
 - Fixed bug that was causing redundant calls to fast.fonts for the Calcite font-famlies.
 
-## v0.2.9
-- Temp Release
-
-## v0.2.8
-- Temp Release
-
-## v0.2.7
+## v0.2.9 
+### Added
 - Calcite Dark colors finalized
 - Consolidated custom variable definitions into `_variables.scss` file.
-### Bugs
+### Changed
 - Class to center text in the footer now works in both container types.
 
+## v0.2.8 -- YANKED
+
+## v0.2.7 -- YANKED
+
 ## v0.2.6
-### Bugs
+### Changed
 - Bug causing primary typeface in body font stack to be dropped in both builds.
 
 ## v0.2.5
+### Added
 - Compiled Calcite variables files into a single _variables.scss file.
 - Added Calcite-Web loading animation
 - added opensans font files
@@ -28,9 +32,11 @@
 - renamed `calcite-custom.scss` to `components.scss` because that's what it is.
 
 ## v0.2.4
+### Changed
 - updated the very old grunt-sass which was using a very old node-sass which could not handle @at-root and thus passed it thru into the css... breaking the glyphicons. 
 
 ## v0.2.3
+### Changed
 - bumped version to address bizzaro caching @ github or proxies or whatever.
 
 ## v0.2.2
