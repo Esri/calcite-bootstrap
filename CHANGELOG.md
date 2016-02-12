@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## v0.2.8
+### Changed
+- bumped version to address problem deleting a bad build released as 0.2.7. Even after npm unpublish-ing it, I could not re-publish a new 0.2.7.
+
 ## v0.2.7
 ### Added
 - Calcite Dark colors finalized
