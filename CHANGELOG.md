@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
-## .0.2.10
+## v0.2.10
 ### Changed
 - Removed scss file for Calcite fonts and replaced import with direct fast.fonts url.
 - Color for links was too dark to pass accessibility. Value for `$link-color` variable was changed.
