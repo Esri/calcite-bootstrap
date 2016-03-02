@@ -8,6 +8,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ### Changed
 - Removed scss file for Calcite fonts and replaced import with direct fast.fonts url.
 - Color for links was too dark to pass accessibility. Value for `$link-color` variable was changed.
+- Custom Cards pattern added. [Example](http://esri.github.io/calcite-bootstrap/examples/#card)
 
 ## v0.2.9 
 ### Added
