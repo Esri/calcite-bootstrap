@@ -1,18 +1,12 @@
-# Introducing Calcite-Bootstrap
+# Calcite Bootstrap
 
-First off, **Calcite** is a flexible design framework, created at ESRI, in which the map and data are the most important component of the user interface. All elements and interactions strengthen a geo-centered user experience.
-
-**Calcite-Bootstrap** is a UI Kit built on the popular [Bootstrap](http://getbootstrap.com) CSS framework based on the Calcite design framework.
-
-We have applied the robust set of patterns and utilities that are core to the Calcite framework to Calcite-Bootstrap. The purpose is to have designs be consistent, but also embrace the characteristics that make each medium unique.
-
-Calcite-Bootstrap was built for developers who have experience working with Bootstrap markup and classes.
+**Calcite Bootstrap** is a custom theme and a custom build system for [Bootstrap](http://getbootstrap.com). The theme is based on **Calcite** - a geo-centric design framework created by ESRI. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.
 
 For more info about this framework, go to the **[documentation site](http://esri.github.io/calcite-bootstrap/)**
 
-# Using Calcite-Bootstrap
+# Using Calcite Bootstrap
 
-There are two main ways to use Calcite-Boostrap: copying compiled css files into your project or installing via a package manager and using a SASS build step in your project.
+There are two main ways to use Calcite Boostrap: 1, Copying compiled css files into your project; or 2, Installing via a package manager and using a SASS build step in your project.
 
 ## Static Files
 
@@ -20,7 +14,7 @@ This is probably the easiest way. If you're looking to get up and running quickl
 
 ## NPM
 
-To install Calcite-Bootstrap with npm, type:
+To install Calcite Bootstrap with npm, type:
 
 ```
 npm install --save-dev Esri/calcite-bootstrap#v0.2.9
@@ -45,9 +39,9 @@ If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/`
 
 Then in your main `.scss` file, you can just require the framework: `@import "calcite-bootstrap";`.
 
-# Contributing to Calcite-Bootstrap
+# Contributing to Calcite Bootstrap
 
-Installing Calcite-Bootstrap was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-bootstrap/issues/) and use the label `install issues`.
+Installing Calcite Bootstrap was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-bootstrap/issues/) and use the label `install issues`.
 
 ### Install Dependencies
 
@@ -71,7 +65,7 @@ If you run into errors during the installs, Mac Users my want to try using `sudo
 
 ### Fork the Repository
 
-All the code for Calcite-Bootstrap lives [on GitHub](https://github.com/Esri/calcite-bootstrap). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution.
+All the code for Calcite Bootstrap lives [on GitHub](https://github.com/Esri/calcite-bootstrap). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution.
 
 1. Fork the repository so you have your own copy (`$ your-username/calcite-bootstrap`)
 2. Clone the repo locally with `$ git clone https://github.com/your-username/calcite-bootstrap`
@@ -168,5 +162,5 @@ limitations under the License.
 
 A copy of the license is available in the repository's [license.txt](https://github.com/Esri/calcite-bootstrap/blob/master/license.txt) file.
 
-[](Esri Tags: Web Mapping ArcGIS Design Basemaps Bootstrap Calcite JavaScript Calcite-Bootstrap)
+[](Esri Tags: Web Mapping ArcGIS Design Basemaps Bootstrap Calcite JavaScript Calcite Bootstrap)
 [](Esri Language: CSS)
