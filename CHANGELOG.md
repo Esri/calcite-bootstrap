@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## v0.2.11
+### Changed
+- Changed background color on hover for `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning` and `.btn-danger` to the darker colors as used in Calcite-Web
+- Changed color values for `$brand-success` and `$brand-danger` variables to match what is used in Calcite-Web
+- Removed `!important` off of `.btn-default`
+
 ## v0.2.10
 ### Changed
 - Removed scss file for Calcite fonts and replaced import with direct fast.fonts url.
