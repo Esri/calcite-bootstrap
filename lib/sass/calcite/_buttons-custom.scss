@@ -22,8 +22,8 @@
 
 .btn-default {
   &:hover, :active {
-    background-color: $Calcite_Blue_a250 !important;
-    color: $Calcite_Gray_050 !important;
+    background-color: $Calcite_Highlight_Blue_400;
+    color: $Calcite_Gray_050;
   }
   &:focus {
     background-color: $Calcite_Gray_050;
@@ -33,35 +33,35 @@
 
 .btn-primary {
   &:hover {
-    background-color: $Calcite_Blue_a200;
-    border-color: $Calcite_Blue_a200;
+    background-color: $Calcite_Highlight_Blue_400;
+    border-color: $Calcite_Highlight_Blue_400;
   }
 }
 
 .btn-success {
   &:hover {
-    background-color: $Calcite_Green_250;
-    border-color: $Calcite_Green_250;
+    background-color: $Calcite_Green_a200;
+    border-color: $Calcite_Green_a200;
   }
 }
 
 .btn-info {
   &:hover {
-    background-color: $Calcite_Blue_100;
-    color: $Calcite_Gray_650;
+    background-color: $Calcite_Highlight_Blue_400;
+    color: $Calcite_Gray_050;
   }
 }
 
 .btn-warning {
   &:hover {
-    background-color: $Calcite_Yellow_100;
+    background-color: $Calcite_Yellow_a150;
     color: $Calcite_Gray_650;
   }
 }
 
 .btn-danger {
   &:hover {
-    background-color: $Calcite_Red_a100;
+    background-color: $Calcite_Red_a200;
   }
 }
 
