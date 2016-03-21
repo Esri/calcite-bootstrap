@@ -43,7 +43,7 @@ section: 'examples'
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Theme example</h1>
-        <p>This is a template showcasing what you can expect in Calcite-Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>This is a template showcasing what you can expect in Calcite Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
       </div>
 
 
@@ -91,7 +91,7 @@ section: 'examples'
         <h1>Loader</h1>
       </div>
       <p>The loader element is a placeholder while content is being retreived or rendered. By default, the loader is set to display: none; and requires an is-active class to display.</p>
-      <p>See <a href="http://esri.github.io/calcite-web/components/#loader">Calcite-Web Documentation</a> for code.</p>
+      <p>See <a href="http://esri.github.io/calcite-web/components/#loader">Calcite Web Documentation</a> for code.</p>
       <div class="loader is-active">
         <div class="loader-bars"></div>
         <div class="loader-text">Loading</div>
