@@ -8,7 +8,7 @@
 
   & > li {
     float: left;
-    padding: 0 15px;
+    padding: 0 13px;
   }
 
   li {
@@ -99,7 +99,7 @@
     }
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     opacity: 1;
     cursor: pointer;
     box-shadow:(0 0 10px 1px rgba(0, 0, 0, 0.2));
@@ -151,7 +151,7 @@
     font-size: 1.5rem;
     line-height: 1.6rem;
 
-    &:hover {
+    &:hover, &:active, &:focus {
       text-decoration: none;
       border: 1px solid white;
       color: white;

@@ -10,6 +10,9 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - Changed color values for `$brand-success` and `$brand-danger` variables to match what is used in Calcite Web
 - Removed `!important` off of `.btn-default`
 - Updated product name throughout to be consistent with other Calcite products.
+- On cards-custom, added &:focus and &:active classes to hover for better accessability
+- Changed `.cards-list > li` padding by 2px in order to make them flow better
+- Noted in theme.html that adding `onclick=""` to the div will fix mobility issue for a first pass
 
 ## v0.2.10
 ### Changed
