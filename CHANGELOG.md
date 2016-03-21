@@ -1,4 +1,4 @@
-# Calcite+Bootstrap CHANGELOG
+# Calcite Bootstrap CHANGELOG
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
@@ -6,9 +6,10 @@ For information about how to add entries to this file, please read [Keep a CHANG
 
 ## v0.2.11
 ### Changed
-- Changed background color on hover for `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning` and `.btn-danger` to the darker colors as used in Calcite-Web
-- Changed color values for `$brand-success` and `$brand-danger` variables to match what is used in Calcite-Web
+- Changed background color on hover for `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning` and `.btn-danger` to the darker colors as used in Calcite Web
+- Changed color values for `$brand-success` and `$brand-danger` variables to match what is used in Calcite Web
 - Removed `!important` off of `.btn-default`
+- Updated product name throughout to be consistent with other Calcite products.
 
 ## v0.2.10
 ### Changed
@@ -34,7 +35,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ## v0.2.5
 ### Added
 - Compiled Calcite variables files into a single _variables.scss file.
-- Added Calcite-Web loading animation
+- Added Calcite Web loading animation
 - added opensans font files
 - added build process for *-open.css files
 - renamed `calcite-custom.scss` to `components.scss` because that's what it is.
@@ -55,7 +56,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - added missing bootstrap vars into calcite files
 - distibutions will have the combined & minified bootstrap javascript
 - added docs describing this
-- added a better example page and the example page markup to the static section so people can copy-paste and be working with calcite-bootstrap.
+- added a better example page and the example page markup to the static section so people can copy-paste and be working with Calcite Bootstrap.
 - added missing /dist/sass/calcite folder to the build process
 
 ## v0.2.1

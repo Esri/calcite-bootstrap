@@ -1,4 +1,4 @@
-There are three ways to use Calcite+Bootstrap in your project:
+There are three ways to use Calcite Bootstrap in your project:
 
 - Copy the static files into your project
 - Load files from the CDN
