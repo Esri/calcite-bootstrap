@@ -17,7 +17,7 @@ This is probably the easiest way. If you're looking to get up and running quickl
 To install Calcite Bootstrap with npm, type:
 
 ```
-npm install --save-dev Esri/calcite-bootstrap#v0.2.9
+npm install --save-dev calcite-bootstrap
 ```
 
 You must add the current version in order to get the `dist/` folder.
