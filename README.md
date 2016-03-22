@@ -43,6 +43,8 @@ Then in your main `.scss` file, you can just require the framework: `@import "ca
 
 Installing Calcite Bootstrap was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-bootstrap/issues/) and use the label `install issues`.
 
+[![Stories in Ready](https://badge.waffle.io/Esri/calcite-bootstrap.svg?label=ready&title=Ready)](http://waffle.io/Esri/calcite-bootstrap)
+
 ### Install Dependencies
 
 Calcite-Boostrap has these main dependencies. 
