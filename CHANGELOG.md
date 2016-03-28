@@ -7,6 +7,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ##v0.3.0
 ### Changed
 - Lots of style changes to the navbar. Default height is now 65px, up from 50px. On hover the accent bar is now below the link instead of above. Tightened up the padding and margin on links significantly. This also makes the accent bar only the width of the text above it. Added custom rule for padding on the active links.
+- Styling changes to dropdowns include adding border between menu items, changing the background color on hover to `$Calcite_Gray_100`, changing the link and link-hover colors to `$Calcite_Gray_200`, changed the menu border color to match item border color, lighten box-shadow of menu, tighten up padding around menu items and menu headers.
 
 ##v0.2.12
 ### Changed
