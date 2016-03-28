@@ -9,6 +9,15 @@
   margin-right: 0px;
 }
 
+// Places a small profile image in the user menu
+.navbar-icon {
+  width: 32px;
+  position: relative;
+  float: left;
+  padding-right: 6px;
+  padding-bottom: 10px;
+}
+
 // Sets the font-size of the brand and navbar links slightly smaller than base
 .navbar-nav,
 .navbar-brand,
@@ -41,13 +50,7 @@
 	}
 }
 
-// Places a small profile image in the user menu
-.navbar-icon {
-	width: 28px;
-  position: relative;
-  float: left;
-  padding-right: 6px;
-}
+
 
 // Add a rule and color transition to the top of navbar nav links
 .navbar-nav {
@@ -73,7 +76,8 @@
 }
 
 // Adds padding to active navbar links
-.navbar-default .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a {
+.navbar-default .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a {
   padding-left: 8px;
   padding-right: 8px;
 }
