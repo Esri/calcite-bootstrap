@@ -22,8 +22,8 @@ $brand-warning:			 $Calcite_Yellow_200 !default;
 $brand-danger:			 $Brand_Red_100 !default;
 
 //## Calcite Custom
-$transparent-background:		rgba($Calcite_Gray_050, .3);
-$transparent-background-hover:	rgba($Calcite_Gray_050, .1);
+$transparent-background:		rgba(#000, .45);
+$transparent-background-hover:	rgba(#000, .3);
 
 
 //== Scaffolding
@@ -901,13 +901,11 @@ $footer-bg: $Calcite_Gray_150;
 //##
 $calcite-tabs-border-color: transparent !default;
 
-$calcite-tabs-link-hover-border-color: $gray-lighter !default;
+$calcite-tabs-link-hover-border-color: $Calcite_Gray_050 !default;
 
-$calcite-tabs-active-link-hover-bg: $body-bg !default;
-$calcite-tabs-active-link-hover-color: $Calcite_Gray_700 !default;
-$calcite-tabs-active-link-hover-border-color: $Calcite_Gray_400 !default;
-
-$calcite-link-hover-bg: $Calcite_Gray_700 !default;
+$calcite-tabs-active-link-bg: $body-bg !default;
+$calcite-tabs-active-link-color: $Calcite_Gray_650 !default;
+$calcite-tabs-active-link-border-color: $Calcite_Gray_050 !default;
 
 $calcite-header-margin-bottom: 30px; // Padding below header
 
