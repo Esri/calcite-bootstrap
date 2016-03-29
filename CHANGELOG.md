@@ -10,6 +10,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - Styling changes to dropdowns include adding border between menu items, changing the background color on hover to `$Calcite_Gray_100`, changing the link and link-hover colors to `$Calcite_Gray_200`, changed the menu border color to match item border color, lighten box-shadow of menu, tighten up padding around menu items and menu headers.
 - Added new styling for having icons within form controls. Removed box-shadow from normal form-control states.
 - Removed media-query in navbar-custom to reduce font-size at small viewports.
+- Styling changes to Calcite-Header include changing background colors for tab and tab hover, adding spacing between tabs, color of hover accent bar
 
 ##v0.2.12
 ### Changed
