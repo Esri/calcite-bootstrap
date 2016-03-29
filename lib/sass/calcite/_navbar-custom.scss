@@ -30,18 +30,11 @@
 	font-weight: 400;
 	font-size: $font-size-base;
   letter-spacing: 0px;
-
 	// Bump weight of span for branding up coinciding with navbar-nav
 	.gis {
 		font-weight: 600;
 	}
-  // Reduce the font-size in drop-down menus for better touch targets
-  @media (max-width: 767px) {
-    font-size: ceil(($font-size-base * 0.8));   
-  }
 }
-
-
 
 // Ease the hover state in and out
 .navbar-brand {
@@ -49,8 +42,6 @@
 		transition: color 150ms linear, text-decoration 150ms linear;
 	}
 }
-
-
 
 // Add a rule and color transition to the top of navbar nav links
 .navbar-nav {
