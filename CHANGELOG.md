@@ -11,6 +11,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - Added new styling for having icons within form controls. Removed box-shadow from normal form-control states.
 - Removed media-query in navbar-custom to reduce font-size at small viewports.
 - Styling changes to Calcite-Header include changing background colors for tab and tab hover, adding spacing between tabs, color of hover accent bar
+- Fixed compile issue in loader.scss where avenir-regular could not be extended
 
 ##v0.2.12
 ### Changed
