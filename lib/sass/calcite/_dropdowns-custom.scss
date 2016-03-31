@@ -28,7 +28,6 @@
 }
 
 .dropdown-menu {
-  @include box-shadow(0 0 16px 0 rgba(0,0,0,.05));
   li {
     border-top: 1px solid $Calcite_Gray_200;
   }
