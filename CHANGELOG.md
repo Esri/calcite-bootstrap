@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+##v0.3.1
+### Changed
+- Bug fix that was causing build to fail on npm module.
+
 ##v0.3.0
 ### Changed
 - Lots of style changes to the navbar. Default height is now 65px, up from 50px. On hover the accent bar is now below the link instead of above. Tightened up the padding and margin on links significantly. This also makes the accent bar only the width of the text above it. Added custom rule for padding on the active links.
