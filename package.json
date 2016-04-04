@@ -82,7 +82,7 @@
     "jsonfile": "^2.2.2"
   },
   "dependencies": {
-    "bootstrap-sass": "3.3.5"
+    "bootstrap-sass": "3.3.6"
 
   }
 }
