@@ -6,8 +6,8 @@
   > li {
     > a {
       border: 1px solid transparent;
-      border-left: 0px;
-      border-right: 0px;
+      border-left: 0px !important;
+      border-right: 0px !important;
       &:hover {
         padding-top: 5px;
         -moz-box-sizing: border-box;

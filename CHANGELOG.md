@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+##v0.3.2
+### Changed
+- Bug fixes that was causing styling rules to be overwritten by core on navbar, nav-tabs and dropdown menus.
+
 ##v0.3.1
 ### Changed
 - Bug fix that was causing build to fail on npm module.
