@@ -7,6 +7,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ##v0.3.2
 ### Changed
 - Bug fixes that was causing styling rules to be overwritten by core on navbar, nav-tabs and dropdown menus.
+- Updated Bootstrap Sass dependency to 3.3.6 to fix breadcrumb bug
 
 ##v0.3.1
 ### Changed
