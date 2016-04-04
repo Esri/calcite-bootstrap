@@ -1,8 +1,8 @@
 {
   "name": "calcite-bootstrap",
-  "title": "Calcite+Boostrap",
-  "version": "0.3.1",
-  "description": "Calcite+Bootstrap is a UI Kit built on the popular Bootstrap CSS framework based on the Calcite design framework.",
+  "title": "Calcite Boostrap",
+  "version": "0.3.2",
+  "description": "Calcite Bootstrap is a UI Kit built on the popular Bootstrap CSS framework based on the Calcite design framework.",
   "homepage": "https://github.com/Esri/calcite-bootstrap",
   "scripts": {
     "test": "grunt test",
