@@ -7,6 +7,8 @@ $include-type:             true;
   $include-i18n:           true;
   $include-type-defaults:  true;
   $include-type-helpers:   true;
+// Calcite Imports
+@import "calcite-web/dist/sass/calcite-web";
 
 $screen-xs:                    480px;
 $screen-xs-min:                $screen-xs;
@@ -35,11 +37,15 @@ $container-large-desktop:      (1140px + $grid-gutter-width);
 $container-lg:                 $container-large-desktop;
 // Bootstrap grid imports
 * {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
 }
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
-// Calcite Imports
-@import "calcite-web/dist/sass/calcite-web";
+
+@import "alerts"

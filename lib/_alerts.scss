@@ -1,0 +1,19 @@
+.alert {
+  @include alert();
+  display: block;
+  .close {
+    @include alert-close();
+  }
+}
+.alert-success {
+  @include alert-green();
+}
+.alert-warning {
+  @include alert-yellow();
+}
+.alert-danger {
+  @include alert-red();
+}
+
+
+
