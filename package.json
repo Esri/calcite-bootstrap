@@ -13,7 +13,7 @@
   },
   "watches": {
     "html": "lib/index.html",
-    "sass": "lib/calcite-bootstrap.scss"
+    "sass": "lib/*.scss"
   },
   "main": "dist/js/calcite-boostrap.js",
   "repository": {
