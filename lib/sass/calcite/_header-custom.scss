@@ -1,7 +1,6 @@
 // ┌────────────────┐
 // │ Calcite Header │
 // └────────────────┘
-
 .cal-header {
 	position: relative;
 	padding: 30px 15px 0px 15px;
@@ -54,7 +53,7 @@
 	      &:focus {
 	        color: $calcite-tabs-active-link-color;
 	        background-color: $calcite-tabs-active-link-bg;
-	        border: 1px solid transparent;
+	       	border: 1px solid transparent;
 	        border-bottom-color: transparent;
 	        cursor: default;
 	      }
