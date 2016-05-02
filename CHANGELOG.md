@@ -5,8 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Added
+- `grunt clean` removes the generated docs ([#261](https://github.com/Esri/calcite-bootstrap/issues/261)).
+
 ### Fixed
-- Bug where the ".btn-default" elements' ":active" styling is applied to its active children instead of itself.
+- Bug where the ".btn-default" elements' ":active" styling is applied to its active children instead of itself ([#257](https://github.com/Esri/calcite-bootstrap/pull/257)).
+- Restore Bootrap's validation state styling ([#201](https://github.com/Esri/calcite-bootstrap/issues/201)).
+- A clean build omits Calcite stylesheets from the generated docs ([#259](https://github.com/Esri/calcite-bootstrap/issues/259)).
 
 ##v0.3.2
 ### Changed
