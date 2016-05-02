@@ -21,7 +21,7 @@
 }
 
 .btn-default {
-  &:hover, :active {
+  &:hover, &:active {
     background-color: $Calcite_Highlight_Blue_400;
     color: $Calcite_Gray_050;
   }

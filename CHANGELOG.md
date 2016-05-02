@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## [Unreleased]
+### Fixed
+- Bug where the ".btn-default" elements' ":active" styling is applied to its active children instead of itself.
+
 ##v0.3.2
 ### Changed
 - Bug fixes that was causing styling rules to be overwritten by core on navbar, nav-tabs and dropdown menus.
