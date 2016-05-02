@@ -15,6 +15,18 @@ select.form-control {
   &:focus {
     outline: 1px inset $Calcite_Blue_a200;
   }
+
+  .has-success & {
+    outline-color: $state-success-border;
+  }
+
+  .has-warning & {
+    outline-color: $state-warning-border;
+  }
+
+  .has-error & {
+    outline-color: $state-danger-border;
+  }
 }
 
 select.form-control#disabledSelect {
