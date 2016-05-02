@@ -363,9 +363,8 @@ module.exports = function(grunt) {
     // Runs tasks concurrently, speeding up Grunt
     'concurrent': {
       prepublish: [
-        'scss',
+        ['scss', 'copy'],
         //'uglify',
-        'copy',
         //'concat:dist',
         'newer:imagemin:dist'
       ]
