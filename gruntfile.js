@@ -356,7 +356,10 @@ module.exports = function(grunt) {
     // Clean the build folder before rebuild
     clean: {
       dist: {
-        src: [ 'dist/' ]
+        src: [
+          'dist/',
+          'docs/build'
+        ]
       },
     },
 
