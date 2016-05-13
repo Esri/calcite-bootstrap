@@ -7,6 +7,10 @@ $include-type:             true;
   $include-i18n:           true;
   $include-type-defaults:  true;
   $include-type-helpers:   true;
+$include-tables:             true;
+$include-forms:             true;
+$include-panels:             true;
+$include-side-nav:             true;
 // Calcite Imports
 @import "calcite-web/dist/sass/calcite-web";
 
@@ -50,13 +54,12 @@ $container-lg:                 $container-large-desktop;
 
 @import "icons";
 @import "alerts";
-@import "tables";
+
 @import "panels";
-@import "forms";
 @import "buttons";
 @import "input-group";
 @import "dropdowns";
-@import "side-nav";
+@import "list-group";
 @import "pagination";
 @import "labels";
 @import "badges";
