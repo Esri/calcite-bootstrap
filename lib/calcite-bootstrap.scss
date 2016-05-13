@@ -48,4 +48,15 @@ $container-lg:                 $container-large-desktop;
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
-@import "alerts"
+@import "icons";
+@import "alerts";
+@import "tables";
+@import "panels";
+@import "forms";
+@import "buttons";
+@import "input-group";
+@import "dropdowns";
+@import "side-nav";
+@import "pagination";
+@import "labels";
+@import "badges";

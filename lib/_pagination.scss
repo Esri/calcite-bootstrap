@@ -1,0 +1,16 @@
+.pagination, .pager {
+  margin: 0;
+  li {
+    @include btn();
+    @include btn-transparent();
+    display: inline-block;
+    margin: 0;
+    list-style-type: none;
+  }
+}
+
+.pagination-lg {
+  li {
+    @include btn-large();
+  }
+}

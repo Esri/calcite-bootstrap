@@ -1,0 +1,25 @@
+.well,
+.panel {@include panel();}
+
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-default {
+  @include panel-white();
+  @include panel-no-padding();
+  margin-bottom: $baseline;
+}
+
+  .panel-black {@include panel-black();}
+  .panel-dark {@include panel-dark();}
+  .panel-default {@include panel-white(); @include panel-no-padding();}
+  .panel-white {@include panel-white();}
+  .panel-dark-blue {@include panel-dark-blue();}
+  .panel-blue {@include panel-blue();}
+  .panel-light-blue {@include panel-light-blue();}
+  .panel-no-border {@include panel-no-border();}
+  .panel-no-padding {@include panel-no-padding();}
+  .panel-footer,
+  .panel-heading {@include panel();}
+  .panel-body {@include panel(); @include panel-white(); margin: 0;}

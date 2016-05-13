@@ -1,0 +1,5 @@
+.input-group {@include input-group();}
+  .input-group-btn,
+  .input-group-addon {@include input-group-button();}
+  input,
+  .input-group-input {@include input-group-input();}

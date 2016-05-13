@@ -38,7 +38,7 @@
     "url": "https://github.com/esri/calcite-bootstrap/issues"
   },
   "devDependencies": {
-    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.14",
+    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.20",
     "http-server": "^0.9.0",
     "node-sass": "^3.5.3",
     "npm-run-all": "^1.8.0",

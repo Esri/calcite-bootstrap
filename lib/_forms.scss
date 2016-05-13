@@ -1,0 +1,9 @@
+@include form();
+label {
+  margin-bottom: 0;
+  margin-top: $baseline;
+}
+.help-block {
+  @include font-size(-1);
+  color: $dark-gray;
+}

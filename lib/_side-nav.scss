@@ -1,0 +1,14 @@
+.list-group,
+.side-nav {@include side-nav();}
+
+.side-nav-title {@include side-nav-title();}
+
+.list-group-item,
+.side-nav-link {
+  margin: 0;
+  @include side-nav-link();
+  &.active {
+    @extend .is-active;
+  }
+}
+
