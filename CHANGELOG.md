@@ -4,9 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
-## v2.0.0
+##v2.0.0
 
-This is what it would look like to consume calcite web as a dependency, so styles always stay in sync.
+Codebase has been greenfielded to consume calcite web as a dependency. No presentational code lives in this project, just enough to glue Bootstrap classnames and grid system to calcite-web styles, and a little infill where there are gaps.
 
 
 ## [Unreleased]
@@ -17,6 +17,8 @@ This is what it would look like to consume calcite web as a dependency, so style
 - Bug where the ".btn-default" elements' ":active" styling is applied to its active children instead of itself ([#257](https://github.com/Esri/calcite-bootstrap/pull/257)).
 - Restore Bootrap's validation state styling ([#201](https://github.com/Esri/calcite-bootstrap/issues/201)).
 - A clean build omits Calcite stylesheets from the generated docs ([#259](https://github.com/Esri/calcite-bootstrap/issues/259)).
+
+
 
 ##v1.0.0
 ### Modifed
