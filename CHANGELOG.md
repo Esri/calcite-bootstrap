@@ -8,6 +8,9 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ### Added
 - `grunt clean` removes the generated docs ([#261](https://github.com/Esri/calcite-bootstrap/issues/261)).
 
+### Removed
+- Removed all `!important` tags in .scss files inside Calcite directory.
+
 ### Fixed
 - Bug where the ".btn-default" elements' ":active" styling is applied to its active children instead of itself ([#257](https://github.com/Esri/calcite-bootstrap/pull/257)).
 - Restore Bootrap's validation state styling ([#201](https://github.com/Esri/calcite-bootstrap/issues/201)).
@@ -51,7 +54,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - Color for links was too dark to pass accessibility. Value for `$link-color` variable was changed.
 - Custom Cards pattern added. [Example](http://esri.github.io/calcite-bootstrap/examples/#card)
 
-## v0.2.9 
+## v0.2.9
 ### Added
 - Calcite Dark colors finalized
 - Consolidated custom variable definitions into `_variables.scss` file.
@@ -76,7 +79,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 
 ## v0.2.4
 ### Changed
-- updated the very old grunt-sass which was using a very old node-sass which could not handle @at-root and thus passed it thru into the css... breaking the glyphicons. 
+- updated the very old grunt-sass which was using a very old node-sass which could not handle @at-root and thus passed it thru into the css... breaking the glyphicons.
 
 ## v0.2.3
 ### Changed

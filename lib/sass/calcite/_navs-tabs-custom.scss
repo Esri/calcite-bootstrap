@@ -6,8 +6,8 @@
   > li {
     > a {
       border: 1px solid transparent;
-      border-left: 0px !important;
-      border-right: 0px !important;
+      border-left: 0px;
+      border-right: 0px;
       &:hover {
         padding-top: 5px;
         -moz-box-sizing: border-box;
@@ -21,7 +21,7 @@
   }
 }
 
-// Compensate for active tab inheriting the padding top on hover from above 
+// Compensate for active tab inheriting the padding top on hover from above
 .nav-tabs > li.active > a {
   &:hover {
     padding-top: 6px;
