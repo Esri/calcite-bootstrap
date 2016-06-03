@@ -7,6 +7,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 ## [Unreleased]
 ### Added
 - `grunt clean` removes the generated docs ([#261](https://github.com/Esri/calcite-bootstrap/issues/261)).
+- added `!default` to entries in `_variables.scss`
 
 ### Removed
 - Removed all `!important` tags in .scss files inside Calcite directory.
