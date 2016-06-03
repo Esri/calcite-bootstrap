@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
-## [Unreleased]
+## 0.3.3
 ### Added
 - `grunt clean` removes the generated docs ([#261](https://github.com/Esri/calcite-bootstrap/issues/261)).
 - added `!default` to entries in `_variables.scss`
