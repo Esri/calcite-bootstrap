@@ -23,7 +23,7 @@ The syntax varies depending on the build system you are using, but with grunt-sa
     options: {
       includePaths: [
         './node_modules/bootstrap-sass/assets/stylesheets'
-        './node_modules/calcite-bootstrap/dist'
+        './node_modules/calcite-bootstrap/dist/sass'
       ]
     }
     ...other configuration as needed...
