@@ -22,7 +22,7 @@ npm install --save-dev calcite-bootstrap
 
 You must add the current version in order to get the `dist/` folder.
 
-If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
+If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/` to your load path. If you're using [`grunt-contrib-sass`](https://github.com/gruntjs/grunt-contrib-sass) you add that like this:
 
 ```
 'sass': {
@@ -30,6 +30,24 @@ If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/`
     options: {
       loadPath: 'node_modules/calcite-bootstrap/dist/sass/'
     },
+    files: {
+      'path/to.css': 'path/to.scss'
+    }
+  }
+}
+```
+
+If you are using [`grunt-sass`](https://github.com/sindresorhus/grunt-sass), you should add it like this:
+
+```
+'sass': {
+  options: {
+    includePaths: [
+      './node_modules/bootstrap-sass/assets/stylesheets',
+      './node_modules/calcite-bootstrap/dist/sass/'
+    ]
+  },
+  target: {
     files: {
       'path/to.css': 'path/to.scss'
     }
