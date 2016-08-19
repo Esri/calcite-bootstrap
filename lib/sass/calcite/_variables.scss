@@ -36,7 +36,7 @@ $body-bg:               $Calcite_Gray_100 !default;
 $text-color:            $Calcite_Gray_650 !default;
 
 //** Global textual link color.
-$link-color:            $Calcite-Highlight-Blue-350 !default;
+$link-color:            $Calcite_Highlight_Blue_350 !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $Calcite_Highlight_Blue_400 !default;
 //** Link hover decoration.
@@ -141,7 +141,7 @@ $table-bg:                      transparent !default;
 $table-bg-accent:               $Calcite_Gray_200 !default;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                $Calcite_Gray_200 !default;
-$table-bg-active:               $Calcite_Highlight-Blue_200 !default;
+$table-bg-active:               $Calcite_Highlight_Blue_200 !default;
 
 //** Border color for table and cell borders.
 $table-border-color:            $gray-light !default;

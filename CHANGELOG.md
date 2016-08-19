@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## Development
+### Added
+- Script in foor of doc templates to initialize tooltips and popovers.
+
+### Removed
+
+### Fixed
+- Fixed bug in variables files for $link-color and $table-bg-active values.
+
 ## 0.3.3
 ### Added
 - `grunt clean` removes the generated docs ([#261](https://github.com/Esri/calcite-bootstrap/issues/261)).
