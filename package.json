@@ -1,11 +1,7 @@
 {
   "name": "calcite-bootstrap",
   "title": "Calcite Boostrap",
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
   "version": "2.0.0",
-=======
-  "version": "1.0.0",
->>>>>>> calcite type, bootstrap grid
   "description": "Calcite Bootstrap is a UI Kit built on the popular Bootstrap CSS framework based on the Calcite design framework.",
   "homepage": "https://github.com/Esri/calcite-bootstrap",
   "scripts": {
@@ -17,11 +13,7 @@
   },
   "watches": {
     "html": "lib/index.html",
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
     "sass": "lib/*.scss"
-=======
-    "sass": "lib/calcite-bootstrap.scss"
->>>>>>> calcite type, bootstrap grid
   },
   "main": "dist/js/calcite-boostrap.js",
   "repository": {
@@ -46,11 +38,7 @@
     "url": "https://github.com/esri/calcite-bootstrap/issues"
   },
   "devDependencies": {
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
     "calcite-web": "github:esri/calcite-web#v1.0.0-beta.20",
-=======
-    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.14",
->>>>>>> calcite type, bootstrap grid
     "http-server": "^0.9.0",
     "node-sass": "^3.5.3",
     "npm-run-all": "^1.8.0",

@@ -7,15 +7,12 @@ $include-type:             true;
   $include-i18n:           true;
   $include-type-defaults:  true;
   $include-type-helpers:   true;
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
 $include-tables:             true;
 $include-forms:             true;
 $include-panels:             true;
 $include-side-nav:             true;
 // Calcite Imports
 @import "calcite-web/dist/sass/calcite-web";
-=======
->>>>>>> calcite type, bootstrap grid
 
 $screen-xs:                    480px;
 $screen-xs-min:                $screen-xs;
@@ -44,21 +41,16 @@ $container-large-desktop:      (1140px + $grid-gutter-width);
 $container-lg:                 $container-large-desktop;
 // Bootstrap grid imports
 * {
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
   @include box-sizing(border-box);
 }
 *:before,
 *:after {
   @include box-sizing(border-box);
-=======
-  box-sizing: border-box;
->>>>>>> calcite type, bootstrap grid
 }
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
-<<<<<<< 4e8c28e9b37a4d3c9512903dbd1a24661c7b6666
 @import "type-helpers";
 
 @import "icons";
@@ -72,7 +64,3 @@ $container-lg:                 $container-large-desktop;
 @import "pagination";
 @import "labels";
 @import "badges";
-=======
-// Calcite Imports
-@import "calcite-web/dist/sass/calcite-web";
->>>>>>> calcite type, bootstrap grid
