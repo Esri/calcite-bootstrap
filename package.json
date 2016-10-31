@@ -6,8 +6,8 @@
   "homepage": "https://github.com/Esri/calcite-bootstrap",
   "scripts": {
     "start": "npm run dev",
-    "html": "cp lib/index.html dist",
-    "sass": "node-sass lib/ -o dist --include-path node_modules",
+    "html": "cp lib/index.html dist/",
+    "sass": "node-sass lib/ --include-path node_modules -o dist/",
     "predev": "npm-run-all html sass",
     "dev": "parallelshell 'http-server dist/' 'rerun-script'"
   },
