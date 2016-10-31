@@ -1,14 +1,19 @@
 {
   "name": "calcite-bootstrap",
   "title": "Calcite Boostrap",
-  "version": "0.3.2",
+  "version": "2.0.0",
   "description": "Calcite Bootstrap is a UI Kit built on the popular Bootstrap CSS framework based on the Calcite design framework.",
   "homepage": "https://github.com/Esri/calcite-bootstrap",
   "scripts": {
-    "test": "grunt test",
-    "gh-release": "gh-release -a calcite-bootstrap.zip",
-    "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
-    "start": "grunt"
+    "start": "npm run dev",
+    "html": "cp lib/index.html dist/",
+    "sass": "node-sass lib/ --include-path node_modules -o dist/",
+    "predev": "npm-run-all html sass",
+    "dev": "parallelshell 'http-server dist/' 'rerun-script'"
+  },
+  "watches": {
+    "html": "lib/index.html",
+    "sass": "lib/*.scss"
   },
   "main": "dist/js/calcite-boostrap.js",
   "repository": {
@@ -24,7 +29,6 @@
       "name": "Julio Ochoa",
       "email": "jochoa@esri.com"
     }
-    
   ],
   "files": [
     "dist/"
@@ -33,56 +37,15 @@
   "bugs": {
     "url": "https://github.com/esri/calcite-bootstrap/issues"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  },
   "devDependencies": {
-    "a11y": "^0.3.3",
-    "acetate": "^0.3.1",
-    "acetate-cli": "0.0.3",
-    "arraystream": "0.0.5",
-    "assemble": "^0.4.42",
-    "autoprefixer-core": "^5.2.1",
-    "connect": "^3.4.0",
-    "connect-livereload": "^0.5.3",
-    "gh-release": "^2.0.1",
-    "glob": "^5.0.14",
-    "grunt": "^0.4.5",
-    "grunt-assemble": "^0.4.0",
-    "grunt-aws-s3": "^0.14.0",
-    "grunt-concurrent": "^2.0.1",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-compress": "^0.13.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.11.0",
-    "grunt-contrib-imagemin": "^0.8.1",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.9.1",
-    "grunt-github-releaser": "^0.1.17",
-    "grunt-http-server": "^1.10.0",
-    "grunt-newer": "^0.7.0",
-    "grunt-postcss": "^0.5.5",
-    "grunt-prompt": "^1.2.1",
-    "grunt-sass": "^1.0",
-    "grunt-shell": "^1.1.2",
-    "imagemin": "^3.2.0",
-    "install": "^0.1.8",
-    "load-grunt-tasks": "^3.2.0",
-    "marked": "^0.3.5",
-    "matchdep": "^0.3.0",
-    "mkdirp": "^0.5.1",
-    "npm": "^2.13.5",
-    "postcss": "^4.1.16",
-    "s3": "^4.4.0",
-    "stream-array": "^1.1.0",
-    "js-yaml": "^3.4.2",
-    "jsonfile": "^2.2.2"
+    "calcite-web": "github:esri/calcite-web#v1.0.0-beta.20",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.5.3",
+    "npm-run-all": "^1.8.0",
+    "parallelshell": "^2.0.0",
+    "rerun-script": "^0.6.0"
   },
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
-
+    "bootstrap-sass": "^3.3.6"
   }
 }

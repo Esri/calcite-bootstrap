@@ -1,0 +1,5 @@
+.label {@include label();}
+  .label-danger {@include label-red();}
+  .label-warning {@include label-yellow();}
+  .label-success {@include label-green();}
+  .label-default {@include label-blue();}

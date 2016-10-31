@@ -1,0 +1,16 @@
+.lead {
+  @include font-size(1);
+}
+.text-muted {
+  @include text-light();
+}
+.text-danger,
+.text-warning {
+  @include text-color($red);
+}
+.text-info {
+  @include text-color($blue);
+}
+.text-success {
+  @include text-color($green);
+}

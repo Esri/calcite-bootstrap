@@ -1,0 +1,16 @@
+.well,
+.panel {@include panel();}
+
+.panel-footer,
+  .panel-heading {@include panel();}
+  .panel-body {@include panel(); @include panel-white(); margin: 0;}
+
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-default {
+  @include panel-white();
+  @include panel-no-padding();
+  margin-bottom: $baseline;
+}

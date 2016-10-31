@@ -1,0 +1,11 @@
+.list-group {@include side-nav();}
+.list-group-item {
+  margin: 0;
+  @include side-nav-link();
+  &.active {
+    @extend .is-active;
+  }
+}
+.list-group-flush {
+  margin: 0;
+}
