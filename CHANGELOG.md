@@ -4,14 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
-## Development
-### Added
-- Script in foor of doc templates to initialize tooltips and popovers.
-
-### Removed
-
+## 0.3.4
 ### Fixed
-- Fixed bug in variables files for $link-color and $table-bg-active values.
+- Replaced numeric font-weights with bold/normal to fix issues with displaying the wrong characters in some languages.
+- Bumped bootstrap-sass, to allow use of jquery 3.x
+- Fixed bug in the _variables.scss file, there are two vars with dashes that should be underscores
 
 ## 0.3.3
 ### Added
