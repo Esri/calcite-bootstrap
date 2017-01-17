@@ -14,8 +14,10 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-color: $brand-primary;
-        border-bottom: 1px solid $nav-tabs-border-color;
+        border-bottom: 1px solid transparent;
         border-top: 2px solid $brand-primary;
+        border-left: 0px;
+        border-right: 0px;
       }
     }
   }
@@ -23,7 +25,14 @@
 
 // Compensate for active tab inheriting the padding top on hover from above
 .nav-tabs > li.active > a {
+  border-top: 2px solid $brand-primary;
+  border-bottom-color: transparent;
+  border-left: 0px;
+  border-right: 0px;
   &:hover {
     padding-top: 6px;
+    border-top: 2px solid $brand-primary;
+    border-left: 0px;
+    border-right: 0px;
   }
 }
