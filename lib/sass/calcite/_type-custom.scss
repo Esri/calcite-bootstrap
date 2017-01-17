@@ -4,7 +4,6 @@
 
 // Adjust base font to match Calcite Web
 body {
-  font-weight: 300;
   font-size: ceil(($font-size-base * 1.05)); // ~17px
   letter-spacing: .03em;
 }
