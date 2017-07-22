@@ -1,0 +1,790 @@
+/**
+ * calcite-bootstrap.scss
+ *
+ * This is the Calcite Theme for Boostrap using strictly Bootstrap variables.
+ * To get a closer look to the Calcite Web brand, you may also want to include
+ * the calcite-bootstrap-expansion-vars and calcite-bootstrap-expansion files.
+ **/
+
+//////////////////////////////////////////////////////////////////////////
+
+// ┌──────────────────────────┐
+// │ Calcite Web Color Pallet │
+// └──────────────────────────┘
+
+/*
+Key for A11y:
+AA=LargeText (14px/bold+ or 18px/regular+)
+aa=RegularText (any size)
+*/
+
+$esri-blue-core:				  #0079c1; //AAaa-Black/White
+$esri-green-core:         #35ac46; //AAaa-Black
+$esri-orange-core:        #da4d1e; //AAaa-Black/White
+$esri-purple-core:				#6c1a78; //AA-Black | AAaa-White
+
+$calcite-blue-core:       #0079c1; //AAaa-Black | AAaa-White
+$calcite-blue-light:			#56A5D8; //AAaa-Black
+$calcite-blue-lighter:		#BCDAED; //AAaa-Black
+$calcite-blue-lightest:		#D2E9F9; //AAaa-Black
+$calcite-blue-dark:				#005E95; //AA-Black | AAaa-White
+$calcite-green-core:			#5A9359; //AAaa-Black | AA-White
+$calcite-green-light:			#9BC19C; //AAaa-Black
+$calcite-green-dark:			#338033; //AA-Black | AAaa-White
+$calcite-orange-core:			#D17E21; //AAaa-Black | AA-White
+$calcite-orange-light:		#E8912E; //AAaa-Black
+$calcite-orange-dark:			#AD6511; //AAaa-Black/White
+$calcite-red-core:				#DE2900; //AA-Black | AAaa-White
+$calcite-red-light:				#E4A793; //AAaa-Black
+$calcite-red-dark:				#AB3C16; //AA-Black | AAaa-White
+$calcite-yellow-core:			#E4D154; //AAaa-Black
+$calcite-yellow-light:		#EFE397; //AAaa-Black
+$calcite-yellow-dark:			#D9BF2B; //AAaa-Black
+$calcite-purple-core:			#9081BC; //AAaa-Black | AA-White
+$calcite-purple-light:		#C4BCDC; //AAaa-Black
+$calcite-purple-dark:			#7461A8; //AA-Black | AAaa-White
+$calcite-brown-core:			#A57946; //AAaa-Black | AA-White
+$calcite-brown-light:			#D2B38F; //AAaa-Black
+$calcite-brown-dark:			#8C5E2A; //AA-Black | AAaa-White
+$calcite-blue-accent:			#005e95; //AA-Black | AAaa-White
+$calcite-green-accent:		#2b622b; //AAaa-White
+
+$calcite-gray-lightest:		#efefef; //AAaa-Black
+$calcite-gray-lighter:		#cccccc; //AAaa-Black
+$calcite-gray-light:			#a9a9a9; //AAaa-Black
+$calcite-gray-core:				#959595; //AAaa-Black
+$calcite-gray-dark:				#828282; //AAaa-Black | AA-White
+$calcite-gray-darker:			#6e6e6e; //AA-Black | AAaa-White
+$calcite-gray-darkest:		#595959; //AAaa-White
+
+$white:							      #ffffff;
+$off-white:						    #f8f8f8;
+$transparent-white:				rgba(255, 255, 255, 0.8);
+
+$true-black:					    #000000;
+$black:							      #323232; //AAaa-White
+$off-black:						    #4c4c4c; //AAaa-White
+$transparent-black:				rgba(0, 0, 0, 0.75); //AAaa-White
+
+//////////////////////////////////////////////////////////////////////////
+
+// ┌───────────────────────────┐
+// │ Bootstrap Variables Begin │
+// └───────────────────────────┘
+
+$brand-primary:					$calcite-blue-core;
+$brand-default:					$calcite-blue-light;
+$brand-success:					$calcite-green-dark;
+$brand-info: 					  $white;
+$brand-warning:					$calcite-yellow-core;
+$brand-danger: 					$calcite-red-core;
+
+
+// ┌───────┐
+// │ Links │
+// └───────┘
+
+$link-color:					   $calcite-blue-core;
+$link-hover-color:			 darken($link-color, 10%);
+$link-hover-decoration:  underline;
+
+// ┌─────────────────┐
+// │ Site Background │
+// └─────────────────┘
+
+$body-bg:              			$white;
+
+// ┌─────────────┐
+// │ Typography  │
+// └─────────────┘
+
+$text-color:          $off-black;
+$h1-color:						$text-color;
+$h2-color:						$text-color;
+$h3-color:						$text-color;
+$h4-color:						$text-color;
+$h5-color:						$text-color;
+$h6-color:						$text-color;
+
+$font-family-sans-serif: 		"Avenir Next W01","Avenir Next", Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-serif:         "Lucida Grande", "Segoe UI", Arial, sans-serif;
+$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:          $font-family-sans-serif;
+
+$font-size-base:				14px;
+$font-size-small:       ceil(($font-size-base * 0.85)); // ~12px
+$font-size-large:       ceil(($font-size-base * 1.25)); // ~18px
+
+$font-size-h1:					floor(($font-size-base * 2.6));  // ~36px
+$font-size-h2:					floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:					floor(($font-size-base * 2.0));  // ~28px
+$font-size-h4:					ceil(($font-size-base * 1.7));   // ~24px
+$font-size-h5:					ceil(($font-size-base * 1.55));  // ~22px
+$font-size-h6:          ceil(($font-size-base * 1.14));  // ~16px
+
+//## Unit-less `line-height` for use in components like buttons.
+$line-height-base:      1.428571429; // 20/14
+
+//## Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+$line-height-large:     1.3333333; // extra decimals for Win 8.1 Chrome
+$line-height-small:     1.5;
+
+$headings-font-family:  inherit;
+$headings-font-weight:  500;
+$headings-line-height:  1.1;
+$headings-color:        $text-color;
+
+// ┌─────────────┐
+// │ Base Radius │
+// └─────────────┘
+
+$border-radius-base:        0px;
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+$border-radius-large:       0px;
+$border-radius-small:       0px;
+
+$component-active-color:    $white;
+$component-active-bg:       $brand-primary;
+$caret-width-base:          4px;
+$caret-width-large:         5px;
+
+// ┌─────────┐
+// │ Badges  │
+// └─────────┘
+
+//## Linked badge - hover
+$badge-color:                 $white;
+$badge-link-hover-color:      $white;
+$badge-bg:                    $calcite-blue-core;
+
+//## Badge in active link
+$badge-active-color:          $link-color;
+$badge-active-bg:             $white;
+
+$badge-font-weight:           bold;
+$badge-line-height:           1;
+$badge-border-radius:         10px;
+
+// ┌────────────────┐
+// │ Border Accents │
+// └────────────────┘
+
+$blockquote-border-color:    	$calcite-purple-light;
+$blockquote-font-size:        ($font-size-base * 1.25);
+$blockquote-small-color:      $calcite-gray-darkest;
+
+$page-header-border-color:   	$calcite-gray-lighter;
+$headings-small-color:        $calcite-gray-darkest;
+$text-muted:                  $calcite-gray-darker;
+
+//## Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px;
+
+//Abbreviations and acronyms border color
+$abbr-border-color:           $calcite-gray-core;
+
+//## Horizontal line color
+$hr-border:                   $calcite-gray-core;
+
+//## Width of horizontal description list titles
+$dl-horizontal-offset:        $component-offset-horizontal;
+
+//Not included - grid should rely on Boostrap defaults
+//$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
+
+// ┌─────────────┐
+// │ Breadcrumbs │
+// └─────────────┘
+
+$breadcrumb-padding-vertical:   8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg:                 transparent;
+$breadcrumb-color:              $link-color;
+$breadcrumb-active-color:       $calcite-gray-darkest;
+$breadcrumb-separator:          "/";
+
+// ┌─────────┐
+// │ Buttons │
+// └─────────┘
+
+$btn-font-weight:                normal;
+
+$btn-border-radius-base:         $border-radius-base;
+$btn-border-radius-large:        $border-radius-large;
+$btn-border-radius-small:        $border-radius-small;
+
+$btn-default-color:              $calcite-blue-core;
+$btn-default-bg:                 $white;
+$btn-default-border:             $calcite-blue-core;
+
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $calcite-blue-core;
+$btn-primary-border:         	   $calcite-blue-core;
+
+$btn-success-color:				       $white;
+$btn-success-bg:				         $brand-success;
+$btn-success-border:			       $brand-success;
+
+$btn-info-color:				         $text-color;
+$btn-info-bg:					           $brand-info;
+$btn-info-border:				         $brand-info;
+
+$btn-warning-color:				       $text-color;
+$btn-warning-bg:				         $brand-warning;
+$btn-warning-border:			       $brand-warning;
+
+$btn-danger-color:				       $brand-danger;
+$btn-danger-bg:					         $white;
+$btn-danger-border:				       $brand-danger;
+
+$btn-link-disabled-color:        $calcite-gray-core;
+
+// ┌───────────┐
+// │ Carousel  │
+// └───────────┘
+
+$carousel-text-shadow:        none;
+
+$carousel-control-color:      $link-color;
+$carousel-control-opacity:    .8;
+$carousel-control-width:      15%;
+$carousel-control-font-size:  $font-size-h3;
+
+$carousel-caption-color:      $link-color;
+$carousel-caption-overlay:	  $white;
+
+$carousel-indicator-active-bg:  $link-color;
+$carousel-indicator-border-color:$link-color;
+
+// ┌───────┐
+// │ Close │
+// └───────┘
+
+$close-font-weight:           400;
+$close-color:                 $calcite-blue-core;
+$close-text-shadow:           none;
+
+// ┌──────┐
+// │ Code │
+// └──────┘
+
+$code-color:                  $off-black;
+$code-bg:                     $off-white;
+
+$kbd-color:                   $white;
+$kbd-bg:                      $calcite-gray-darkest;
+
+$pre-bg:                      $off-white;
+$pre-color:                   $off-black;
+$pre-border-color:            $calcite-gray-lighter;
+$pre-scrollable-max-height:   340px;
+
+// ┌───────────┐
+// │ Dropdowns │
+// └───────────┘
+
+$dropdown-bg:                    $white;
+$dropdown-border:                darken($calcite-gray-lightest, 5%);
+$dropdown-fallback-border:       darken($calcite-gray-lightest, 5%);
+$dropdown-divider-bg:            $calcite-gray-lighter;
+
+$dropdown-link-color:            $text-color;
+$dropdown-link-hover-color:      $text-color;
+$dropdown-link-hover-bg:         $calcite-gray-lightest;
+
+$dropdown-link-active-color:     $text-color;
+$dropdown-link-active-bg:        $calcite-gray-lighter;
+
+$dropdown-link-disabled-color:   $calcite-gray-lighter;
+
+$dropdown-header-color:          $calcite-gray-lightest;
+$dropdown-caret-color:           $text-color;
+
+// ┌───────┐
+// │ Forms │
+// └───────┘
+
+$input-bg:						            $body-bg;
+$input-bg-disabled:               $calcite-gray-lightest;
+$input-color:                     $off-black;
+$input-border:					          $calcite-gray-light;
+$input-border-focus: 			        $calcite-blue-lighter;
+
+// This has no effect on <select> in Safari
+$input-border-radius:            $border-radius-base;
+$input-border-radius-large:      $border-radius-large;
+$input-border-radius-small:      $border-radius-small;
+
+$input-border-focus:             $link-color; //onFocus
+$input-color-placeholder:        $calcite-gray-darkest;
+
+// Default `.form-control` heights
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
+
+//## `.form-group` margin
+$form-group-margin-bottom:       15px;
+
+$legend-color:                   $text-color;
+$legend-border-color:            $calcite-gray-darker;
+
+// Input Addon Classes
+$input-group-addon-bg:           $calcite-gray-lightest;
+$input-group-addon-border-color: $input-border;
+
+// Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed;
+
+
+// ┌──────────────┐
+// │ Iconography  │
+// └──────────────┘
+
+/* Specify custom location and filename of the included Glyphicons icon font.
+Useful for those including Bootstrap via Bower.
+Load fonts from this directory.*/
+
+/*// [converter] If $bootstrap-sass-asset-helper if used,
+provide path relative to the assets load path.
+// [converter] This is because some asset helpers,
+such as Sprockets, do not work with file-relative paths.
+$icon-font-path: if($bootstrap-sass-asset-helper,
+"bootstrap/", "../fonts/bootstrap/") !default;*/
+
+//## File name for all font files.
+$icon-font-name:                "glyphicons-halflings-regular";
+//## Element ID within SVG icon file.
+$icon-font-svg-id:              "glyphicons_halflingsregular";
+
+// ┌───────────────────┐
+// │ Input Validation  │
+// └───────────────────┘
+
+$state-success-text:            $text-color;
+$state-success-bg:              lighten($calcite-green-light, 20%);
+$state-success-border:          $calcite-green-core;
+
+$state-info-text:             	$text-color;
+$state-info-bg:               	lighten($calcite-blue-lighter, 5%);
+$state-info-border:           	$calcite-blue-core;
+
+$state-warning-text:            $text-color;
+$state-warning-bg:              lighten($calcite-yellow-light, 20%);
+$state-warning-border:          $calcite-yellow-dark;
+
+$state-danger-text:             $text-color;
+$state-danger-bg:               lighten($calcite-red-light, 20%);
+$state-danger-border:           $calcite-red-core;
+
+// ┌───────────┐
+// │ Jumbotron │
+// └───────────┘
+
+$jumbotron-bg:               	  transparent;
+
+$jumbotron-padding:             30px;
+$jumbotron-color:               inherit;
+$jumbotron-heading-color:       inherit;
+$jumbotron-font-size:           ceil(($font-size-base * 1.5));
+$jumbotron-heading-font-size:   ceil(($font-size-base * 4.5));
+
+// ┌─────────┐
+// │ Labels  │
+// └─────────┘
+
+$label-default-bg:            $calcite-gray-lightest;
+$label-primary-bg:            $brand-primary;
+$label-success-bg:            $brand-success;
+$label-info-bg:               $white;
+$label-warning-bg:            $brand-warning;
+$label-danger-bg:             $brand-danger;
+
+$label-color:		         	    $white;
+$label-link-hover-color:     	$white;
+
+// ┌────────────┐
+// │ List Group │
+// └────────────┘
+
+$list-group-bg:                 $body-bg;
+$list-group-border:             $calcite-gray-lighter;
+$list-group-border-radius:      $border-radius-base;
+
+$list-group-link-color:			    $text-color;
+$list-group-border:             $calcite-gray-lighter;
+$list-group-hover-bg:           lighten($calcite-gray-lightest, 2%);
+$list-group-active-color:       $calcite-gray-darkest;
+$list-group-active-bg:          $list-group-hover-bg;
+$list-group-active-border:      $list-group-border;
+$list-group-active-text-color:  $calcite-gray-darkest;
+
+$list-group-disabled-color:     $calcite-gray-core;
+$list-group-disabled-bg:        $calcite-gray-lighter;
+$list-group-disabled-text-color:$calcite-gray-core;
+
+$list-group-link-color:         $calcite-gray-darkest;
+$list-group-link-hover-color:   $list-group-link-color;
+$list-group-link-heading-color: $calcite-gray-darkest;
+
+// ┌─────────┐
+// │ Modals  │
+// └─────────┘
+
+$modal-inner-padding:         20px;
+
+$modal-title-padding:         20px;
+$modal-title-line-height:     $line-height-base;
+
+$modal-content-bg:            $white;
+$modal-content-border-color:  rgba(0,0,0,.2);
+$modal-content-fallback-border-color: $black;
+
+$modal-backdrop-bg:           $off-black;
+$modal-backdrop-opacity:      .5;
+$modal-header-border-color:   transparent;
+$modal-footer-border-color:   transparent;
+
+$modal-lg:                    900px;
+$modal-md:                    600px;
+$modal-sm:                    300px;
+
+// ┌────────┐
+// │ Navbar │
+// └────────┘
+
+$grid-gutter-width:           30px;
+
+$navbar-height: 					    55px;
+$navbar-margin-bottom:				20px;
+$navbar-border-radius:        $border-radius-base;
+
+$navbar-padding-horizontal:   floor(($grid-gutter-width / 2));
+$navbar-padding-vertical:     (($navbar-height - $line-height-computed) / 2);
+$navbar-collapse-max-height:  340px;
+
+$navbar-default-bg: 				       $white;
+$navbar-default-color:          	 $off-black;
+$navbar-default-border:            $calcite-gray-lightest;
+
+//Navbar Links
+$navbar-default-link-color: 	     $off-black;
+$navbar-default-link-hover-color:	 $link-color;
+$navbar-default-link-hover-bg:  	 transparent;
+$navbar-default-link-active-color: $navbar-default-link-hover-color;
+$navbar-default-link-active-bg:		 transparent;
+
+//Navbar Brand
+$navbar-default-brand-color:       $navbar-default-link-color;
+$navbar-default-brand-hover-color: $navbar-default-link-color;
+$navbar-default-brand-hover-bg:    transparent;
+
+//Navbar Toggle
+$navbar-default-toggle-hover-bg:     $calcite-gray-lightest;
+$navbar-default-toggle-icon-bar-bg:  $navbar-default-color;
+$navbar-default-toggle-border-color: $navbar-default-link-color;
+
+//Inverted Navbar
+$navbar-inverse-color:          	 $white;
+$navbar-inverse-bg:             	 $off-black;
+$navbar-inverse-border:         	 lighten($navbar-inverse-bg, 10%);
+
+// Inverted Navbar links
+$navbar-inverse-link-color:          $white;
+$navbar-inverse-link-hover-color:    $white;
+$navbar-inverse-link-hover-bg:       transparent;
+$navbar-inverse-link-active-color:   $navbar-inverse-link-hover-color;
+$navbar-inverse-link-active-bg:      lighten($navbar-inverse-bg, 5%);
+$navbar-inverse-link-disabled-color: darken($navbar-inverse-link-color, 25%);
+$navbar-inverse-link-disabled-bg:    transparent;
+
+// Inverted Navbar brand label
+$navbar-inverse-brand-color:         $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color:   $navbar-inverse-link-hover-color;
+$navbar-inverse-brand-hover-bg:      $navbar-inverse-link-hover-bg;
+
+// Inverted Navbar toggle
+$navbar-inverse-toggle-hover-bg:     $navbar-inverse-link-active-bg;
+$navbar-inverse-toggle-icon-bar-bg:  $navbar-inverse-color;
+$navbar-inverse-toggle-border-color: $navbar-inverse-link-color;
+
+// ┌──────────────────────┐
+// │ Navs - Shared Styles │
+// └──────────────────────┘
+
+$nav-link-padding:                   10px 15px;
+$nav-link-hover-bg:                  $link-hover-color;
+
+$nav-disabled-link-color:            $calcite-gray-core;
+$nav-disabled-link-hover-color:      $calcite-gray-core;
+
+// ┌───────────┐
+// │ Nav Pills │
+// └───────────┘
+
+$nav-pills-border-radius:             $border-radius-base;
+$nav-pills-active-link-hover-bg:      $link-color;
+$nav-pills-active-link-hover-color:   $white;
+
+// ┌───────────┐
+// │ Nav Tabs  │
+// └───────────┘
+
+$nav-tabs-border-color:                     	$calcite-gray-lighter;
+$nav-tabs-link-hover-border-color:          	transparent;
+$nav-tabs-active-link-hover-bg:             	$body-bg;
+$nav-tabs-active-link-hover-color:          	$text-color;
+$nav-tabs-active-link-hover-border-color:   	$calcite-gray-lighter;
+
+$nav-tabs-justified-link-border-color:      	$link-color;
+$nav-tabs-justified-active-link-border-color:	$body-bg;
+
+// ┌─────────────┐
+// │ Pagination  │
+// └─────────────┘
+
+$pagination-color:              $link-color;
+$pagination-bg:                 transparent;
+$pagination-border:             none;
+
+$pagination-hover-color:        $white;
+$pagination-hover-bg:           $link-color;
+$pagination-hover-border:       none;
+
+$pagination-active-color:       $link-color;
+$pagination-active-bg:          $white;
+$pagination-active-border:      none;
+
+$pagination-disabled-color:     $calcite-blue-lightest;
+$pagination-disabled-bg:        transparent;
+$pagination-disabled-border:    none;
+
+// ┌────────┐
+// │ Pager  │
+// └────────┘
+
+$pager-bg:                      transparent;
+$pager-border:                  none;
+$pager-border-radius:           15px;
+$pager-hover-bg:                transparent;
+$pager-active-bg:               $pagination-active-bg;
+$pager-active-color:            $pagination-active-color;
+$pager-disabled-color:          $calcite-blue-lightest;
+
+// ┌─────────┐
+// │ Panels  │
+// └─────────┘
+
+$panel-bg:					  $white;
+$panel-heading-padding:       10px 15px;
+$panel-footer-padding:        $panel-heading-padding;
+$panel-default-text:          $text-color;
+$panel-default-border:        $calcite-gray-lighter;
+$panel-inner-border:          $calcite-gray-lighter;
+$panel-default-heading-bg:    $calcite-gray-lightest;
+$panel-footer-bg:             $white;
+
+// ┌─────────┐
+// │ Popover │
+// └─────────┘
+
+$popover-bg:                          $white;
+$popover-max-width:                   300px;
+$popover-border-color:                $calcite-gray-lighter;
+$popover-fallback-border-color:       $calcite-gray-lighter;
+
+$popover-title-bg:                    $off-white;
+
+$popover-arrow-width:                 10px;
+$popover-arrow-color:                 $popover-bg;
+$popover-arrow-outer-width:           ($popover-arrow-width + 1);
+$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05);
+$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%);
+
+// ┌──────────────┐
+// │ Progress Bar │
+// └──────────────┘
+
+$progress-bg:                 	$calcite-gray-lightest;
+
+$progress-bar-color:            $white;
+$progress-border-radius:        4px;
+
+$progress-bar-bg:               $calcite-blue-core;
+$progress-bar-success-bg:       $calcite-green-dark;
+$progress-bar-warning-bg:       $calcite-orange-core; //can only use with lg white text
+$progress-bar-danger-bg:        $calcite-red-core;
+$progress-bar-info-bg:        	$calcite-blue-lighter;
+
+// ┌───────┐
+// │ Table │
+// └───────┘
+
+$table-bg:                      $white;
+$table-cell-padding:            10px;
+$table-condensed-cell-padding:  5px;
+$table-bg-hover:                $calcite-blue-lightest;
+$table-bg-accent:               $calcite-blue-lightest;
+$table-bg-active:               $table-bg-hover;
+$table-border-color:            $calcite-gray-light;
+
+// ┌─────────────┐
+// │ Thumbnails  │
+// └─────────────┘
+
+$thumbnail-padding:           4px;
+$thumbnail-bg:                $body-bg;
+$thumbnail-border:            $calcite-gray-lighter;
+$thumbnail-border-radius:     $border-radius-base;
+
+$thumbnail-caption-color:     $off-black;
+$thumbnail-caption-padding:   10px;
+
+// ┌──────────┐
+// │ Tooltips │
+// └──────────┘
+
+$tooltip-max-width:           200px;
+$tooltip-color:               $white;
+$tooltip-bg:                  $off-black;
+$tooltip-opacity:             0.95;
+
+$tooltip-arrow-width:         5px;
+$tooltip-arrow-color:         $tooltip-bg;
+
+// ┌────────┐
+// │ Wells  │
+// └────────┘
+
+$well-bg:                     	$calcite-gray-lightest;
+$well-border:                 	$calcite-gray-lighter;
+
+/////////////////////////////////////////////////////////////////
+
+// ┌─────────────────────┐
+// │ Framework Variables │
+// └─────────────────────┘
+/* NOTE: Grid variables are commented out so that Calcite Web relies
+on the defaults presented by Bootstrap, since there are no custom
+changes to the grid at this time. */
+
+// ┌────────────┐
+// │ Containers │
+// └────────────┘
+
+/*
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//## For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//## For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//## For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+*/
+
+
+// ┌────────────┐
+// │ Z-Indexes  │
+// └────────────┘
+
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+/*$zindex-navbar:          1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-modal-background:  1040;
+$zindex-modal:             1050;*/
+
+// ┌─────────────────────────┐
+// │ Media Query Breakpoints │
+// └─────────────────────────┘
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+/*
+//== Extra small screen / phone
+//## Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//## Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//## Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+//== Small screen / tablet
+//## Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//## Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+//== Medium screen / desktop
+//## Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//## Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+//== Large screen / wide desktop
+//## Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//## Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+*/
+
+/*
+// ┌───────┐
+// │ Grid  │
+// └───────┘
+//## Define your custom responsive grid.
+
+//## Number of columns in the grid.
+$grid-columns:              12 !default;
+//## Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+
+// Navbar collapse
+//## Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//## Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+*/
+
+$header-background: #0f3a14;
+$header-text:       #ffffff;
+$body-background:   #a6b0a6;
+$body-text:         #3a4f33;
+$body-link:         #134b8d;
+$button-background: #ff8d00;
+$button-text:       #ffffff;
+$flags-umbrella:    true;

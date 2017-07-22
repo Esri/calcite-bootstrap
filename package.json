@@ -1,88 +1,57 @@
 {
   "name": "calcite-bootstrap",
-  "title": "Calcite Boostrap",
-  "version": "0.3.3",
-  "description": "Calcite Bootstrap is a UI Kit built on the popular Bootstrap CSS framework based on the Calcite design framework.",
-  "homepage": "https://github.com/Esri/calcite-bootstrap",
+  "version": "0.4.0",
+  "description": "Calcite Theme for Bootstrap 3.x",
   "scripts": {
-    "test": "grunt test",
-    "gh-release": "gh-release -a calcite-bootstrap.zip",
-    "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
-    "start": "grunt"
+    "start": "node_modules/.bin/watch-run -p 'lib/sass/**/*.scss' npm run build-css",
+    "build-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss dist/css/calcite-bootstrap.css",
+    "postbuild-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss | node_modules/.bin/cleancss -o dist/css/calcite-bootstrap.min.css",
+    "build": "npm run build-css && cp -r lib/sass dist/sass && cp -r ./node_modules/bootstrap-sass/assets/fonts/bootstrap dist/fonts"
   },
-  "main": "dist/js/calcite-boostrap.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/esri/calcite-bootstrap.git"
+  "keywords": [
+    "bootstrap",
+    "calcite",
+    "esri",
+    "arcgis"
+  ],
+  "author": {
+    "name": "Esri DC R&D Center",
+    "email": "<dc@esri.com>",
+    "url": "http://dc.esri.com/"
   },
   "contributors": [
-    {
-      "name": "Erich Rainville",
-      "email": "erainville@esri.com"
-    },
-    {
-      "name": "Julio Ochoa",
-      "email": "jochoa@esri.com"
-    }
-    
-  ],
-  "files": [
-    "dist/"
+    "Klara Schmitt <kschmitt@esri.com>",
+    "Dave Bouwman <dbouwman@esri.com>"
   ],
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/esri/calcite-bootstrap/issues"
-  },
-  "engines": {
-    "node": ">=0.10.0"
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
-    "a11y": "^0.3.3",
-    "acetate": "^0.3.1",
-    "acetate-cli": "0.0.3",
-    "arraystream": "0.0.5",
-    "assemble": "^0.4.42",
-    "autoprefixer-core": "^5.2.1",
-    "connect": "^3.4.0",
-    "connect-livereload": "^0.5.3",
-    "gh-release": "^2.0.1",
-    "glob": "^5.0.14",
-    "grunt": "^0.4.5",
-    "grunt-assemble": "^0.4.0",
-    "grunt-aws-s3": "^0.14.0",
-    "grunt-concurrent": "^2.0.1",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-compress": "^0.13.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.11.0",
-    "grunt-contrib-imagemin": "^0.8.1",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.9.1",
-    "grunt-github-releaser": "^0.1.17",
-    "grunt-http-server": "^1.10.0",
-    "grunt-newer": "^0.7.0",
-    "grunt-postcss": "^0.5.5",
-    "grunt-prompt": "^1.2.1",
-    "grunt-sass": "^1.0",
-    "grunt-shell": "^1.1.2",
-    "imagemin": "^3.2.0",
-    "install": "^0.1.8",
-    "load-grunt-tasks": "^3.2.0",
-    "marked": "^0.3.5",
-    "matchdep": "^0.3.0",
-    "mkdirp": "^0.5.1",
-    "npm": "^2.13.5",
-    "postcss": "^4.1.16",
-    "s3": "^4.4.0",
-    "stream-array": "^1.1.0",
-    "js-yaml": "^3.4.2",
-    "jsonfile": "^2.2.2"
-  },
-  "dependencies": {
-    "bootstrap-sass": "~3.3.7"
-
+    "browser-sync": "^2.2.1",
+    "clean-css": "^4.1.7",
+    "node-sass": "^4.5.3",
+    "watch-run": "^1.2.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-eslint": "^3.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.0.0",
+    "main-bower-files": "^2.5.0",
+    "run-sequence": "^1.2.2",
+    "wiredep": "^4.0.0"
   }
 }

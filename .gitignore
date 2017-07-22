@@ -1,17 +1,3 @@
-.DS_Store
-.publish
-.sass-cache
 .tmp
-.grunt
-docs/build/
-app/styles/.DS_Store
-aws.json
-bower_components
-calcite-bootstrap.zip
 dist
-gulp-aws.json
 node_modules
-old/
-npm-debug.log
-
-

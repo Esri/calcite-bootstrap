@@ -1,6 +1,95 @@
-// Core variables and mixins
-@import "calcite/colors-default"; // This loads the Default Theme colors
-@import "calcite/calcite"; // This loads all the variables
+$icon-font-path: '../fonts/';
 
-// Custom Calcite Components
-@import "calcite/components"; // This loads the custom calcite css
+//============================
+// Import a set of color contrast functions
+//============================
+@import 'mixins/contrast';
+
+
+
+//============================
+// Flags for Hub used in calcite-bootstrap-expansion
+//============================
+$flags-iframeheader: false;
+$flags-umbrella:false;
+
+//============================
+// import a theme...
+//============================
+@import "themes/calcite-bootstrap.scss";
+//@import "themes/org-theme.scss";
+
+//============================
+// apply theme to bootstrap
+//============================
+@import "expansions/bootstrap-defaults.scss";
+
+//=============================
+// import calcite web expansion
+//=============================
+@import "expansions/calcite-bootstrap-expansion-vars.scss";
+@import "expansions/calcite-bootstrap-expansion.scss";
+
+//============================
+// Now the bootstrap defaults...
+//============================
+//@import "bootstrap/_variables";
+
+//============================
+// Bootstrap itself...
+//============================
+// Core variables and mixins
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+//@import "bootstrap/print";
+@import "bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/alerts";
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+//============================
+// Calcite-Bootstrap
+//============================
+//@import "calcite-components/cards";
