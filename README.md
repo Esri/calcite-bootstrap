@@ -6,7 +6,17 @@ For more info about this framework, go to the **[documentation site](http://esri
 
 # Using Calcite Bootstrap
 
-There are two main ways to use Calcite Boostrap: 1, Copying compiled css files into your project; or 2, Installing via a package manager and using a SASS build step in your project.
+There are two main ways to use Calcite Boostrap:
+- 1, Copying compiled css files into your project; or
+- 2, Installing via a npm and using a SASS build step in your project.
+
+## Bootstrap Javascript Components
+Calcite Bootstrap does not include any javascript components itself - it simply provides a theme for Bootstrap components. If you elect to use any Bootstrap components that require javascript, you will need to include the Bootstrap javascript in your application.
+
+For applications without a build system, we recommend loading the Bootstrap javascript from the [BootstrapCDN](https://www.bootstrapcdn.com/).
+
+If you have a build step, and installed calcite-bootstrap via npm, then bootstrap-sass was also installed, and you can include the scripts you need from `node_modules/bootstrap-sass/assets/javascripts/...`
+
 
 ## Static Files
 
@@ -20,21 +30,19 @@ To install Calcite Bootstrap with npm, type:
 npm install --save-dev calcite-bootstrap
 ```
 
-You must add the current version in order to get the `dist/` folder.
-
-If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/` to your load path. If you're using [`grunt-contrib-sass`](https://github.com/gruntjs/grunt-contrib-sass) you add that like this:
+If you're using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/` to your load path. If you're using [`gulp-sass`](https://github.com/dlmanning/gulp-sass) you will add something like this:
 
 ```
-'sass': {
-  target: {
-    options: {
-      loadPath: 'node_modules/calcite-bootstrap/dist/sass/'
-    },
-    files: {
-      'path/to.css': 'path/to.scss'
-    }
-  }
-}
+gulp.task('sass', function () {
+ return gulp.src('./sass/**/*.scss')
+   .pipe(sass({
+     includePaths: [
+      './node_modules/bootstrap-sass/assets/stylesheets',
+      './node_modules/calcite-bootstrap/dist/sass/'
+     ]
+    }).on('error', sass.logError))
+   .pipe(gulp.dest('./css'));
+});
 ```
 
 If you are using [`grunt-sass`](https://github.com/sindresorhus/grunt-sass), you should add it like this:
@@ -61,11 +69,10 @@ Then in your main `.scss` file, you can just require the framework: `@import "ca
 
 Installing Calcite Bootstrap was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-bootstrap/issues/) and use the label `install issues`.
 
-[![Stories in Ready](https://badge.waffle.io/Esri/calcite-bootstrap.svg?label=ready&title=Ready)](http://waffle.io/Esri/calcite-bootstrap)
 
 ### Install Dependencies
 
-Calcite-Boostrap has these main dependencies. 
+Calcite-Boostrap has these main dependencies.
 
 - Xcode Command Line Tools (for Git)
 - Node.js
@@ -140,7 +147,7 @@ To run a development environment, just type `$ grunt`. You should have a copy of
 - `$ grunt` - [default] builds and then serves up local environment at localhost:8888 (includes watch for updated files)
 - `$ grunt serve` - serves local environment at localhost:8888 (no build)
 - `$ grunt build` - builds local environment only (no localhost)
-- `$ grunt release` - creates `calcite-bootstrap.zip` file for release in root directory 
+- `$ grunt release` - creates `calcite-bootstrap.zip` file for release in root directory
 - `$ grunt publish` - publishes new release candidate to Amazon S3 (requires credentials)
 
 ## Doing the git dance

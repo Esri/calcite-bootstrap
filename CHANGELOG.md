@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+## Unreleased
+
+### Changed
+- removed doc generation from this repo
+- simplified build process to use *just* npm scripts
+
 ## 0.3.4
 ### Fixed
 - Replaced numeric font-weights with bold/normal to fix issues with displaying the wrong characters in some languages.

@@ -1,0 +1,769 @@
+/**
+ * calcite-bootstrap-expansion.scss
+ * Requires: calcite-bootstrap-expansion-vars.scss
+**/
+
+// ┌───────┐
+// │ Links │
+// └───────┘
+/*KS: These !important are a necessary override of Bootstrap's scaffording file.
+I'm not applying outlines on a <a> basis through the app & webkit's
+default outline color is too dark on dark themes*/
+
+ a:focus {
+  outline-color: $link-color;
+  outline: thin dotted;
+  outline: 5px auto $link-color;
+  outline-offset: -2px;
+}
+
+
+// ┌─────────┐
+// │ Badges  │
+// └─────────┘
+
+.nav-pills > a > .badge,
+.nav-pills > .active > a > .badge {
+  background-color: $link-color;
+  color: $body-bg;
+  padding: 2px 7px;
+}
+
+.nav-pills > .active > a > .badge {
+  border: 1px solid $link-color;
+}
+
+
+// ┌─────────────┐
+// │ Breadcrumbs │
+// └─────────────┘
+
+.breadcrumb > .active {
+  font-weight: 500;
+}
+
+
+// ┌──────────────────┐
+// │ Button Settings  │
+// └──────────────────┘
+
+.btn {
+  box-shadow: $box-shadow-present;
+  border-radius: $border-radius-base;
+}
+
+a.btn-default:hover,
+a.btn-default:focus,
+a.btn-default:active,
+button.btn-default:hover,
+button.btn-default:focus,
+button.btn-default:active,
+button.btn-default.active,
+button.open>.dropdown-toggle.btn-default,
+button.btn-default:active:focus {
+  border-color: $btn-background-hover;
+  background-color: $btn-background-hover;
+  color: $btn-color-hover;
+}
+
+a.btn-default.disabled {
+  color: $btn-link-disabled-color;
+}
+
+button.btn-default.disabled {
+  border: $border-stroke $btn-link-disabled-color;
+  color: $btn-link-disabled-color;
+}
+
+a.btn-default.disabled:hover,
+a.btn-default.disabled:focus,
+a.btn-default.disabled:active,
+button.btn-default.disabled:hover,
+button.btn-default.disabled:focus,
+button.btn-default.disabled:active,
+button.btn-default.disabled.active,
+button.btn-default.disabled:active:focus {
+  border: $border-stroke $btn-link-disabled-color;
+  color: $btn-link-disabled-color;
+}
+
+button.btn-link.disabled {
+  border: 0px;
+  color: $btn-link-disabled-color;
+}
+
+button[disabled].btn-danger,
+button[disabled].btn-danger:hover,
+button[disabled].btn-danger:focus  {
+  border: $calcite-red-light;
+  color: $calcite-red-light;
+}
+
+a.btn-danger:hover,
+a.btn-danger:focus,
+a.btn-danger:active,
+button.btn-danger:hover,
+button.btn-danger:focus,
+button.btn-danger:active,
+button.btn-danger.active,
+button.open>.dropdown-toggle.btn-danger,
+button.btn-danger:active:focus {
+  border-color: $btn-danger-hover;
+  background-color: $btn-danger-hover;
+  color: $btn-danger-text-hover;
+}
+
+ul.dropdown-menu {
+  padding-top: 0px;
+  border: 1px solid;
+  border-color: darken($calcite-gray-lightest, 5%);
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+}
+
+li.dropdown-header {
+  margin-bottom: 5px;
+  background-color: $calcite-gray-lightest;
+  color: $off-black;
+  font-size: $font-size-base;
+  border-bottom: 1px solid;
+  border-color: darken($calcite-gray-lightest, 5%);
+}
+
+
+// ┌───────┐
+// │ Cards │
+// └───────┘
+//# Located at the bottom of this file since they had so much CSS
+
+
+// ┌───────────┐
+// │ Carousel  │
+// └───────────┘
+
+ ol.carousel-indicators .active {
+  background-color: $off-black;
+ }
+
+ ol.carousel-indicators li {
+  border-color: $off-black;
+ }
+
+ .carousel-caption {
+  background: $carousel-caption-overlay;
+ }
+
+ // ┌───────┐
+ // │ Close │
+ // └───────┘
+
+.close:focus {outline:auto;}
+
+
+// ┌─────────────┐
+// │ Dropdowns   │
+// └─────────────┘
+
+ul.dropdown-menu{
+ margin: 0px;
+ -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+ -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+ box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+ > li {
+  margin-bottom: 0px;
+  > a {
+   padding: 10px 20px;
+  }
+ }
+ .dropdown-header {
+  padding: 10px 20px;
+  margin-bottom: 0px;
+ }
+}
+
+
+// ┌──────────────────┐
+// │ Form Validation  │
+// └──────────────────┘
+
+input.form-control:focus {
+border-color: $link-color;
+}
+
+.has-success {
+  label,
+  label.control-label,
+  span.help-block,
+  span .glyphicon {
+  color: $calcite-green-dark;
+  }
+  input.form-control,
+  input.form-control:focus,
+  span.input-group-addon {
+    background-color: $white;
+    border-color: $calcite-green-dark;
+  }
+}
+
+.has-warning {
+  label,
+  label.control-label,
+  span.help-block,
+  span .glyphicon {
+  color: #796916;
+  }
+  input.form-control,
+  span.input-group-addon {
+    background-color: $white;
+    border-color: #796916;
+  }
+}
+
+.has-error {
+  label,
+  label.control-label,
+  span.help-block,
+  span .glyphicon {
+  color: $calcite-red-dark;
+  }
+  input.form-control,
+  input.form-control:focus,
+  span.input-group-addon {
+    background-color: $white;
+    border-color: $calcite-red-dark;
+  }
+}
+
+.has-error input.with-addon-alert,
+.has-warning input.with-addon-alert,
+.has-success input.with-addon-alert {
+  box-shadow: none;
+  border-right: 0px;
+}
+
+.form-control[disabled] {
+  background-color: $calcite-gray-lightest;
+}
+
+
+// ┌─────────┐
+// │ Labels  │
+// └─────────┘
+
+span.label {
+  border-radius: 3px;
+  font-weight: normal;
+ }
+
+span.label-default,
+span.label-info,
+span.label-warning {
+  color: $text-color;
+}
+
+// ┌─────────────┐
+// │ List Group  │
+// └─────────────┘
+
+.list-group {
+  .list-group-item.active .list-group-item-text,
+  .list-group-item.active:hover .list-group-item-text {
+    color: $calcite-gray-darkest;
+
+  }
+}
+
+
+// ┌────────┐
+// │ Modals │
+// └────────┘
+
+.modal-dialog .modal-content {
+  border-radius: $border-radius-base;
+  box-shadow: $box-shadow-present;
+  color: $calcite-gray-darkest;
+  .modal-header {
+    h4 {
+      font-size: $font-size-h2;
+      font-weight: normal;
+    }
+    .close {
+      color: $link-color;
+      opacity: 1;
+      font-weight: normal;
+      font-size: $font-size-h1;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+  .modal-body {
+    font-size: $font-size-base;
+  }
+}
+
+
+// ┌─────────┐
+// │ Navbar  │
+// └─────────┘
+
+.navbar-default {
+  color: $navbar-default-color;
+   > li {
+     > a {
+       &:hover,
+       &:focus,
+       &.active {
+        color: $navbar-default-link-hover-color;
+        background-image: linear-gradient(to bottom,transparent 92%, $navbar-default-link-hover-color 93%, $navbar-default-link-hover-color 100%);
+        text-decoration: none;
+        outline: 0px;
+       }
+     }
+   }
+   li.active a.active {
+     color: $navbar-default-link-hover-color;
+     background-image: linear-gradient(to bottom,transparent 92%, $navbar-default-link-hover-color 93%, $navbar-default-link-hover-color 100%);
+     text-decoration: none;
+     outline: 0px;
+   }
+ }
+
+ .navbar-inverse {
+   color: $navbar-inverse-link-color;
+    > li {
+      > a {
+        &:hover,
+        &:focus,
+        &.active {
+         color: $navbar-inverse-link-hover-color;
+         background-image: linear-gradient(to bottom,transparent 92%, $navbar-inverse-link-hover-color 93%, $navbar-inverse-link-hover-color 100%);
+         text-decoration: none;
+         outline: 0px;
+        }
+      }
+    }
+    li.active a.active {
+      color: $navbar-inverse-link-hover-color;
+      background-image: linear-gradient(to bottom,transparent 92%, $navbar-inverse-link-hover-color 93%, $navbar-inverse-link-hover-color 100%);
+      text-decoration: none;
+      outline: 0px;
+    }
+ }
+
+// ┌───────────┐
+// │ Nav Tabs  │
+// └───────────┘
+
+.nav-tabs[role="tablist"] > li > a {
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+   &:hover,
+   &:focus,
+   &.focus {
+    background-color: $btn-primary-hover;
+    border-bottom-color: $btn-primary-hover;
+    text-decoration: none;
+   }
+ }
+
+.nav-tabs[role="tablist"] > li.active > a,
+.nav-tabs[role="tablist"] > li.active > a:focus,
+.nav-tabs[role="tablist"] > li.active > a:hover {
+     background-color: $body-bg;
+     color: $text-color;
+ }
+
+
+// ┌───────────┐
+// │ Nav Pills │
+// └───────────┘
+
+.nav-pills[role="tablist"] > li > a {
+  color: $link-color;
+  border-bottom: 2px solid $body-bg;
+  outline: none;
+  &:hover {
+    background-color: $body-bg;
+    color: $link-color;
+    border-bottom: 2px solid $link-color;
+  }
+  &:active,
+  &.focus,
+  &:focus {
+    background-color: $white;
+    color: $link-color;
+    border-bottom: 2px solid $link-color;
+    outline: none;
+  }
+}
+
+.nav-pills[role="tablist"] > li.active > a {
+   background-color: $body-bg;
+    color: $text-color;
+    border-bottom: 2px solid $link-color;
+    &:hover {
+     background-color: $body-bg;
+     color: $text-color;
+     border-bottom: 2px solid $link-color;
+    }
+    &:focus,
+    &.focus {
+     background-color: $body-bg;
+     color: $text-color;
+     border-bottom: 2px solid $link-color;
+     outline: none;
+    }
+}
+
+.tab-pane {
+  margin-top: 20px;
+}
+
+
+// ┌────────┐
+// │ Pager  │
+// └────────┘
+
+.pager > li > a {
+  &:hover,
+  &.focus,
+  &:focus {
+  background-color: $link-color;
+  color: $body-bg;
+  }
+}
+
+
+// ┌──────────┐
+// │ Panels   │
+// └──────────┘
+
+ .panel{
+   box-shadow: $calcite-box-shadow;
+   border: none;
+ }
+
+
+// ┌─────────┐
+// │ Popover │
+// └─────────┘
+
+div.popover {
+  padding: 0px;
+  border-radius: $border-radius-base;
+}
+
+
+// ┌─────────┐
+// │ Tables  │
+// └─────────┘
+
+table {
+  color: $table-color;
+}
+
+table.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $calcite-gray-lightest;
+}
+
+table.table-blue {
+  thead tr {
+    background-color: $calcite-blue-core;
+    color: $white;
+  }
+  thead > tr > th,
+  tbody > tr > td {
+    border: $border-stroke;
+    border-color: $calcite-blue-core;
+  }
+}
+
+// ┌──────────┐
+// │ Tooltips │
+// └──────────┘
+
+.tooltip .tooltip-inner {
+  border-bottom-color: $off-black;
+  opacity: $tooltip-opacity;
+  border-radius: 2px;
+}
+
+// ┌───────┐
+// │ Wells │
+// └───────┘
+
+ .well {
+  color: $well-text;
+  border-radius: 3px;
+  box-shadow: $box-shadow-present;
+ }
+
+// ┌───────────────────────────────┐
+// │ Cards - Old Calcite Bootstrap │
+// └───────────────────────────────┘
+
+.cards-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    float: left;
+    padding: 0 13px;
+    list-style: none;
+  }
+
+  .card {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: $white;
+    border: $border-stroke;
+    border-color: $calcite-gray-light;
+    text-align: center;
+    width: 255px;
+    height: 296px;
+
+  img {
+    height: 133px;
+    max-width: 200px;
+  }
+  h6 {
+    font-weight: 500;
+    color: $calcite-gray-darkest;
+    font-size: $font-size-large;
+    margin-top: 30px;
+  }
+}
+
+.card-options {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: $white;
+  opacity: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 172px, transparent 173px, rgba(255, 255, 255, 0) 100%);
+  transition: opacity ease-in-out 400ms;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    }
+    a {
+      margin-top: 25%;
+    }
+  }
+}
+
+// ┌─────────────────────┐
+// │ Cards - Calcite Web │
+// └─────────────────────┘
+
+//Note: These cards use flexbox, which is unsupported by IE10 and limited support for IE11.
+.calcite-web {
+
+  .card-base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  background: $white;
+  box-shadow: $calcite-box-shadow;
+  }
+
+  .card-image-wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    -webkit-box-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
+  .card-image {
+    width: 100%;
+    display: block;
+  }
+
+  .card-image-caption {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    font-size: $thumbnail-caption-size;
+    padding: $thumbnail-caption-padding;
+    color: $thumbnail-caption-color;
+    background: $thumbnail-caption-overlay;
+  }
+
+  .card-last {
+    margin-bottom: auto;
+  }
+
+  .card-content {
+    padding: 1.429rem; //20px on 14px base font
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    word-wrap: break-word;
+  }
+
+  .card-shaped {
+    box-shadow: none;
+    background: transparent;
+
+    .card-content {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+      padding-top: 4rem;
+    }
+    .card-image-wrap {
+      margin-bottom: -3rem;
+      padding: 0 1.25rem;
+      box-sizing: border-box;
+    }
+  }
+
+  .card-wide {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    .card-content {
+      display: block;
+      -webkit-box-flex: 1 1 75%;
+      -ms-flex: 1 1 75%;
+      flex: 1 1 75%;
+    }
+  }
+
+  .card-wide-image-wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .card-wide-image {
+    width: auto;
+    min-width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    display: block;
+    position: absolute;
+    }
+
+    .card-bar-blue-lightest {
+      border-top: 3px solid $calcite-blue-lightest;
+    }
+
+    .card-bar-blue-lighter {
+      border-top: 3px solid $calcite-blue-lighter;
+    }
+
+    .card-bar-blue-light {
+      border-top: 3px solid $calcite-blue-light;
+    }
+
+    .card-bar-blue-core {
+      border-top: 3px solid $calcite-blue-core;
+    }
+
+    .card-bar-blue-darl {
+      border-top: 3px solid $calcite-blue-dark;
+    }
+
+    .card-bar-green-light {
+      border-top: 3px solid $calcite-green-light;
+    }
+
+    .card-bar-green-core {
+      border-top: 3px solid $calcite-green-core;
+    }
+
+    .card-bar-green-dark {
+      border-top: 3px solid $calcite-green-dark;
+    }
+
+    .card-bar-red-light {
+      border-top: 3px solid $calcite-red-light;
+    }
+
+    .card-bar-red-core {
+      border-top: 3px solid $calcite-red-core;
+    }
+
+    .card-bar-red-dark {
+      border-top: 3px solid $calcite-red-dark;
+    }
+
+    .card-bar-orange-light {
+      border-top: 3px solid $calcite-orange-light;
+    }
+
+    .card-bar-orange-core {
+      border-top: 3px solid $calcite-orange-core;
+    }
+
+    .card-bar-orange-dark {
+      border-top: 3px solid $calcite-orange-dark;
+    }
+
+    .card-bar-yellow-light {
+      border-top: 3px solid $calcite-yellow-light;
+    }
+
+    .card-bar-yellow-core {
+      border-top: 3px solid $calcite-yellow-core;
+    }
+
+    .card-bar-yellow-dark {
+      border-top: 3px solid $calcite-yellow-dark;
+    }
+
+    .card-bar-purple-light {
+      border-top: 3px solid $calcite-purple-light;
+    }
+
+    .card-bar-purple-core {
+      border-top: 3px solid $calcite-purple-core;
+    }
+
+    .card-bar-purple-dark {
+      border-top: 3px solid $calcite-purple-dark;
+    }
+
+    .card-bar-brown-light {
+      border-top: 3px solid $calcite-brown-light;
+    }
+
+    .card-bar-brown-core {
+      border-top: 3px solid $calcite-brown-core;
+    }
+
+    .card-bar-brown-dark {
+      border-top: 3px solid $calcite-brown-core;
+    }
+}

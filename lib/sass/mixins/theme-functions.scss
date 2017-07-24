@@ -1,0 +1,63 @@
+
+$white:                  #fff !default;
+$black:                  #000 !default;
+$link-color:             #0079c1 !default;
+
+// ┌────────────────────────┐
+// │ Header Color Function  │
+// └────────────────────────┘
+
+ @function setTextColor($color) {
+   @if (lightness($color) > 63) {
+     @return $black; // Lighter background, return dark color
+   }
+   @else {
+     @return $white; // Darker background, return light color
+   }
+ }
+
+ @function setBackgroundColor($color) {
+   @if (lightness($color) > 63) {
+     @return #222222; // Lighter Text, return dark color
+   } @else {
+     @return #f0f0f0; // Darker Text, return light color
+   }
+ }
+
+// ┌─────────────────────────┐
+// │ Btn-Primary Text Color  │
+// └─────────────────────────┘
+
+ @function setPrimaryBtnTextColor($color) {
+   @if (lightness($color) > 63) {
+     @return $black; // Light button bg, return dark color
+   } @else {
+     @return $white; // Dark button bg, return light color
+   }
+ }
+
+// ┌─────────────────────────────────┐
+// │ Search Input Place Holder Text  │
+// └─────────────────────────────────┘
+
+
+ @function setPlaceholderTextColor($color) {
+   @if (lightness($color) > 63) {
+     @return $black; // Light input bg, return dark color
+   } @else {
+     @return $white; // Dark input bg, return light color
+   }
+ }
+
+// ┌────────────────────────┐
+// │ Table Row Hover Color  │
+// └────────────────────────┘
+
+ @function setTableRowHover($color) {
+   @if (lightness($color) > 63) {
+     @return darken($link-color, 30%); // Light table text, return dark color
+   }
+   @else {
+     @return lighten($link-color, 30%); // Dark table text, return light color
+   }
+ }

@@ -1,0 +1,145 @@
+/*
+
+SCSS Color Methods for Accessibility
+================================================================================
+
+Adjust given colors to ensure that those color combination provide sufficient
+contrast.
+
+@version 0.1
+@link http://eye48.com/go/scsscontrast
+@license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License (LGPL)
+@author Michael Haschke, http://michael.haschke.biz/
+
+Usage
+--------------------------------------------------------------------------------
+
+Import contrast.scss first, then use method ``color_adjust_contrast_AERT``.
+
+```(scss)
+@import 'libs/contrast';
+
+.my-element {
+    background-color: #eee;
+    color: color_adjust_contrast_AERT(#ccc, #eee); // get grey with good contrast on #eee
+}
+```
+
+How it works
+--------------------------------------------------------------------------------
+
+It tests for sufficent difference on brightness and color of two values. If it
+is not enough contrats regarding test formulas of accessible guidelines then one
+color is adjusted on lightness and saturation.
+
+Methods using calculations from:
+
+* "Techniques For Accessibility Evaluation And Repair Tools (AERT)" working draft,
+  @see http://www.w3.org/TR/AERT#color-contrast
+* TODO: add methods to test with WCAG2 formulas
+
+*/
+
+// -- AERT ----------------------------------------------------------------
+
+@function color_adjust_contrast_AERT(
+                            $color_adjust,
+                            $color_keep,
+                            $lightness_change_value:1,
+                            $saturation_change_value:1,
+                            $brightness_min: 75,
+                            $difference_min: 500)
+{
+
+    @if (color_test_contrast_AERT($color_adjust, $color_keep, $brightness_min, $difference_min) == true)
+    {
+        @return $color_adjust;
+    }
+
+    $color_save: $color_adjust;
+    $S: saturation($color_adjust);
+    $L: lightness($color_adjust);
+
+    $foundresult: false;
+    @while(($foundresult == false) and ($S > 0 or ($L > 0 and $L < 100)))
+    {
+        $color_adjust: desaturate($color_adjust, $saturation_change_value);
+
+        $S: $S - $saturation_change_value;
+        @if (lightness($color_keep) > lightness($color_adjust))
+        {
+             $color_adjust: darken($color_adjust, $lightness_change_value);
+             $L: $L - $lightness_change_value;
+        }
+        @else
+        {
+             $color_adjust: lighten($color_adjust, $lightness_change_value);
+             $L: $L + $lightness_change_value;
+        }
+        $foundresult: color_test_contrast_AERT($color_adjust, $color_keep, $brightness_min, $difference_min);
+    }
+
+    @if ($foundresult == false)
+    {
+        @debug $color_save + " was adjusted to " + $color_adjust + " but this is not enough contrast to " + $color_keep + " (AERT).";
+    }
+
+    @return $color_adjust;
+}
+
+@function color_test_contrast_AERT($color_1, $color_2, $brightness_min: 75, $difference_min: 500)
+{
+    $difference_brightness: math_absolute(color_brightness_AERT($color_1) - color_brightness_AERT($color_2));
+    $difference_color: color_difference_AERT($color_1, $color_2);
+
+    @if (($difference_brightness < $brightness_min) or ($difference_color < $difference_min))
+    {
+        @return false;
+    }
+    @else
+    {
+        @return true;
+    }
+}
+
+@function color_brightness_AERT($color)
+{
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    @return (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+}
+
+@function color_difference_AERT($color1, $color2)
+{
+    $r1: red($color1);
+    $g1: green($color1);
+    $b1: blue($color1);
+
+    $r2: red($color2);
+    $g2: green($color2);
+    $b2: blue($color2);
+
+    @return (math_max($r1, $r2) - math_min($r1, $r2)) + (math_max($g1, $g2) - math_min($g1, $g2)) + (math_max($b1, $b2) - math_min($b1, $b2));
+}
+
+// -- math stuff ----------------------------------------------------------
+
+@function math_max($value1, $value2)
+{
+    @if ($value1 > $value2) { @return $value1; }
+    @return $value2;
+}
+
+@function math_min($value1, $value2)
+{
+    @if ($value1 < $value2) { @return $value1; }
+    @return $value2;
+}
+
+@function math_absolute($value)
+{
+    @if ($value > 0) { @return $value; }
+    @return $value * -1;
+}
