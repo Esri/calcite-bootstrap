@@ -72,23 +72,18 @@ Installing Calcite Bootstrap was designed to be fairly painless. If you have any
 
 ### Install Dependencies
 
-Calcite-Boostrap has these main dependencies.
+Calcite-Boostrap has these main dependencies:
 
-- Xcode Command Line Tools (for Git)
-- Node.js
-- Grunt
-- Bower
-- Sass
+- node.js
+- gulp
 
 1. Open Terminal (or your favorite command line tool. For OSX, I recommend iTerm) and check to see if you have Git installed just by entering `$ git`. You should see a list of commands for git if it is. If Git is not installed, OSX will automatically prompt you to install the XCode Command Line Developers Tools. Follow the prompts to complete the install.
 2. Visit [nodejs.org](http://nodejs.org/) to install Node. Check the install by entering `$ node -v` in Terminal
-3. Install Grunt by entering `$ npm install -g grunt-cli` in Terminal.
-4. Install Bower by entering `$ npm install -g bower` in Terminal.
-5. Install SASS by entering `$ gem install sass` in Terminal.
+3. Install Grunt by entering `$ npm install -g gulp` in Terminal.
 
 If you run into errors during the installs, Mac Users my want to try using `sudo`. For example:
 
-`$ sudo npm install -g grunt-cli` or `$ sudo gem install sass`
+`$ sudo npm install -g gulp`
 
 ### Fork the Repository
 
@@ -101,11 +96,10 @@ All the code for Calcite Bootstrap lives [on GitHub](https://github.com/Esri/cal
 ### Setting up the Repository
 
 1. Install npm modules: `$ npm install`
-2. Install bower components: `$ bower install`
 
 Again, if you run into errors during, Mac Users my want to try using `sudo`.
 
-When the installs complete run `$ grunt` to start the application. Open a new browser and navigate to `http://localhost:8888`.
+When the installs complete run `$ gulp serve` to start the application. Open a new browser and navigate to `http://localhost:9000`.
 
 ### Git Remote
 You should also add `Esri/calcite-bootstrap` as a remote at this point. We generally call this remote branch 'upstream':
@@ -124,43 +118,8 @@ upstream	https://github.com/Esri/calcite-bootstrap.git (fetch)
 upstream	https://github.com/Esri/calcite-bootstrap.git (push)
 ```
 
-## Troubleshooting
 
-When running `$ bower install` if you get an error stating `unable to connect to gihub.com` you will need to run the following command: `git config --global url."https://".insteadOf git://`
 
-If the above doesn't work, try manually modifying the `.git-config` file under your user directory (note: it is a hidden file).
-
-```
-[url "https://"]
-	insteadOf = git://
-```
-[link to stackoverflow](http://stackoverflow.com/questions/27417175/bower-install-libraries-issues)
-
-You might also want to try installing `sudo npm install -g n` and `sudo npm install -g nvm`
-
-## Development
-
-To run a development environment, just type `$ grunt`. You should have a copy of the documentation site live at [localhost:8888](http://localhost:8888).
-
-### Common Tasks
-
-- `$ grunt` - [default] builds and then serves up local environment at localhost:8888 (includes watch for updated files)
-- `$ grunt serve` - serves local environment at localhost:8888 (no build)
-- `$ grunt build` - builds local environment only (no localhost)
-- `$ grunt release` - creates `calcite-bootstrap.zip` file for release in root directory
-- `$ grunt publish` - publishes new release candidate to Amazon S3 (requires credentials)
-
-## Doing the git dance
-
-Please use the practice of creating a new branch for the the task you are working on
-
-`$ git checkout -b my-new-feature`
-
-Once you are ready to commit, please ensure you have added your changes to CHANGELOG.md, and then push the changes to your fork.
-
-`$ git push origin my-new-feature`
-
-Then go to the main repo page and click the button to create a Pull Request.
 
 ### Releasing to NPM
 To prepare a release, you need an NPM account (npmjs.org), and need to be running on a mac or linux.

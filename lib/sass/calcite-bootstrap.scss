@@ -6,7 +6,6 @@ $icon-font-path: '../fonts/';
 @import 'mixins/contrast';
 
 
-
 //============================
 // Flags for Hub used in calcite-bootstrap-expansion
 //============================
@@ -88,8 +87,3 @@ $flags-umbrella:false;
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
-
-//============================
-// Calcite-Bootstrap
-//============================
-//@import "calcite-components/cards";
