@@ -1,0 +1,142 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/dbouwman/.nvm/versions/node/v6.3.0/bin/node',
+1 verbose cli   '/Users/dbouwman/.nvm/versions/node/v6.3.0/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   'next' ]
+2 info using npm@3.10.3
+3 info using node@v6.3.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/dbouwman/dev/calcite-bootstrap',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/dbouwman/.npm correctMkdir not in flight; initializing
+10 info lifecycle calcite-bootstrap@0.4.0-alpha.1~prepublish: calcite-bootstrap@0.4.0-alpha.1
+11 silly lifecycle calcite-bootstrap@0.4.0-alpha.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package.tgz',
+12 verbose tar pack   '/Users/dbouwman/dev/calcite-bootstrap' ]
+13 verbose tarball /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package.tgz
+14 verbose folder /Users/dbouwman/dev/calcite-bootstrap
+15 verbose addLocalTarball adding from inside cache /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package.tgz
+16 verbose correctMkdir /Users/dbouwman/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd calcite-bootstrap@0.4.0-alpha.1
+18 verbose afterAdd /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/dbouwman/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package/package.json written
+21 silly publish { name: 'calcite-bootstrap',
+21 silly publish   version: '0.4.0-alpha.1',
+21 silly publish   description: 'Calcite Theme for Bootstrap 3.x',
+21 silly publish   scripts:
+21 silly publish    { start: 'watch-run -p \'lib/sass/**/*.scss\' npm run build-css',
+21 silly publish      'build-css': 'node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss dist/css/calcite-bootstrap.css',
+21 silly publish      'postbuild-css': 'node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss | node_modules/.bin/cleancss -o dist/css/calcite-bootstrap.min.css',
+21 silly publish      build: 'npm run build-css && cp -r lib/sass dist/sass && cp -r ./node_modules/bootstrap-sass/assets/fonts/bootstrap dist/fonts' },
+21 silly publish   keywords: [ 'bootstrap', 'calcite', 'esri', 'arcgis' ],
+21 silly publish   author:
+21 silly publish    { name: 'Esri DC R&D Center',
+21 silly publish      email: '<dc@esri.com',
+21 silly publish      url: 'http://dc.esri.com/' },
+21 silly publish   contributors:
+21 silly publish    [ { name: 'Klara Schmitt', email: 'kschmitt@esri.com' },
+21 silly publish      { name: 'Dave Bouwman', email: 'dbouwman@esri.com' } ],
+21 silly publish   license: 'Apache-2.0',
+21 silly publish   dependencies: { 'bootstrap-sass': '^3.3.7' },
+21 silly publish   devDependencies:
+21 silly publish    { 'browser-sync': '^2.2.1',
+21 silly publish      'clean-css': '^4.1.7',
+21 silly publish      'node-sass': '^4.5.3',
+21 silly publish      'watch-run': '^1.2.5',
+21 silly publish      del: '^2.2.0',
+21 silly publish      gulp: '^3.9.0',
+21 silly publish      'gulp-autoprefixer': '^3.0.1',
+21 silly publish      'gulp-babel': '^6.1.1',
+21 silly publish      'gulp-cache': '^0.4.2',
+21 silly publish      'gulp-cssnano': '^2.0.0',
+21 silly publish      'gulp-eslint': '^3.0.0',
+21 silly publish      'gulp-filter': '^4.0.0',
+21 silly publish      'gulp-htmlmin': '^3.0.0',
+21 silly publish      'gulp-if': '^2.0.2',
+21 silly publish      'gulp-imagemin': '^3.0.1',
+21 silly publish      'gulp-load-plugins': '^1.2.4',
+21 silly publish      'gulp-plumber': '^1.0.1',
+21 silly publish      'gulp-sass': '^2.0.0',
+21 silly publish      'gulp-size': '^2.1.0',
+21 silly publish      'gulp-sourcemaps': '^2.2.0',
+21 silly publish      'gulp-uglify': '^2.0.0',
+21 silly publish      'gulp-useref': '^3.0.0',
+21 silly publish      'main-bower-files': '^2.5.0',
+21 silly publish      'run-sequence': '^1.2.2',
+21 silly publish      wiredep: '^4.0.0' },
+21 silly publish   readme: '# Calcite Bootstrap\n\n**Calcite Bootstrap** is a custom theme and a custom build system for [Bootstrap](http://getbootstrap.com). The theme is based on **Calcite** - a geo-centric design framework created by ESRI. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.\n\nFor more info about this framework, go to the **[documentation site](http://esri.github.io/calcite-bootstrap/)**\n\n# Using Calcite Bootstrap\n\nThere are two main ways to use Calcite Boostrap:\n- 1, Copying compiled css files into your project; or\n- 2, Installing via a npm and using a SASS build step in your project.\n\n## Bootstrap Javascript Components\nCalcite Bootstrap does not include any javascript components itself - it simply provides a theme for Bootstrap components. If you elect to use any Bootstrap components that require javascript, you will need to include the Bootstrap javascript in your application.\n\nFor applications without a build system, we recommend loading the Bootstrap javascript from the [BootstrapCDN](https://www.bootstrapcdn.com/).\n\nIf you have a build step, and installed calcite-bootstrap via npm, then bootstrap-sass was also installed, and you can include the scripts you need from `node_modules/bootstrap-sass/assets/javascripts/...`\n\n\n## Static Files\n\nThis is probably the easiest way. If you\'re looking to get up and running quickly, just [download the latest release](https://github.com/esri/calcite-bootstrap/releases) and move the zipped files to wherever you keep you assets. Be sure to use [the documentation site](http://esri.github.io/calcite-bootstrap/) and the main [Bootstrap](http://getbootstrap.com) to copy and paste patterns, components, and even a sample html boilerplate.\n\n## NPM\n\nTo install Calcite Bootstrap with npm, type:\n\n```\nnpm install --save-dev calcite-bootstrap\n```\n\nIf you\'re using sass, be sure to add `node_modules/calcite-bootstrap/dist/sass/` to your load path. If you\'re using [`gulp-sass`](https://github.com/dlmanning/gulp-sass) you will add something like this:\n\n```\ngulp.task(\'sass\', function () {\n return gulp.src(\'./sass/**/*.scss\')\n   .pipe(sass({\n     includePaths: [\n      \'./node_modules/bootstrap-sass/assets/stylesheets\',\n      \'./node_modules/calcite-bootstrap/dist/sass/\'\n     ]\n    }).on(\'error\', sass.logError))\n   .pipe(gulp.dest(\'./css\'));\n});\n```\n\nIf you are using [`grunt-sass`](https://github.com/sindresorhus/grunt-sass), you should add it like this:\n\n```\n\'sass\': {\n  options: {\n    includePaths: [\n      \'./node_modules/bootstrap-sass/assets/stylesheets\',\n      \'./node_modules/calcite-bootstrap/dist/sass/\'\n    ]\n  },\n  target: {\n    files: {\n      \'path/to.css\': \'path/to.scss\'\n    }\n  }\n}\n```\n\nThen in your main `.scss` file, you can just require the framework: `@import "calcite-bootstrap";`.\n\n# Contributing to Calcite Bootstrap\n\nInstalling Calcite Bootstrap was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-bootstrap/issues/) and use the label `install issues`.\n\n\n### Install Dependencies\n\nCalcite-Boostrap has these main dependencies:\n\n- node.js\n- gulp\n\n1. Open Terminal (or your favorite command line tool. For OSX, I recommend iTerm) and check to see if you have Git installed just by entering `$ git`. You should see a list of commands for git if it is. If Git is not installed, OSX will automatically prompt you to install the XCode Command Line Developers Tools. Follow the prompts to complete the install.\n2. Visit [nodejs.org](http://nodejs.org/) to install Node. Check the install by entering `$ node -v` in Terminal\n3. Install Grunt by entering `$ npm install -g gulp` in Terminal.\n\nIf you run into errors during the installs, Mac Users my want to try using `sudo`. For example:\n\n`$ sudo npm install -g gulp`\n\n### Fork the Repository\n\nAll the code for Calcite Bootstrap lives [on GitHub](https://github.com/Esri/calcite-bootstrap). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution.\n\n1. Fork the repository so you have your own copy (`$ your-username/calcite-bootstrap`)\n2. Clone the repo locally with `$ git clone https://github.com/your-username/calcite-bootstrap`\n3. Move into the clone repo:  `$ cd calcite-bootstrap`\n\n### Setting up the Repository\n\n1. Install npm modules: `$ npm install`\n\nAgain, if you run into errors during, Mac Users my want to try using `sudo`.\n\nWhen the installs complete run `$ gulp serve` to start the application. Open a new browser and navigate to `http://localhost:9000`.\n\n### Git Remote\nYou should also add `Esri/calcite-bootstrap` as a remote at this point. We generally call this remote branch \'upstream\':\n\n```\n$ git remote add upstream https://github.com/Esri/calcite-bootstrap\n```\n\nCheck your configuration: `$ git remote -v`\n\nThe results should look like:\n```\norigin\thttps://github.com/your-username/calcite-bootstrap.git (fetch)\norigin\thttps://github.com/your-username/calcite-bootstrap.git (push)\nupstream\thttps://github.com/Esri/calcite-bootstrap.git (fetch)\nupstream\thttps://github.com/Esri/calcite-bootstrap.git (push)\n```\n\n\n\n\n### Releasing to NPM\nTo prepare a release, you need an NPM account (npmjs.org), and need to be running on a mac or linux.\n\nMost of the process is automated, but we have left two manual steps to ensure that the actual publishing to NPM is not done accidentally.\n\n1. increment the version number in `package.json` This will usually mean bumping the PATCH number (major.minor.patch). This version number will be used in the TAG that the next step will create @ github.\n1. run `sh bin/release.sh` This will create a branch, build the css, and pushes a release. NOTE: You can only push to the same version once. Re-release on the same version, you must manually destroy the release @ github.\n1. Got to the release @ github [https://github.com/Esri/calcite-bootstrap/releases](https://github.com/Esri/calcite-bootstrap/releases) and copy the url to the tar.gz source code file.\n1. run `npm publish <url to tar.gz file>` - this will push the update to npm.\n\n## Licensing\nCopyright 2015 Esri\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nA copy of the license is available in the repository\'s [license.txt](https://github.com/Esri/calcite-bootstrap/blob/master/license.txt) file.\n\n[](Esri Tags: Web Mapping ArcGIS Design Basemaps Bootstrap Calcite JavaScript Calcite Bootstrap)\n[](Esri Language: CSS)\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'e383c162cb3f1df0beb8876fcaa009f1a0947616',
+21 silly publish   _id: 'calcite-bootstrap@0.4.0-alpha.1',
+21 silly publish   _shasum: '5c2f90d31375e0a5c7af41d060688baba3bb41b4',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name calcite-bootstrap
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'calcite-bootstrap',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'calcite-bootstrap',
+26 silly mapToRegistry   name: 'calcite-bootstrap',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/calcite-bootstrap
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/dbouwman/.npm/calcite-bootstrap/0.4.0-alpha.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/calcite-bootstrap
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 1:31:43 PM
+33 verbose request using bearer token for auth
+34 verbose request id 21dbdeb4285c7ef5
+35 http request PUT https://registry.npmjs.org/calcite-bootstrap
+36 http 403 https://registry.npmjs.org/calcite-bootstrap
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '103',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 24 Jul 2017 19:31:44 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-den6027-DEN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1500924703.197993,VS0,VE904',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/dbouwman/.npm/registry.npmjs.org/calcite-bootstrap on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.4.0-alpha.1." : calcite-bootstrap
+40 verbose stack     at makeError (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/dbouwman/.nvm/versions/node/v6.3.0/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid calcite-bootstrap
+43 verbose cwd /Users/dbouwman/dev/calcite-bootstrap
+44 error Darwin 16.7.0
+45 error argv "/Users/dbouwman/.nvm/versions/node/v6.3.0/bin/node" "/Users/dbouwman/.nvm/versions/node/v6.3.0/bin/npm" "publish" "--tag" "next"
+46 error node v6.3.0
+47 error npm  v3.10.3
+48 error code E403
+49 error "You cannot publish over the previously published version 0.4.0-alpha.1." : calcite-bootstrap
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
