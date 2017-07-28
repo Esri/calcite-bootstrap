@@ -7,7 +7,7 @@ $link-color:             #0079c1 !default;
 // │ Header Color Function  │
 // └────────────────────────┘
 
- @function setTextColor($color) {
+@function setTextColor($color) {
    @if (lightness($color) > 63) {
      @return $black; // Lighter background, return dark color
    }

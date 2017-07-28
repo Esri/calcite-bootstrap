@@ -41,12 +41,9 @@ $footer-text-color:				$off-black !default;
 // │ Forms │
 // └───────┘
 
-$form-bg:						            $off-white !default;
-$border-stroke:					        1px solid !default;
-$input-color-placeholder:       setPlaceholderTextColor($input-bg) !default;
-$input-color-placeholder-home:  setPlaceholderTextColor($body-bg) !default;
-$input-color-placeholder-navbar:setPlaceholderTextColor($navbar-default-bg) !default;
-$input-label:                   $off-black;
+$form-bg:						       $off-white !default;
+$border-stroke:					   1px solid !default;
+$input-label:              $off-black;
 
 // ┌──────────────┐
 // │ Iconography  │
@@ -58,43 +55,28 @@ $icon-font-path: '../assets/fonts/' !default;
 // │ Jumbotron │
 // └───────────┘
 
-$jumbotron-top-margin:			0px !default;
-
-// ┌─────────┐
-// │ Navbar  │
-// └─────────┘
-
-$navbar-link-alignment:     none !default;
-$navbar-link-btm-padding:   auto !default;
-$navbar-link-top-padding:   auto !default;
-$navbar-link-btm-border:    0px !default;
-$navbar-link-top-border:    0px !default;
-
-$profilename-visibility:    inline-block !default;
+$jumbotron-top-margin:			0px !default
 
 // ┌──────────┐
 // │ Sidebar  │
 // └──────────┘
 
-$sidebar-bg-color:            	$body-bg !default;
-$sidebar-shadow:				        $calcite-gray-lighter !default;
+$sidebar-bg-color:          $body-bg !default;
+$sidebar-shadow:				    $calcite-gray-lighter !default;
 
 // ┌──────────┐
 // │ Shadows  │
 // └──────────┘
 
-$box-shadow-color:				$white !default;
-$box-shadow-present:		  none !default;
-$calcite-box-shadow:      0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05) !default;
-
+$box-shadow-color:				  $body-bg !default;
+$box-shadow-present:		    none !default;
+$calcite-box-shadow:        0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05) !default;
 
 // ┌─────────┐
 // │ Tables  │
 // └─────────┘
 
-$table-color:           $off-black !default;
-$row-hover-color:				$calcite-blue-lightest !default;
-$row-color:             $calcite-gray-lightest !default;
+$table-color:               $text-color !default; //text color
 
 // ┌────────────┐
 // │ Typography │
@@ -103,16 +85,9 @@ $row-color:             $calcite-gray-lightest !default;
 $font-size-extra-small: 	floor(($font-size-base * 0.75)) !default; //~10px
 $font-size-extra-large:   ceil(($font-size-base * 1.4)) !default; //~20px
 
-$h1-btm-padding:   		auto !default;
-$h2-btm-padding:   		auto !default;
-$h3-btm-padding:   		auto !default;
-$h1-btm-border:    		0px !default;
-$h2-btm-border:    		0px !default;
-$h3-btm-border:    		0px !default;
-
 // ┌────────┐
 // │ Wells  │
 // └────────┘
 
-$well-text:						$text-color !default;
-$well-border-color:             $calcite-gray-light !default;
+$well-text:						     $text-color !default;
+$well-border-color:        $calcite-gray-light !default;

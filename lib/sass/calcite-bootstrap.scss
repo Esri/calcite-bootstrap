@@ -4,7 +4,8 @@ $icon-font-path: '../fonts/';
 // Import a set of color contrast functions
 //============================
 @import 'mixins/contrast';
-
+@import 'mixins/theme-functions';
+@import 'fonts';
 
 //============================
 // Flags for Hub used in calcite-bootstrap-expansion
@@ -15,19 +16,18 @@ $flags-umbrella:false;
 //============================
 // import a theme...
 //============================
-@import "themes/calcite-bootstrap.scss";
-//@import "themes/org-theme.scss";
+@import "themes/calcite-bootstrap";
 
 //============================
 // apply theme to bootstrap
 //============================
-@import "expansions/bootstrap-defaults.scss";
+@import "expansions/bootstrap-defaults";
 
 //=============================
 // import calcite web expansion
 //=============================
-@import "expansions/calcite-bootstrap-expansion-vars.scss";
-@import "expansions/calcite-bootstrap-expansion.scss";
+@import "expansions/calcite-bootstrap-expansion-vars";
+@import "expansions/calcite-bootstrap-expansion";
 
 //============================
 // Now the bootstrap defaults...
