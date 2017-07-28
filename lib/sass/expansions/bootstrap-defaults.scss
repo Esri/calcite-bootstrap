@@ -17,12 +17,20 @@ $bootstrap-sass-asset-helper: false !default;
 // │ Colors │
 // └────────┘
 
+$white:                  #fff !default;
+$black:                  #000 !default;
+
 $gray-base:              #323232 !default; //esri black
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333 transparent-black
 $gray:                   lighten($gray-base, 33.5%) !default; // #4c4c4c off-black
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777 dark-gray
 $gray-lighter:           lighten($gray-base, 93%) !default; // #ededed lightest-gray
+
+$link-color:             #0079c1 !default; //calcite-blue-core
+$link-hover-color:       darken($link-color, 10%) !default;
+$text-color:             #4c4c4c !default;
+$body-bg:                $white !default;
 
 $brand-primary:          darken($link-color, 8%) !default;
 $brand-success:          #338033 !default; //calcite-green-dark
@@ -35,6 +43,9 @@ $brand-danger:           #DE2900 !default; //calcite-red-core
 // ┌─────────────┐
 // │ Typography  │
 // └─────────────┘
+
+
+$link-hover-decoration:  underline !default;
 
 $font-family-sans-serif:  "Avenir Next W01","Avenir Next",Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
@@ -65,9 +76,6 @@ $headings-font-family:    inherit !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
-
-$link-hover-color:        darken($link-color, 10%) !default;
-$link-hover-decoration:  underline !default;
 
 
 // ┌──────────────┐
@@ -129,11 +137,12 @@ $caret-width-large:         5px !default;
 
 $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default; //condensed table style
-$table-bg:                      $body-bg !default; //table bg
+$table-bg:                      rgba(255,255,255,0.8) !default; //table bg
+$table-color:                   #4c4c4c !default; //table color (*extension var)
 $table-bg-accent:               lighten($gray-light, 30%) !default; //bg for table-striped
-$table-bg-hover:                lighten($gray-light, 30%) !default; //bg for table-hover
+$table-bg-hover:                setTableRowHover($link-color) !default; //hover
 $table-bg-active:               $table-bg-hover !default; //bg for table-hover
-$table-border-color:            $gray-light !default; //table and cell border color
+$table-border-color:            $body-color !default; //table and cell border color
 
 
 // ┌─────────┐
@@ -331,8 +340,8 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-bg:                $brand-primary !default;
-$navbar-default-color:             $link-color !default;
+$navbar-default-bg:                $gray-lighter !default;
+$navbar-default-color:             $gray-darker !default;
 $navbar-default-border:            $gray-lighter !default;
 
 // Navbar links

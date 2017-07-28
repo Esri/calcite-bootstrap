@@ -66,10 +66,11 @@ button.btn-default:active:focus {
   color: $btn-color-hover;
 }
 
-a.btn-default.disabled {
+/*a.btn-default.disabled {
   color: $btn-link-disabled-color;
-}
+}*/
 
+a.btn-default.disabled,
 button.btn-default.disabled {
   border: $border-stroke $btn-link-disabled-color;
   color: $btn-link-disabled-color;
@@ -85,18 +86,12 @@ button.btn-default.disabled.active,
 button.btn-default.disabled:active:focus {
   border: $border-stroke $btn-link-disabled-color;
   color: $btn-link-disabled-color;
+  background-color: $body-bg;
 }
 
 button.btn-link.disabled {
   border: 0px;
   color: $btn-link-disabled-color;
-}
-
-button[disabled].btn-danger,
-button[disabled].btn-danger:hover,
-button[disabled].btn-danger:focus  {
-  border: $calcite-red-light;
-  color: $calcite-red-light;
 }
 
 a.btn-danger:hover,
@@ -111,6 +106,19 @@ button.btn-danger:active:focus {
   border-color: $btn-danger-hover;
   background-color: $btn-danger-hover;
   color: $btn-danger-text-hover;
+}
+
+a.btn-danger.disabled:hover,
+a.btn-danger.disabled:focus,
+a.btn-danger.disabled:active,
+button.btn-danger.disabled:hover,
+button.btn-danger.disabled:focus,
+button.btn-danger.disabled:active,
+button.btn-danger.disabled.active,
+button.btn-danger.disabled:active:focus  {
+  border: $calcite-red-light;
+  color: $calcite-red-light;
+  background-color: $white;
 }
 
 ul.dropdown-menu {

@@ -251,7 +251,7 @@ $btn-danger-color:				       $brand-danger;
 $btn-danger-bg:					         $white;
 $btn-danger-border:				       $brand-danger;
 
-$btn-link-disabled-color:        $calcite-gray-core;
+$btn-link-disabled-color:        $calcite-gray-darker;
 
 // ┌───────────┐
 // │ Carousel  │
@@ -634,11 +634,11 @@ $progress-bar-info-bg:        	$calcite-blue-lighter;
 // │ Table │
 // └───────┘
 
-$table-bg:                      $white;
+$table-bg:                      rgba(255,255,255,1);
 $table-cell-padding:            10px;
 $table-condensed-cell-padding:  5px;
 $table-bg-hover:                $calcite-blue-lightest;
-$table-bg-accent:               $calcite-blue-lightest;
+$table-bg-accent:               $calcite-gray-lightest;
 $table-bg-active:               $table-bg-hover;
 $table-border-color:            $calcite-gray-light;
 
@@ -779,12 +779,3 @@ $grid-float-breakpoint:     $screen-sm-min !default;
 //## Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 */
-
-$header-background: #0f3a14;
-$header-text:       #ffffff;
-$body-background:   #a6b0a6;
-$body-text:         #3a4f33;
-$body-link:         #134b8d;
-$button-background: #ff8d00;
-$button-text:       #ffffff;
-$flags-umbrella:    true;
