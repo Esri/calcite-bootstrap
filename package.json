@@ -1,6 +1,6 @@
 {
   "name": "calcite-bootstrap",
-  "version": "0.4.0-alpha.3",
+  "version": "0.4.0-alpha.4",
   "description": "Calcite Theme for Bootstrap 3.x",
   "scripts": {
     "start": "node_modules/.bin/watch-run -p 'lib/sass/**/*.scss' npm run build-css",

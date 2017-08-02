@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
-## Unreleased
+## 0.4.0-alpha.5
 
 ### Changed
+- removed `@import 'fonts'` from calcite-bootstrap.scss 
 - removed doc generation from this repo
 - simplified build process to use *just* npm scripts
 
