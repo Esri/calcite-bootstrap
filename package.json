@@ -1,12 +1,13 @@
 {
   "name": "calcite-bootstrap",
-  "version": "0.4.0-alpha.4",
+  "version": "0.4.0-alpha.5",
   "description": "Calcite Theme for Bootstrap 3.x",
   "scripts": {
     "start": "node_modules/.bin/watch-run -p 'lib/sass/**/*.scss' npm run build-css",
     "build-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss dist/css/calcite-bootstrap.css",
     "postbuild-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss | node_modules/.bin/cleancss -o dist/css/calcite-bootstrap.min.css",
-    "build": "npm run build-css && cp -r lib/sass dist/sass && cp -r ./node_modules/bootstrap-sass/assets/fonts/bootstrap dist/fonts"
+    "build": "npm run clean && npm run build-css && cp -r lib/sass dist/sass && cp -r ./node_modules/bootstrap-sass/assets/fonts/bootstrap dist/fonts",
+    "clean": "rm -rf dist"
   },
   "keywords": [
     "bootstrap",
