@@ -4,15 +4,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+# Unreleased
+
+### Changed
+
 ## 0.4.0-alpha.5
 
 ### Changed
-- removed `@import 'fonts'` from calcite-bootstrap.scss 
-- removed doc generation from this repo
-- simplified build process to use *just* npm scripts
 - targeted more disabled states for button groups
 - fixed backward values for active state in pagination
 - corrected color in table for even rows
+
+## 0.4.0-alpha.4
+### Changed
+- actually build the /dist files
+
+## 0.4.0-alpha.3
+
+### Changed
+- removed `@import 'fonts'` from calcite-bootstrap.scss
+- removed doc generation from this repo
+- simplified build process to use *just* npm scripts
+
 
 ## 0.3.4
 ### Fixed
