@@ -8,16 +8,19 @@ For information about how to add entries to this file, please read [Keep a CHANG
 
 ### Changed
 
-## 0.4.0-alpha.5
+## 0.4.0-alpha.6
 
 ### Changed
 - targeted more disabled states for button groups
 - fixed backward values for active state in pagination
 - corrected color in table for even rows
 
-## 0.4.0-alpha.4
+## 0.4.0-alpha.5
+
 ### Changed
 - actually build the /dist files
+
+## 0.4.0-alpha.4 - YANKED
 
 ## 0.4.0-alpha.3
 
