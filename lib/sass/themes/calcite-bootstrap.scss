@@ -485,12 +485,12 @@ $navbar-default-border:            $calcite-gray-lightest;
 $navbar-default-link-color: 	     $off-black;
 $navbar-default-link-hover-color:	 $link-color;
 $navbar-default-link-hover-bg:  	 transparent;
-$navbar-default-link-active-color: $navbar-default-link-hover-color;
+$navbar-default-link-active-color: $link-color;
 $navbar-default-link-active-bg:		 transparent;
 
 //Navbar Brand
 $navbar-default-brand-color:       $navbar-default-link-color;
-$navbar-default-brand-hover-color: $navbar-default-link-color;
+$navbar-default-brand-hover-color: $navbar-default-link-hover-color;
 $navbar-default-brand-hover-bg:    transparent;
 
 //Navbar Toggle
@@ -565,8 +565,8 @@ $pagination-hover-color:        $white;
 $pagination-hover-bg:           $link-color;
 $pagination-hover-border:       none;
 
-$pagination-active-color:       $link-color;
-$pagination-active-bg:          $white;
+$pagination-active-color:       $white;
+$pagination-active-bg:          $link-color;
 $pagination-active-border:      none;
 
 $pagination-disabled-color:     $calcite-blue-lightest;

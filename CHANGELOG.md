@@ -10,6 +10,9 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - removed `@import 'fonts'` from calcite-bootstrap.scss 
 - removed doc generation from this repo
 - simplified build process to use *just* npm scripts
+- targeted more disabled states for button groups
+- fixed backward values for active state in pagination
+- corrected color in table for even rows
 
 ## 0.3.4
 ### Fixed

@@ -76,6 +76,11 @@ button.btn-default.disabled {
   color: $btn-link-disabled-color;
 }
 
+button[disabled],
+button[disabled]:hover,
+button[disabled]:focus,
+button[disabled]:active,
+button[disabled]:active:focus,
 a.btn-default.disabled:hover,
 a.btn-default.disabled:focus,
 a.btn-default.disabled:active,
@@ -84,7 +89,8 @@ button.btn-default.disabled:focus,
 button.btn-default.disabled:active,
 button.btn-default.disabled.active,
 button.btn-default.disabled:active:focus {
-  border: $border-stroke $btn-link-disabled-color;
+  border: $border-stroke;
+  border-color: $btn-link-disabled-color;
   color: $btn-link-disabled-color;
   background-color: $body-bg;
 }
@@ -443,7 +449,6 @@ span.label-warning {
   }
 }
 
-
 // ┌──────────┐
 // │ Panels   │
 // └──────────┘
@@ -470,10 +475,11 @@ div.popover {
 
 table {
   color: $table-color;
+  background-color: $table-bg;
 }
 
-table.table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: $calcite-gray-lightest;
+table.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: $white;
 }
 
 table.table-blue {
