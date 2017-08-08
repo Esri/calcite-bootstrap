@@ -364,28 +364,28 @@ $navbar-default-toggle-icon-bar-bg:$navbar-default-bg !default;
 $navbar-default-toggle-border-color:$navbar-default-color !default;
 
 //=== Inverted navbar
-$navbar-inverse-color:             $white !default;
-$navbar-inverse-bg:                $gray-darker !default;
-$navbar-inverse-border:            lighten($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-bg:                darken($navbar-default-bg, 5%) !default;
+$navbar-inverse-color:             setTextColor($navbar-default-bg) !default;
+$navbar-inverse-border:            lighten($navbar-inverse-bg, 2%) !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:          $white !default;
-$navbar-inverse-link-hover-color:    $white !default;
-$navbar-inverse-link-hover-bg:       lighten($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-active-color:   $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:      lighten($navbar-inverse-bg, 5%) !default;
-$navbar-inverse-link-disabled-color: darken($navbar-inverse-link-color, 25%) !default;
+$navbar-inverse-link-color:          $navbar-inverse-color !default;
+$navbar-inverse-link-hover-color:    $navbar-inverse-color !default;
+$navbar-inverse-link-hover-bg:       transparent !default;
+$navbar-inverse-link-active-color:   $navbar-inverse-color !default;
+$navbar-inverse-link-active-bg:      transparent !default;
+$navbar-inverse-link-disabled-color: $gray-lighter !default;
 $navbar-inverse-link-disabled-bg:    transparent !default;
 
 // Inverted navbar brand label
-$navbar-inverse-brand-color:         $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:   $navbar-inverse-link-hover-color !default;
-$navbar-inverse-brand-hover-bg:      $navbar-inverse-link-hover-bg !default;
+$navbar-inverse-brand-color:         $navbar-inverse-color !default;
+$navbar-inverse-brand-hover-color:   $navbar-inverse-color !default;
+$navbar-inverse-brand-hover-bg:      transparent !default;
 
 // Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:     $navbar-inverse-link-active-bg !default;
-$navbar-inverse-toggle-icon-bar-bg:  $navbar-inverse-bg !default;
-$navbar-inverse-toggle-border-color: $navbar-inverse-link-color !default;
+$navbar-inverse-toggle-hover-bg:     transparent !default;
+$navbar-inverse-toggle-icon-bar-bg:  $navbar-inverse-color !default;
+$navbar-inverse-toggle-border-color: $navbar-inverse-color !default;
 
 // ┌──────────────────────┐
 // │ Navs - Shared Styles │
