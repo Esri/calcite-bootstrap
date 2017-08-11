@@ -88,11 +88,12 @@ $link-color:					   $calcite-blue-core;
 $link-hover-color:			 darken($link-color, 10%);
 $link-hover-decoration:  underline;
 
-// ┌─────────────────┐
-// │ Site Background │
-// └─────────────────┘
+// ┌───────┐
+// │ Site  │
+// └───────┘
 
 $body-bg:              			$white;
+$border-radius-base:        0px;
 
 // ┌─────────────┐
 // │ Typography  │
@@ -136,11 +137,33 @@ $headings-font-weight:  500;
 $headings-line-height:  1.1;
 $headings-color:        $text-color;
 
+// ┌─────────┐
+// │ Alerts  │
+// └─────────┘
+
+$alert-padding:               0.775rem;
+$alert-border-radius:         $border-radius-base;
+$alert-link-font-weight:      normal;
+
+$alert-success-bg:            $state-success-bg;
+$alert-success-text:          $text-color;
+$alert-success-border:        $state-success-border;
+
+$alert-info-bg:               $state-info-bg;
+$alert-info-text:             $text-color;
+$alert-info-border:           $state-info-border;
+
+$alert-warning-bg:            $state-warning-bg;
+$alert-warning-text:          $text-color;
+$alert-warning-border:        $state-warning-border
+
+$alert-danger-bg:             $state-danger-bg;
+$alert-danger-text:           $text-color;
+$alert-danger-border:         $state-danger-border;
+
 // ┌─────────────┐
 // │ Base Radius │
 // └─────────────┘
-
-$border-radius-base:        0px;
 
 $padding-base-vertical:     6px;
 $padding-base-horizontal:   12px;
@@ -479,7 +502,7 @@ $navbar-collapse-max-height:  340px;
 
 $navbar-default-bg: 				       $white;
 $navbar-default-color:          	 $off-black;
-$navbar-default-border:            $calcite-gray-lightest;
+$navbar-default-border:            $off-white;
 
 //Navbar Links
 $navbar-default-link-color: 	     $off-black;
@@ -559,19 +582,19 @@ $nav-tabs-justified-active-link-border-color:	$body-bg;
 
 $pagination-color:              $link-color;
 $pagination-bg:                 transparent;
-$pagination-border:             none;
+$pagination-border:             0px;
 
 $pagination-hover-color:        $white;
 $pagination-hover-bg:           $link-color;
-$pagination-hover-border:       none;
+$pagination-hover-border:       0px;
 
 $pagination-active-color:       $white;
 $pagination-active-bg:          $link-color;
-$pagination-active-border:      none;
+$pagination-active-border:      0px;
 
 $pagination-disabled-color:     $calcite-blue-lightest;
 $pagination-disabled-bg:        transparent;
-$pagination-disabled-border:    none;
+$pagination-disabled-border:    0px;
 
 // ┌────────┐
 // │ Pager  │

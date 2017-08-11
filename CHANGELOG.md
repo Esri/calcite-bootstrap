@@ -7,6 +7,10 @@ For information about how to add entries to this file, please read [Keep a CHANG
 # Unreleased
 
 ### Changed
+- targeted even more specific disabled states on buttons
+- set table row to odd, added border color, thead background color
+- modified input-btn-groups to not take on form validation styling
+- correct pagination border from none to 0px property
 
 ## 0.4.0-alpha.6
 
