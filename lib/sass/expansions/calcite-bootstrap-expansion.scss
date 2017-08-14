@@ -76,6 +76,12 @@ button.btn-default.disabled {
   color: $btn-link-disabled-color;
 }
 
+.btn-primary[disabled],
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus,
 button[disabled],
 button[disabled]:hover,
 button[disabled]:focus,
@@ -208,6 +214,7 @@ border-color: $link-color;
 .has-success {
   label,
   label.control-label,
+  .help-block,
   span.help-block,
   span .glyphicon {
   color: $calcite-green-dark;
@@ -223,6 +230,7 @@ border-color: $link-color;
 .has-warning {
   label,
   label.control-label,
+  .help-block,
   span.help-block,
   span .glyphicon {
   color: #796916;
@@ -237,6 +245,7 @@ border-color: $link-color;
 .has-error {
   label,
   label.control-label,
+  .help-block,
   span.help-block,
   span .glyphicon {
   color: $calcite-red-dark;
@@ -255,6 +264,61 @@ border-color: $link-color;
   box-shadow: none;
   border-right: 0px;
 }
+
+.has-error .input-group-btn .btn-default,
+.has-warning .input-group-btn .btn-default,
+.has-success .input-group-btn .btn-default {
+  color: $btn-default-color;
+  .glyphicon {
+    color: $btn-default-color;
+  }
+}
+
+.has-error .input-group-btn .btn-primary,
+.has-warning .input-group-btn .btn-primary,
+.has-success .input-group-btn .btn-primary{
+  color: $btn-primary-color;
+  .glyphicon {
+    color: $btn-primary-color;
+  }
+}
+
+.has-error .input-group-btn .btn-success,
+.has-warning .input-group-btn .btn-success,
+.has-success .input-group-btn .btn-success {
+  color: $btn-success-color;
+  .glyphicon {
+    color: $btn-success-color;
+  }
+}
+
+.has-error .input-group-btn .btn-warning,
+.has-warning .input-group-btn .btn-warning,
+.has-success .input-group-btn .btn-warning {
+  color: $btn-warning-color;
+  .glyphicon {
+    color: $btn-warning-color;
+  }
+}
+
+.has-error .input-group-btn .btn-error,
+.has-warning .input-group-btn .btn-error,
+.has-success .input-group-btn .btn-error {
+  color: $btn-error-color;
+  .glyphicon {
+    color: $btn-error-color;
+  }
+}
+
+.has-error .input-group-btn .btn-info,
+.has-warning .input-group-btn .btn-info,
+.has-success .input-group-btn .btn-info {
+  color: $btn-info-color;
+  .glyphicon {
+    color: $btn-info-color;
+  }
+}
+
 
 .form-control[disabled] {
   background-color: $calcite-gray-lightest;
@@ -312,9 +376,6 @@ span.label-warning {
       }
     }
   }
-  .modal-body {
-    font-size: $font-size-base;
-  }
 }
 
 
@@ -324,6 +385,8 @@ span.label-warning {
 
 .navbar-default {
   color: $navbar-default-color;
+  border: 0px;
+  border-bottom: 1px solid $navbar-default-border;
    > li {
      > a {
        &:hover,
@@ -449,6 +512,10 @@ span.label-warning {
   }
 }
 
+.pagination > li > a {
+  border: 0px;
+}
+
 // ┌──────────┐
 // │ Panels   │
 // └──────────┘
@@ -476,10 +543,18 @@ div.popover {
 table {
   color: $table-color;
   background-color: $table-bg;
+  thead {
+    background-color: $calcite-gray-lightest;
+  }
 }
 
-table.table-striped > tbody > tr:nth-of-type(even) {
+table.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: $white;
+}
+
+.table,
+.table-responsive {
+    border-color: $calcite-gray-lighter;
 }
 
 table.table-blue {
