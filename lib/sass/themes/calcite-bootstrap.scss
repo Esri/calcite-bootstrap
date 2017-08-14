@@ -137,30 +137,6 @@ $headings-font-weight:  500;
 $headings-line-height:  1.1;
 $headings-color:        $text-color;
 
-// ┌─────────┐
-// │ Alerts  │
-// └─────────┘
-
-$alert-padding:               0.775rem;
-$alert-border-radius:         $border-radius-base;
-$alert-link-font-weight:      normal;
-
-$alert-success-bg:            $state-success-bg;
-$alert-success-text:          $text-color;
-$alert-success-border:        $state-success-border;
-
-$alert-info-bg:               $state-info-bg;
-$alert-info-text:             $text-color;
-$alert-info-border:           $state-info-border;
-
-$alert-warning-bg:            $state-warning-bg;
-$alert-warning-text:          $text-color;
-$alert-warning-border:        $state-warning-border
-
-$alert-danger-bg:             $state-danger-bg;
-$alert-danger-text:           $text-color;
-$alert-danger-border:         $state-danger-border;
-
 // ┌─────────────┐
 // │ Base Radius │
 // └─────────────┘
@@ -283,12 +259,12 @@ $btn-link-disabled-color:        $calcite-gray-darker;
 $carousel-text-shadow:        none;
 
 $carousel-control-color:      $link-color;
-$carousel-control-opacity:    .8;
+$carousel-control-opacity:    0.7;
 $carousel-control-width:      15%;
 $carousel-control-font-size:  $font-size-h3;
 
 $carousel-caption-color:      $link-color;
-$carousel-caption-overlay:	  $white;
+$carousel-caption-overlay:	  rgba(255,255,255,$carousel-control-opacity);
 
 $carousel-indicator-active-bg:  $link-color;
 $carousel-indicator-border-color:$link-color;
@@ -336,6 +312,48 @@ $dropdown-link-disabled-color:   $calcite-gray-lighter;
 
 $dropdown-header-color:          $calcite-gray-lightest;
 $dropdown-caret-color:           $text-color;
+
+// ┌─────────┐
+// │ Errors  │
+// └─────────┘
+
+//Input Validation
+$state-success-text:            $text-color;
+$state-success-bg:              lighten($calcite-green-light, 20%);
+$state-success-border:          $calcite-green-core;
+
+$state-info-text:             	$text-color;
+$state-info-bg:               	lighten($calcite-blue-lighter, 5%);
+$state-info-border:           	$calcite-blue-core;
+
+$state-warning-text:            $text-color;
+$state-warning-bg:              lighten($calcite-yellow-light, 20%);
+$state-warning-border:          $calcite-yellow-dark;
+
+$state-danger-text:             $text-color;
+$state-danger-bg:               lighten($calcite-red-light, 20%);
+$state-danger-border:           $calcite-red-core;
+
+//Alerts
+$alert-padding:               1.1rem;
+$alert-border-radius:         $border-radius-base;
+$alert-link-font-weight:      normal;
+
+$alert-success-bg:            $state-success-bg;
+$alert-success-text:          $text-color;
+$alert-success-border:        $state-success-border;
+
+$alert-info-bg:               $state-info-bg;
+$alert-info-text:             $text-color;
+$alert-info-border:           $state-info-border;
+
+$alert-warning-bg:            $state-warning-bg;
+$alert-warning-text:          $text-color;
+$alert-warning-border:        $state-warning-border;
+
+$alert-danger-bg:             $state-danger-bg;
+$alert-danger-text:           $text-color;
+$alert-danger-border:         $state-danger-border;
 
 // ┌───────┐
 // │ Forms │
@@ -393,26 +411,6 @@ $icon-font-path: if($bootstrap-sass-asset-helper,
 $icon-font-name:                "glyphicons-halflings-regular";
 //## Element ID within SVG icon file.
 $icon-font-svg-id:              "glyphicons_halflingsregular";
-
-// ┌───────────────────┐
-// │ Input Validation  │
-// └───────────────────┘
-
-$state-success-text:            $text-color;
-$state-success-bg:              lighten($calcite-green-light, 20%);
-$state-success-border:          $calcite-green-core;
-
-$state-info-text:             	$text-color;
-$state-info-bg:               	lighten($calcite-blue-lighter, 5%);
-$state-info-border:           	$calcite-blue-core;
-
-$state-warning-text:            $text-color;
-$state-warning-bg:              lighten($calcite-yellow-light, 20%);
-$state-warning-border:          $calcite-yellow-dark;
-
-$state-danger-text:             $text-color;
-$state-danger-bg:               lighten($calcite-red-light, 20%);
-$state-danger-border:           $calcite-red-core;
 
 // ┌───────────┐
 // │ Jumbotron │
@@ -663,7 +661,7 @@ $table-condensed-cell-padding:  5px;
 $table-bg-hover:                $calcite-blue-lightest;
 $table-bg-accent:               $calcite-gray-lightest;
 $table-bg-active:               $table-bg-hover;
-$table-border-color:            $calcite-gray-light;
+$table-border-color:            $calcite-gray-lighter;
 
 // ┌─────────────┐
 // │ Thumbnails  │

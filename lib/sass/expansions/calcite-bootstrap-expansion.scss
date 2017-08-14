@@ -304,9 +304,9 @@ border-color: $link-color;
 .has-error .input-group-btn .btn-error,
 .has-warning .input-group-btn .btn-error,
 .has-success .input-group-btn .btn-error {
-  color: $btn-error-color;
+  color: $btn-danger-color;
   .glyphicon {
-    color: $btn-error-color;
+    color: $btn-danger-color;
   }
 }
 
@@ -383,7 +383,7 @@ span.label-warning {
 // │ Navbar  │
 // └─────────┘
 
-.navbar-default {
+.navbar-default .navbar-nav {
   color: $navbar-default-color;
   border: 0px;
   border-bottom: 1px solid $navbar-default-border;
@@ -399,7 +399,8 @@ span.label-warning {
        }
      }
    }
-   li.active a.active {
+   li.active a,
+   li a.active {
      color: $navbar-default-link-hover-color;
      background-image: linear-gradient(to bottom,transparent 92%, $navbar-default-link-hover-color 93%, $navbar-default-link-hover-color 100%);
      text-decoration: none;
@@ -407,7 +408,7 @@ span.label-warning {
    }
  }
 
- .navbar-inverse {
+ .navbar-inverse .navbar-nav {
    color: $navbar-inverse-link-color;
     > li {
       > a {
@@ -421,7 +422,8 @@ span.label-warning {
         }
       }
     }
-    li.active a.active {
+    li.active a,
+    li a.active {
       color: $navbar-inverse-link-hover-color;
       background-image: linear-gradient(to bottom,transparent 92%, $navbar-inverse-link-hover-color 93%, $navbar-inverse-link-hover-color 100%);
       text-decoration: none;
@@ -552,9 +554,8 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: $white;
 }
 
-.table,
-.table-responsive {
-    border-color: $calcite-gray-lighter;
+table.table > thead > tr > th {
+  border-bottom: 1px solid $calcite-gray-lighter;
 }
 
 table.table-blue {
