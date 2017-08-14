@@ -259,12 +259,12 @@ $btn-link-disabled-color:        $calcite-gray-darker;
 $carousel-text-shadow:        none;
 
 $carousel-control-color:      $link-color;
-$carousel-control-opacity:    .8;
+$carousel-control-opacity:    0.7;
 $carousel-control-width:      15%;
 $carousel-control-font-size:  $font-size-h3;
 
 $carousel-caption-color:      $link-color;
-$carousel-caption-overlay:	  $white;
+$carousel-caption-overlay:	  rgba(255,255,255,$carousel-control-opacity);
 
 $carousel-indicator-active-bg:  $link-color;
 $carousel-indicator-border-color:$link-color;
@@ -335,7 +335,7 @@ $state-danger-bg:               lighten($calcite-red-light, 20%);
 $state-danger-border:           $calcite-red-core;
 
 //Alerts
-$alert-padding:               0.775rem;
+$alert-padding:               1.1rem;
 $alert-border-radius:         $border-radius-base;
 $alert-link-font-weight:      normal;
 
@@ -349,7 +349,7 @@ $alert-info-border:           $state-info-border;
 
 $alert-warning-bg:            $state-warning-bg;
 $alert-warning-text:          $text-color;
-$alert-warning-border:        $state-warning-border
+$alert-warning-border:        $state-warning-border;
 
 $alert-danger-bg:             $state-danger-bg;
 $alert-danger-text:           $text-color;
@@ -661,7 +661,7 @@ $table-condensed-cell-padding:  5px;
 $table-bg-hover:                $calcite-blue-lightest;
 $table-bg-accent:               $calcite-gray-lightest;
 $table-bg-active:               $table-bg-hover;
-$table-border-color:            $calcite-gray-light;
+$table-border-color:            $calcite-gray-lighter;
 
 // ┌─────────────┐
 // │ Thumbnails  │
