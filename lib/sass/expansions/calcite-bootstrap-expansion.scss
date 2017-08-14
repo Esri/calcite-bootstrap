@@ -66,10 +66,6 @@ button.btn-default:active:focus {
   color: $btn-color-hover;
 }
 
-/*a.btn-default.disabled {
-  color: $btn-link-disabled-color;
-}*/
-
 a.btn-default.disabled,
 button.btn-default.disabled {
   border: $border-stroke $btn-link-disabled-color;
@@ -98,7 +94,7 @@ button.btn-default.disabled:active:focus {
   border: $border-stroke;
   border-color: $btn-link-disabled-color;
   color: $btn-link-disabled-color;
-  background-color: $body-bg;
+  background-color: transparent;
 }
 
 button.btn-link.disabled {
@@ -214,7 +210,8 @@ border-color: $link-color;
 .has-success {
   label,
   label.control-label,
-  .help-block,
+  span .help-block,
+  div.help-block,
   span.help-block,
   span .glyphicon {
   color: $calcite-green-dark;
@@ -230,7 +227,8 @@ border-color: $link-color;
 .has-warning {
   label,
   label.control-label,
-  .help-block,
+  span .help-block,
+  div.help-block,
   span.help-block,
   span .glyphicon {
   color: #796916;
@@ -245,7 +243,8 @@ border-color: $link-color;
 .has-error {
   label,
   label.control-label,
-  .help-block,
+  span .help-block,
+  div.help-block,
   span.help-block,
   span .glyphicon {
   color: $calcite-red-dark;

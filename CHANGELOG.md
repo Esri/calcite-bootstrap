@@ -11,6 +11,8 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - set table row to odd, added border color, thead background color
 - modified input-btn-groups to not take on form validation styling
 - correct pagination border from none to 0px property
+- set background on all disabled buttons to be transparent
+- few more classes on .help-block classes to try to get around ember form validation issue with spans
 
 ## 0.4.0-alpha.6
 
