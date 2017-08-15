@@ -605,6 +605,10 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: $white;
 }
 
+table.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: $calcite-gray-lightest;
+}
+
 table.table > thead > tr > th {
   border-bottom: 1px solid $calcite-gray-lighter;
 }
