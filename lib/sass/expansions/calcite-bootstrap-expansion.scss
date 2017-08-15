@@ -71,10 +71,12 @@ button.btn-default.disabled {
   border: $border-stroke $btn-link-disabled-color;
   color: $btn-link-disabled-color;
 }
-
+/*
 .btn-primary[disabled],
 .btn-primary[disabled]:hover,
 .btn-primary[disabled]:focus,
+*/
+
 .btn[disabled],
 .btn[disabled]:hover,
 .btn[disabled]:focus,
@@ -97,7 +99,53 @@ button.btn-default.disabled:active:focus {
   background-color: transparent;
 }
 
-button.btn-link.disabled {
+a.btn-primary.disabled,
+a.btn-primary.disabled:hover,
+a.btn-primary.disabled:focus,
+button.btn-primary.disabled,
+button.btn-primary.disabled:hover,
+button.btn-primary.disabled:focus {
+  border-color: $btn-primary-bg;
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+}
+
+a.btn-success.disabled,
+a.btn-success.disabled:hover,
+a.btn-success.disabled:focus,
+button.btn-success.disabled,
+button.btn-success.disabled:hover,
+button.btn-success.disabled:focus {
+  border-color: $btn-success-bg;
+  background-color: $btn-success-bg;
+  color: $btn-success-color;
+}
+
+a.btn-warning.disabled,
+a.btn-warning.disabled:hover,
+a.btn-warning.disabled:focus,
+button.btn-warning.disabled,
+button.btn-warning.disabled:hover,
+button.btn-warning.disabled:focus {
+  border-color: $btn-warning-bg;
+  background-color: $btn-warning-bg;
+  color: $btn-warning-color;
+}
+
+a.btn-info.disabled,
+a.btn-info.disabled:hover,
+a.btn-info.disabled:focus,
+button.btn-info.disabled,
+button.btn-info.disabled:hover,
+button.btn-info.disabled:focus {
+  border-color: transparent;
+  color: $btn-link-disabled-color;
+  background-color: transparent;
+}
+
+.btn-link.disabled,
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
   border: 0px;
   color: $btn-link-disabled-color;
 }
@@ -123,8 +171,11 @@ button.btn-danger.disabled:hover,
 button.btn-danger.disabled:focus,
 button.btn-danger.disabled:active,
 button.btn-danger.disabled.active,
-button.btn-danger.disabled:active:focus  {
-  border: $calcite-red-light;
+button.btn-danger.disabled:active:focus,
+.btn-danger[disabled],
+.btn-danger[disabled]:hover,
+.btn-danger[disabled]:focus  {
+  border-color: $calcite-red-light;
   color: $calcite-red-light;
   background-color: $white;
 }
@@ -443,6 +494,7 @@ span.label-warning {
     background-color: $btn-primary-hover;
     border-bottom-color: $btn-primary-hover;
     text-decoration: none;
+    box-shadow: 0 2px 0 $white inset;
    }
  }
 
