@@ -433,10 +433,12 @@ span.label-warning {
 // │ Navbar  │
 // └─────────┘
 
+.navbar {
+  border: 0px;
+}
+
 .navbar-default .navbar-nav {
   color: $navbar-default-color;
-  border: 0px;
-  border-bottom: 1px solid $navbar-default-border;
    > li {
      > a {
        &:hover,
@@ -485,6 +487,15 @@ span.label-warning {
 // │ Nav Tabs  │
 // └───────────┘
 
+.secondary-nav {
+  background-color: $calcite-blue-dark;
+  min-height: 40px;
+  padding: 10px 10px 0px 10px;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $calcite-blue-dark;
+}
+
+.nav-tabs[role="navigation"] > li > a,
 .nav-tabs[role="tablist"] > li > a {
   background-color: $btn-primary-bg;
   color: $btn-primary-color;
@@ -498,11 +509,26 @@ span.label-warning {
    }
  }
 
+.nav-tabs[role="navigation"] > li.active > a,
+.nav-tabs[role="navigation"] > li.active > a:focus,
+.nav-tabs[role="navigation"] > li.active > a:hover,
 .nav-tabs[role="tablist"] > li.active > a,
 .nav-tabs[role="tablist"] > li.active > a:focus,
 .nav-tabs[role="tablist"] > li.active > a:hover {
      background-color: $body-bg;
      color: $text-color;
+ }
+
+ .nav-tabs[role="tablist"] {
+   border-bottom: 1px solid $calcite-gray-light;
+ }
+
+ .secondary-nav .nav-tabs {
+   border-bottom: 0px;
+ }
+
+ .tab-pane {
+   margin-top: 20px;
  }
 
 
@@ -546,11 +572,6 @@ span.label-warning {
      outline: none;
     }
 }
-
-.tab-pane {
-  margin-top: 20px;
-}
-
 
 // ┌────────┐
 // │ Pager  │
