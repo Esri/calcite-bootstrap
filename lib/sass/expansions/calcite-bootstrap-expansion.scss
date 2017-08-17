@@ -577,14 +577,24 @@ span.label-warning {
 // │ Pager  │
 // └────────┘
 
-.pager > li > a {
-  &:hover,
-  &.focus,
-  &:focus {
+.pager .next > a,
+.pager .previous > a {
+  color: $link-color;
+}
+
+.pager .next,
+.pager .previous {
+  > a:hover,
+  > a:focus {
   background-color: $link-color;
   color: $body-bg;
-  }
 }
+}
+
+// ┌─────────────┐
+// │ Pagination  │
+// └─────────────┘
+
 
 .pagination > li > a {
   border: 0px;
