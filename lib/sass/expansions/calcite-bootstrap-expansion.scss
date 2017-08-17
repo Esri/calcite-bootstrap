@@ -433,8 +433,11 @@ span.label-warning {
 // │ Navbar  │
 // └─────────┘
 
-.navbar {
+.navbar,
+.navbar-default,
+.navbar-inverse {
   border: 0px;
+  border-style: none;
 }
 
 .navbar-default .navbar-nav {
@@ -452,7 +455,8 @@ span.label-warning {
      }
    }
    li.active a,
-   li a.active {
+   li a.active,
+   li.active a:hover {
      color: $navbar-default-link-hover-color;
      background-image: linear-gradient(to bottom,transparent 92%, $navbar-default-link-hover-color 93%, $navbar-default-link-hover-color 100%);
      text-decoration: none;
@@ -497,13 +501,13 @@ span.label-warning {
 
 .nav-tabs[role="navigation"] > li > a,
 .nav-tabs[role="tablist"] > li > a {
-  background-color: $btn-primary-bg;
-  color: $btn-primary-color;
+  background-color: $link-color;
+  color: $body-bg;
    &:hover,
    &:focus,
    &.focus {
-    background-color: $btn-primary-hover;
-    border-bottom-color: $btn-primary-hover;
+    background-color: $link-hover-color;
+    border-bottom-color: $link-hover-color;
     text-decoration: none;
     box-shadow: 0 2px 0 $white inset;
    }
