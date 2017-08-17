@@ -13,6 +13,7 @@ For information about how to add entries to this file, please read [Keep a CHANG
 - correct pagination border from none to 0px property
 - set background on all disabled buttons to be transparent
 - few more classes on .help-block classes to try to get around ember form validation issue with spans
+- separated out nav-tabs styling vs subnav nav-tabs
 
 ## 0.4.0-alpha.6
 

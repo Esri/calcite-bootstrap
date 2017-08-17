@@ -133,9 +133,9 @@ $line-height-large:     1.3333333; // extra decimals for Win 8.1 Chrome
 $line-height-small:     1.5;
 
 $headings-font-family:  inherit;
-$headings-font-weight:  500;
+$headings-font-weight:  400;
 $headings-line-height:  1.1;
-$headings-color:        $text-color;
+$headings-color:        inherit;
 
 // ┌─────────────┐
 // │ Base Radius │
@@ -263,7 +263,7 @@ $carousel-control-opacity:    0.7;
 $carousel-control-width:      15%;
 $carousel-control-font-size:  $font-size-h3;
 
-$carousel-caption-color:      $link-color;
+$carousel-caption-color:      $off-black;
 $carousel-caption-overlay:	  rgba(255,255,255,$carousel-control-opacity);
 
 $carousel-indicator-active-bg:  $link-color;
@@ -500,7 +500,7 @@ $navbar-collapse-max-height:  340px;
 
 $navbar-default-bg: 				       $white;
 $navbar-default-color:          	 $off-black;
-$navbar-default-border:            $off-white;
+$navbar-default-border:            $white;
 
 //Navbar Links
 $navbar-default-link-color: 	     $off-black;

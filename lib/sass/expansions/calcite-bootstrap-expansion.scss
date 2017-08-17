@@ -71,10 +71,12 @@ button.btn-default.disabled {
   border: $border-stroke $btn-link-disabled-color;
   color: $btn-link-disabled-color;
 }
-
+/*
 .btn-primary[disabled],
 .btn-primary[disabled]:hover,
 .btn-primary[disabled]:focus,
+*/
+
 .btn[disabled],
 .btn[disabled]:hover,
 .btn[disabled]:focus,
@@ -97,7 +99,53 @@ button.btn-default.disabled:active:focus {
   background-color: transparent;
 }
 
-button.btn-link.disabled {
+a.btn-primary.disabled,
+a.btn-primary.disabled:hover,
+a.btn-primary.disabled:focus,
+button.btn-primary.disabled,
+button.btn-primary.disabled:hover,
+button.btn-primary.disabled:focus {
+  border-color: $btn-primary-bg;
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+}
+
+a.btn-success.disabled,
+a.btn-success.disabled:hover,
+a.btn-success.disabled:focus,
+button.btn-success.disabled,
+button.btn-success.disabled:hover,
+button.btn-success.disabled:focus {
+  border-color: $btn-success-bg;
+  background-color: $btn-success-bg;
+  color: $btn-success-color;
+}
+
+a.btn-warning.disabled,
+a.btn-warning.disabled:hover,
+a.btn-warning.disabled:focus,
+button.btn-warning.disabled,
+button.btn-warning.disabled:hover,
+button.btn-warning.disabled:focus {
+  border-color: $btn-warning-bg;
+  background-color: $btn-warning-bg;
+  color: $btn-warning-color;
+}
+
+a.btn-info.disabled,
+a.btn-info.disabled:hover,
+a.btn-info.disabled:focus,
+button.btn-info.disabled,
+button.btn-info.disabled:hover,
+button.btn-info.disabled:focus {
+  border-color: transparent;
+  color: $btn-link-disabled-color;
+  background-color: transparent;
+}
+
+.btn-link.disabled,
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
   border: 0px;
   color: $btn-link-disabled-color;
 }
@@ -123,8 +171,11 @@ button.btn-danger.disabled:hover,
 button.btn-danger.disabled:focus,
 button.btn-danger.disabled:active,
 button.btn-danger.disabled.active,
-button.btn-danger.disabled:active:focus  {
-  border: $calcite-red-light;
+button.btn-danger.disabled:active:focus,
+.btn-danger[disabled],
+.btn-danger[disabled]:hover,
+.btn-danger[disabled]:focus  {
+  border-color: $calcite-red-light;
   color: $calcite-red-light;
   background-color: $white;
 }
@@ -382,10 +433,12 @@ span.label-warning {
 // │ Navbar  │
 // └─────────┘
 
+.navbar {
+  border: 0px;
+}
+
 .navbar-default .navbar-nav {
   color: $navbar-default-color;
-  border: 0px;
-  border-bottom: 1px solid $navbar-default-border;
    > li {
      > a {
        &:hover,
@@ -434,6 +487,15 @@ span.label-warning {
 // │ Nav Tabs  │
 // └───────────┘
 
+.secondary-nav {
+  background-color: $calcite-blue-dark;
+  min-height: 40px;
+  padding: 10px 10px 0px 10px;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $calcite-blue-dark;
+}
+
+.nav-tabs[role="navigation"] > li > a,
 .nav-tabs[role="tablist"] > li > a {
   background-color: $btn-primary-bg;
   color: $btn-primary-color;
@@ -443,14 +505,30 @@ span.label-warning {
     background-color: $btn-primary-hover;
     border-bottom-color: $btn-primary-hover;
     text-decoration: none;
+    box-shadow: 0 2px 0 $white inset;
    }
  }
 
+.nav-tabs[role="navigation"] > li.active > a,
+.nav-tabs[role="navigation"] > li.active > a:focus,
+.nav-tabs[role="navigation"] > li.active > a:hover,
 .nav-tabs[role="tablist"] > li.active > a,
 .nav-tabs[role="tablist"] > li.active > a:focus,
 .nav-tabs[role="tablist"] > li.active > a:hover {
      background-color: $body-bg;
      color: $text-color;
+ }
+
+ .nav-tabs[role="tablist"] {
+   border-bottom: 1px solid $calcite-gray-lighter;
+ }
+
+ .secondary-nav .nav-tabs {
+   border-bottom: 0px;
+ }
+
+ .tab-pane {
+   margin-top: 20px;
  }
 
 
@@ -495,23 +573,28 @@ span.label-warning {
     }
 }
 
-.tab-pane {
-  margin-top: 20px;
-}
-
-
 // ┌────────┐
 // │ Pager  │
 // └────────┘
 
-.pager > li > a {
-  &:hover,
-  &.focus,
-  &:focus {
+.pager .next > a,
+.pager .previous > a {
+  color: $link-color;
+}
+
+.pager .next,
+.pager .previous {
+  > a:hover,
+  > a:focus {
   background-color: $link-color;
   color: $body-bg;
-  }
 }
+}
+
+// ┌─────────────┐
+// │ Pagination  │
+// └─────────────┘
+
 
 .pagination > li > a {
   border: 0px;
@@ -551,6 +634,10 @@ table {
 
 table.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: $white;
+}
+
+table.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: $calcite-gray-lightest;
 }
 
 table.table > thead > tr > th {
