@@ -599,7 +599,6 @@ span.label-warning {
 // │ Pagination  │
 // └─────────────┘
 
-
 .pagination > li > a {
   border: 0px;
 }
@@ -702,6 +701,7 @@ table.table-blue {
     background-color: $white;
     border: $border-stroke;
     border-color: $calcite-gray-light;
+    color: $text-color;
     text-align: center;
     width: 255px;
     height: 296px;
@@ -709,6 +709,10 @@ table.table-blue {
   img {
     height: 133px;
     max-width: 200px;
+  }
+  h3 {
+    font-size: 25px;
+    color: $text-color;
   }
   h6 {
     font-weight: 500;
