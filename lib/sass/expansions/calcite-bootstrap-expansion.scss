@@ -950,4 +950,46 @@ table.table-blue {
     .card-bar-brown-dark {
       border-top: 3px solid $calcite-brown-core;
     }
-}
+
+    .card-profile .card-image-wrap img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .measure-card {
+      .measure-icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+      }
+      .measure-icon span {
+        position: absolute;
+        z-index: 8;
+        top: -40px;
+        left: 5px;
+        width: 100px;
+        height: 100px;
+        line-height: 120px;
+        border-radius: 50%;
+          i {
+            padding-left: 15px;
+            color: rgb(255, 255, 255);
+            z-index: 9;
+            font-size: $font-size-h4;
+          }
+        }
+      .status-failing-bg {
+        background-color: $calcite-red-core;
+      }
+      .status-info-bg {
+        background-color: $calcite-blue-core;
+      }
+      .status-ontrack-bg {
+        background-color: $calcite-green-core;
+      }
+    } //measure card
+}//calcite-web

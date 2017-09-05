@@ -26,24 +26,15 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="#">Calcite-Bootstrap</a>
+           <a class="navbar-brand" href="index.html">Calcite-Bootstrap</a>
          </div>
          <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
-             <li class="active"><a href="#">Home</a></li>
-             <li><a href="#about">About</a></li>
-             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown Example<span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                 <li><a href="#">Action</a></li>
-                 <li><a href="#">Another action</a></li>
-                 <li><a href="#">Something else here</a></li>
-                 <li role="separator" class="divider"></li>
-                 <li class="dropdown-header">Nav header</li>
-                 <li><a href="#">Separated link</a></li>
-                 <li><a href="#">One more separated link</a></li>
-               </ul>
-             </li>
+             <li class="active"><a href="index.html">Home</a></li>
+             <li><a href="about.html">Setup</a></li>
+             <li><a href="colors.html">Colors</a></li>
+             <li><a href="type.html">Typography</a></li>
+             <li><a href="patterns.html">Patterns</a></li>
            </ul>
            <ul class="nav navbar-nav navbar-right">
               <li><a href="https://github.com/Esri/calcite-bootstrap/issues">Issues</a></li>
@@ -54,7 +45,7 @@
        </div>
      </nav>
 
-     <div class="row" style="padding-top: 100px;">
+     <div class="row" style="padding-top: 100px; padding-bottom: 30px;">
        <div class="container theme-showcase" role="main">
          <a name="topofpage"></a>
          <div class="col-xs-12 col-sm-3">
@@ -88,20 +79,16 @@
              <div class="list-group-item"><a href="#popover">Popover</a></div>
              <div class="list-group-item"><a href="#progressbar">Progress Bars</a></div>
              <div class="list-group-item"><a href="#tooltips">Tooltips</a></div>
-             <div class="list-group-item active">Cards</div>
-             <div class="list-group-item"><a href="#card-old">Open Data (Deprecated)</a></div>
-             <div class="list-group-item"><a href="#card-wide">Wide</a></div>
-             <div class="list-group-item"><a href="#card-classic">Classic</a></div>
-             <div class="list-group-item"><a href="#card-classic">Circle Image</a></div>
-             <div class="list-group-item"><a href="#card-classic">Top Border</a></div>
-             <a href="#topofpage" class="btn btn-link" style="bottom: 10px; position: fixed;">Back to Top</a>
+
+             <div class="btn-block" style="bottom: 1px; position: fixed; background-color: white; padding: 10px; z-index: 500;"><a href="#topofpage" class="btn btn-link" >Back to Top</a></div>
            </div>
          </div>
          <div class="col-xs-12 col-sm-9">
              <!-- Main jumbotron for a primary marketing message or call to action -->
-               <div class="jumbotron" style="background: url('http://www.esri.com/~/media/ArcGISProducts/Home/hero-digital-transformation.jpg') no-repeat; color: #fff;">
+               <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.esri.com/~/media/ArcGISProducts/Home/hero-digital-transformation.jpg'); background-position: center top; color: #fff;">
                  <h1>Calcite Bootstrap</h1>
-                 <p>Calcite Bootstrap is a custom theme and a custom build system for <a href="https://getbootstrap.com/docs/3.3/" style="color:white;">Bootstrap 3</a>. The theme is based on <a style="color:white;" href="http://esri.github.io/calcite-web/documentation/">Calcite</a> - a geo-centric design framework created by ESRI. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.</p>
+                 <p>Calcite Bootstrap is a custom theme and a custom build system for <a href="https://getbootstrap.com/docs/3.3/" style="color:white;text-decoration: underline;">Bootstrap 3</a>. The theme is based on <a style="color:white; text-decoration: underline;" href="http://esri.github.io/calcite-web/documentation/">Calcite Web</a> - a web adatation of Calcite, the desktop framework for ArcGIS Pro. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme to their web pages and apps.</p>
+                 <p>To find out more about the breaking changes between v0.3.2 and the latest version, go to <a href="about.html" style="color:white; text-decoration: underline;">About</a>. For instructions on how to run this version, check out <a href="about.html#setup" style="color:white; text-decoration: underline;">Setup</a>.</p>
                </div>
 
                <div class="page-header">
@@ -223,249 +210,6 @@
                <a href="#" class="btn btn-info disabled">Link</a>
                <a href="#" class="btn btn-warning disabled">Link</a>
                <a href="#" class="btn btn-danger disabled">Link</a>
-
-               <div class="page-header">
-                  <h1><a name="cards-old"></a>Cards: v0.3.2 Calcite Bootstrap Style</h1>
-                  <p>(Calcite Bootstrap expansion required.)</p>
-               </div>
-
-               <div class="row">
-                 <ul class="cards-list">
-                   <li class="col-xs-12 col-sm-6 col-md-4">
-                     <div class="card center-block">
-                       <a href="#" target="_blank">
-                       <img alt="Card Thumbnail" src="https://s3.amazonaws.com/geohub-assets/templates/public-engagement/survey-123-th.jpg">
-                       </a>
-                       <div class="card-options">
-                       <a href="#" class="btn btn-default" target="_blank">Take Me There</a>
-                       </div>
-                       <h6>Local Perspective</h6>
-                       <p>Hear from your community.</p>
-                     </div>
-                   </li>
-
-                   <li class="col-xs-12 col-sm-6 col-md-4">
-                     <div class="card center-block">
-                       <a href="#" target="_blank">
-                       <img alt="Card Thumbnail" src="https://s3.amazonaws.com/geohub-assets/templates/public-engagement/survey-123-th.jpg">
-                       </a>
-                       <div class="card-options">
-                       <a href="#" class="btn btn-default" target="_blank">Fill Out Survey</a>
-                       </div>
-                       <h6>Community Watch Survey</h6>
-                       <p>We need you to fill out this survey for districts 7-12.</p>
-                     </div>
-                   </li>
-
-                   <li class="col-xs-12 col-sm-6 col-md-4">
-                     <div class="card center-block">
-                       <a href="#" target="_blank">
-                       <img alt="Card Thumbnail" src="https://s3.amazonaws.com/geohub-assets/templates/public-engagement/survey-123-th.jpg">
-                       </a>
-                       <div class="card-options">
-                       <a href="#" class="btn btn-default" target="_blank">Story Maps</a>
-                       </div>
-                       <h6>Greener, Cleaner Life</h6>
-                       <p>Here are the environmental changes we've made for your local community.</p>
-                     </div>
-                   </li>
-                 </ul>
-               <div class="clearfix"></div>
-               </div><!-- /row -->
-
-               <div class="page-header">
-                 <h1>v0.4.3+ Cards</h1>
-                 <p>Note to Developers: In order to include these, your app must include the Calcite Bootstrap expansion files.</p>
-               </div>
-
-               <div class="row">
-
-                 <div class="page-header">
-                   <h2><a name="card-classic"></a>Wide</h2>
-                 </div>
-
-                  <div class="col-xs-12">
-                     <div class="calcite-web">
-                        <div class="card-base card-wide">
-                           <div class="card-wide-image-wrap">
-                             <img class="card-wide-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg" alt="Bridge Club, 1954">
-                             <div class="card-image-caption">
-                               Florida, January 1954
-                             </div>
-                           </div>
-                           <div class="card-content">
-                             <h4><a href="#">Wide Cards</a></h4>
-                             <p>Wide cards are just like standard cards except that they are displayed in landscape orientation. This is useful in situations where there is too much content to display well in a standard card.</p>
-                             <p>Generally wide cards are meant to be displayed one-up, not grouped.</p>
-                             <span class="glyphicon glyphicon-star"></span>
-                             <span class="glyphicon glyphicon-star"></span>
-                             <span class="glyphicon glyphicon-star"></span>
-                             <span class="glyphicon glyphicon-star-empty"></span>
-                             <span class="glyphicon glyphicon-star-empty"></span>
-                           </div>
-                         </div>
-                      </div>
-                   </div>
-
-                 </div><!-- /row -->
-
-               <div class="row"><div class="col-xs-12"><p style="margin: 20px auto;"></p></div></div>
-
-               <div class="page-header">
-                 <h2><a name="card-classic"></a>Classic</h2>
-               </div>
-
-               <div class="row">
-
-                <div class="col-xs-12 col-sm-4">
-                   <div class="calcite-web">
-                     <div class="card-base">
-                       <div class="card-image-wrap">
-                         <img class="card-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg" alt="Bridge Club, 1954">
-                         <div class="card-image-caption">
-                           Florida, January 1954
-                         </div>
-                       </div>
-                       <div class="card-content">
-                         <h4><a href="#">Card with Image</a></h4>
-                         <p>Cards can have full-bleed images with optional captions.</p>
-                         <a href="" class="btn btn-default">View Examples</a>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-
-                 <div class="col-xs-12 col-sm-4">
-                    <div class="calcite-web">
-                      <div class="card-base">
-                        <div class="card-image-wrap">
-                          <img class="card-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg" alt="Bridge Club, 1954">
-                          <div class="card-image-caption">
-                            Florida, January 1954
-                          </div>
-                        </div>
-                        <div class="card-content">
-                          <h4><a href="#">Card with Image</a></h4>
-                          <p>Cards can single buttons or button groups with inline justified buttons. </p>
-                          <div class="btn-group btn-group-justified" role="group" aria-label="actions">
-                            <a href="#" class="btn btn-default">Details</a><a href="#" class="btn btn-primary">View</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-4">
-                     <div class="calcite-web">
-                       <div class="card-base">
-                         <div class="card-image-wrap">
-                           <img class="card-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg" alt="Bridge Club, 1954">
-                           <div class="card-image-caption">
-                             Florida, January 1954
-                           </div>
-                         </div>
-                         <div class="card-content">
-                           <h4><a href="#">Card with Image</a></h4>
-                           <p>Cards can also have stacked buttons.</p>
-                           <a href="#" class="btn btn-default btn-block">Details</a>
-                           <a href="#" class="btn btn-primary btn-block">View</a>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-
-               </div><!-- /row -->
-
-               <div class="row">
-
-                 <div class="page-header">
-                   <h2><a name="card-circle"></a>Shaped</h2>
-                 </div>
-
-                  <div class="col-xs-12 col-sm-4">
-                     <div class="calcite-web">
-                       <div class="card-base card-shaped">
-                         <div class="card-image-wrap">
-                           <img src="http://esri.github.io/calcite-web/assets/img/docs/bridge-circle.png" class="card-image">
-                         </div>
-                         <div class="card-content">
-                           <p>Another class <code>card-shaped</code> allows for a stylized version of the card meant to work with geometrically-shaped images.</p>
-                           <a href="" class="btn btn-default">View Examples</a>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-
-               </div><!-- /row -->
-
-               <div class="row">
-
-                 <div class="page-header">
-                   <h2><a name="card-top-bar"></a>Top Border</h2>
-                 </div>
-
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="calcite-web">
-                     <div class="card-base card-bar-purple-dark">
-                       <div class="card-content">
-                         <h4>Card with Colored Bar</h4>
-                         <p>Every color can in calcite can be used as a colored "bar" along the top of a card to provide a bit visual punch with <code>.card-bar-{color}</code>.</p>
-                         <a href="" class="btn btn-default">What colors?</a>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-
-               </div><!-- /row -->
-
-               <div class="row">
-
-                 <div class="page-header">
-                   <h2><a name="card-circle-alt"></a>Circle</h2>
-                 </div>
-
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="calcite-web">
-                     <div class="card-base card-profile">
-                        <h3 class="text-center">Profile Card</h3>
-                        <div class="card-image-wrap">
-                          <div class="profile-box">
-                            <img class="card-img-featured rounded-circle" src="https://randomuser.me/api/portraits/men/77.jpg" alt="profile image">
-                          </div>
-                        </div>
-                        <div class="card-content text-center">
-                            <h4>Mike Parker</h4>
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span class="social-share-links">
-                              <a href="#"><i class="glyphicon glyphicon-link"></i> LinkedIn</a>
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-               </div><!-- /row -->
-
-               <div class="row">
-
-                 <div class="page-header">
-                   <h2><a name="card-stat-style"></a>Statistic</h2>
-                 </div>
-
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="calcite-web">
-                     <div class="card-base measure-card">
-                       <div class="measure-icon"><span class="status-ontrack-bg"></span><i class="glyphicon glyphicon-home"></i></div>
-                        <h3>Public Housing Occupancy Rate</h3>
-                        <h4><span class="status-ontrack-text">88.8</span></h4>
-                        <div class="measure-subtext"><i class="glyphicon glyphicon-triangle-top status-ontrack-text"></i> percent occupied</div>
-                        <div class="measure-citation">Source: <a href="#">Davenport Housing Authority</a></div>
-                     </div>
-                   </div>
-                 </div>
-
-               </div><!-- /row -->
 
                <div class="page-header">
                  <h1><a name="carousel"></a>Carousel</h1>
@@ -1136,129 +880,6 @@
       </div><!-- /col -->
     </div><!-- /container -->
   </div><!-- /row -->
-<!--
-       <div class="page-header">
-         <h1>Cards - Gallery</h1>
-       </div>
-
-       <div class="row gallery-card">
-       <div class="col-sm-3 disabled">
-       <div class="item-card panel"><div class="panel-body">
-        <div class="type-icon icon icon-app-category">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 80 80.3" enable-background="new 0 0 80 80.3" xml:space="preserve" aria-label="placeholder">
-          <g id="icons">
-            <path d="M39.8,0.4C17.8,0.4,0,18.2,0,40.2c0,22,17.8,39.8,39.8,39.8s39.8-17.8,39.8-39.8
-              C79.7,18.2,61.8,0.4,39.8,0.4z M39.8,79.3c-21.5,0-39.1-17.5-39.1-39.1S18.3,1.2,39.8,1.2s39.1,17.5,39.1,39.1S61.4,79.3,39.8,79.3
-              z"/>
-            <g id="g10" transform="matrix(1.25,0,0,-1.25,0,245.025)">
-              <g id="g12" transform="scale(0.1,0.1)">
-                <path id="path14" d="M420.9,1660.6l-78,0.1c0,0-16.9,50.7-24.5,73.7c-8.5-26.1-16.3-49.6-24.2-73.9
-                  c-25.2,0-50.1,0-77.5,0c20.2-14.7,63.1-45.5,63.1-45.5s-10.2-29.9-13.8-41.3c-3.2-10.1-6.4-20.2-10.3-32.5
-                  c20,14.6,62.5,47.4,62.5,47.4s35.8-27.7,50.1-38.1c3.7-2.7,7.4-5.3,12.9-9.3c-8.5,26.3-16.2,50.1-23.8,73.8
-                  C378.1,1630,420.9,1660.6,420.9,1660.6z M202.1,1469.9l43.9,134.5l-112.2,83.4c0,0,94.2,0,140.6,0c14.5,44.6,28.9,88.6,44,135.2
-                  c10-30.6,44.2-135.1,44.2-135.1s90.3,0.2,131.5,0.2c2.3,0,4.7,0,9.3,0c-4-3.3-112.4-83.6-112.4-83.6l41.7-134.5l-114.3,82.9
-                  L202.1,1469.9"/>
-              </g>
-            </g>
-          </g>
-          </svg>
-        </div>
-        <h3 class="gallery-card-ellide text-center"></h3>
-        <p></p>
-        <a href="#" target="_blank" class="btn btn-primary btn-block disabled">Explore</a>
-        <span class="source-attribute">Source: <span></span></span>
-        </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-       <div class="item-card panel"><div class="panel-body">
-        <div class="type-icon icon icon-app-category">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 80 80.3" enable-background="new 0 0 80 80.3" xml:space="preserve" aria-label="placeholder">
-          <g id="icons">
-            <path d="M39.8,0.4C17.8,0.4,0,18.2,0,40.2c0,22,17.8,39.8,39.8,39.8s39.8-17.8,39.8-39.8
-              C79.7,18.2,61.8,0.4,39.8,0.4z M39.8,79.3c-21.5,0-39.1-17.5-39.1-39.1S18.3,1.2,39.8,1.2s39.1,17.5,39.1,39.1S61.4,79.3,39.8,79.3
-              z"/>
-            <g id="g10" transform="matrix(1.25,0,0,-1.25,0,245.025)">
-              <g id="g12" transform="scale(0.1,0.1)">
-                <path id="path14" d="M420.9,1660.6l-78,0.1c0,0-16.9,50.7-24.5,73.7c-8.5-26.1-16.3-49.6-24.2-73.9
-                  c-25.2,0-50.1,0-77.5,0c20.2-14.7,63.1-45.5,63.1-45.5s-10.2-29.9-13.8-41.3c-3.2-10.1-6.4-20.2-10.3-32.5
-                  c20,14.6,62.5,47.4,62.5,47.4s35.8-27.7,50.1-38.1c3.7-2.7,7.4-5.3,12.9-9.3c-8.5,26.3-16.2,50.1-23.8,73.8
-                  C378.1,1630,420.9,1660.6,420.9,1660.6z M202.1,1469.9l43.9,134.5l-112.2,83.4c0,0,94.2,0,140.6,0c14.5,44.6,28.9,88.6,44,135.2
-                  c10-30.6,44.2-135.1,44.2-135.1s90.3,0.2,131.5,0.2c2.3,0,4.7,0,9.3,0c-4-3.3-112.4-83.6-112.4-83.6l41.7-134.5l-114.3,82.9
-                  L202.1,1469.9"/>
-              </g>
-            </g>
-          </g>
-          </svg>
-        </div>
-        <h3 class="gallery-card-ellide text-center">2000 Census Blocks (Census/TIGER)</h3>
-        <p>This is the 2009 vintage of the 2000 TIGER/Line Census Blocks.  This vintage enables users to work with Census 2000 data using boundaries as they existed in 2000.  Census Blocks are statistical areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and/or by nonvisible boundaries such a</p>
-        <a href="#" target="_blank" class="btn btn-primary btn-block">Explore</a>
-        <span class="source-attribute">Source: US Census</span>
-        </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-       <div class="item-card panel"><div class="panel-body">
-        <div class="type-icon icon icon-app-category">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 80 80.3" enable-background="new 0 0 80 80.3" xml:space="preserve" aria-label="placeholder">
-          <g id="icons">
-            <path d="M39.8,0.4C17.8,0.4,0,18.2,0,40.2c0,22,17.8,39.8,39.8,39.8s39.8-17.8,39.8-39.8
-              C79.7,18.2,61.8,0.4,39.8,0.4z M39.8,79.3c-21.5,0-39.1-17.5-39.1-39.1S18.3,1.2,39.8,1.2s39.1,17.5,39.1,39.1S61.4,79.3,39.8,79.3
-              z"/>
-            <g id="g10" transform="matrix(1.25,0,0,-1.25,0,245.025)">
-              <g id="g12" transform="scale(0.1,0.1)">
-                <path id="path14" d="M420.9,1660.6l-78,0.1c0,0-16.9,50.7-24.5,73.7c-8.5-26.1-16.3-49.6-24.2-73.9
-                  c-25.2,0-50.1,0-77.5,0c20.2-14.7,63.1-45.5,63.1-45.5s-10.2-29.9-13.8-41.3c-3.2-10.1-6.4-20.2-10.3-32.5
-                  c20,14.6,62.5,47.4,62.5,47.4s35.8-27.7,50.1-38.1c3.7-2.7,7.4-5.3,12.9-9.3c-8.5,26.3-16.2,50.1-23.8,73.8
-                  C378.1,1630,420.9,1660.6,420.9,1660.6z M202.1,1469.9l43.9,134.5l-112.2,83.4c0,0,94.2,0,140.6,0c14.5,44.6,28.9,88.6,44,135.2
-                  c10-30.6,44.2-135.1,44.2-135.1s90.3,0.2,131.5,0.2c2.3,0,4.7,0,9.3,0c-4-3.3-112.4-83.6-112.4-83.6l41.7-134.5l-114.3,82.9
-                  L202.1,1469.9"/>
-              </g>
-            </g>
-          </g>
-          </svg>
-        </div>
-        <h3 class="gallery-card-ellide text-center">2000 Census Blocks (Census/TIGER)</h3>
-        <p>This is the 2009 vintage of the 2000 TIGER/Line Census Blocks.  This vintage enables users to work with Census 2000 data using boundaries as they existed in 2000.  Census Blocks are statistical areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and/or by nonvisible boundaries such a</p>
-        <a href="#" target="_blank" class="btn btn-primary btn-block">Explore</a>
-        <span class="source-attribute">Source: US Census</span>
-        </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-       <div class="item-card panel"><div class="panel-body">
-        <div class="type-icon icon icon-app-category">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 80 80.3" enable-background="new 0 0 80 80.3" xml:space="preserve" aria-label="placeholder">
-          <g id="icons">
-            <path d="M39.8,0.4C17.8,0.4,0,18.2,0,40.2c0,22,17.8,39.8,39.8,39.8s39.8-17.8,39.8-39.8
-              C79.7,18.2,61.8,0.4,39.8,0.4z M39.8,79.3c-21.5,0-39.1-17.5-39.1-39.1S18.3,1.2,39.8,1.2s39.1,17.5,39.1,39.1S61.4,79.3,39.8,79.3
-              z"/>
-            <g id="g10" transform="matrix(1.25,0,0,-1.25,0,245.025)">
-              <g id="g12" transform="scale(0.1,0.1)">
-                <path id="path14" d="M420.9,1660.6l-78,0.1c0,0-16.9,50.7-24.5,73.7c-8.5-26.1-16.3-49.6-24.2-73.9
-                  c-25.2,0-50.1,0-77.5,0c20.2-14.7,63.1-45.5,63.1-45.5s-10.2-29.9-13.8-41.3c-3.2-10.1-6.4-20.2-10.3-32.5
-                  c20,14.6,62.5,47.4,62.5,47.4s35.8-27.7,50.1-38.1c3.7-2.7,7.4-5.3,12.9-9.3c-8.5,26.3-16.2,50.1-23.8,73.8
-                  C378.1,1630,420.9,1660.6,420.9,1660.6z M202.1,1469.9l43.9,134.5l-112.2,83.4c0,0,94.2,0,140.6,0c14.5,44.6,28.9,88.6,44,135.2
-                  c10-30.6,44.2-135.1,44.2-135.1s90.3,0.2,131.5,0.2c2.3,0,4.7,0,9.3,0c-4-3.3-112.4-83.6-112.4-83.6l41.7-134.5l-114.3,82.9
-                  L202.1,1469.9"/>
-              </g>
-            </g>
-          </g>
-          </svg>
-        </div>
-        <h3 class="gallery-card-ellide text-center">2000 Census Blocks (Census/TIGER)</h3>
-        <p>This is the 2009 vintage of the 2000 TIGER/Line Census Blocks.  This vintage enables users to work with Census 2000 data using boundaries as they existed in 2000.  Census Blocks are statistical areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and/or by nonvisible boundaries such a</p>
-        <a href="#" target="_blank" class="btn btn-primary btn-block">Explore</a>
-        <span class="source-attribute">Source: US Census</span>
-        </div>
-        </div>
-      </div>
-    </div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
