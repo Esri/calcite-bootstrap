@@ -10,6 +10,19 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="styles/calcite-bootstrap.min.css">
+    <link rel="stylesheet" href="documentation.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script>
+      /*$(document).ready(function(){
+         $().click(function(e) {
+             e.preventDefault();
+
+             $("a[name]").focus();
+         });
+      });*/
+    </script>
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -18,7 +31,7 @@
 
     <!-- Fixed navbar -->
      <nav class="navbar navbar-default navbar-fixed-top">
-       <div class="container">
+       <div class="container-fluid">
          <div class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
              <span class="sr-only">Toggle navigation</span>
@@ -31,9 +44,9 @@
          <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
              <li class="active"><a href="index.html">Home</a></li>
-             <li><a href="about.html">Setup</a></li>
-             <li><a href="colors.html">Colors</a></li>
-             <li><a href="type.html">Typography</a></li>
+             <li><a href="about.html">Get Started</a></li>
+             <li><a href="colors.html">Color</a></li>
+             <li><a href="type.html">Type</a></li>
              <li><a href="patterns.html">Patterns</a></li>
            </ul>
            <ul class="nav navbar-nav navbar-right">
@@ -45,11 +58,11 @@
        </div>
      </nav>
 
-     <div class="row" style="padding-top: 100px; padding-bottom: 30px;">
-       <div class="container theme-showcase" role="main">
+     <div class="row">
+       <div class="container-fluid theme-showcase" role="main">
          <a name="topofpage"></a>
          <div class="col-xs-12 col-sm-3">
-           <div class="list-group" style="padding-bottom: 30vh;">
+           <div class="list-group">
              <div class="list-group-item active">Navigation</div>
              <div class="list-group-item"><a href="#breadcrumbs">Breadcrumbs</a></div>
              <div class="list-group-item"><a href="#buttons">Buttons</a></div>
@@ -80,20 +93,22 @@
              <div class="list-group-item"><a href="#progressbar">Progress Bars</a></div>
              <div class="list-group-item"><a href="#tooltips">Tooltips</a></div>
 
-             <div class="btn-block" style="bottom: 1px; position: fixed; background-color: white; padding: 10px; z-index: 500;"><a href="#topofpage" class="btn btn-link" >Back to Top</a></div>
+             <div class="btn-block back-to-top"><a href="#topofpage" class="btn btn-link" >Back to Top</a></div>
            </div>
          </div>
          <div class="col-xs-12 col-sm-9">
              <!-- Main jumbotron for a primary marketing message or call to action -->
-               <div class="jumbotron" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://www.esri.com/~/media/ArcGISProducts/Home/hero-digital-transformation.jpg'); background-position: center top; color: #fff;">
+               <div class="jumbotron">
                  <h1>Calcite Bootstrap</h1>
-                 <p>Calcite Bootstrap is a custom theme and a custom build system for <a href="https://getbootstrap.com/docs/3.3/" style="color:white;text-decoration: underline;">Bootstrap 3</a>. The theme is based on <a style="color:white; text-decoration: underline;" href="http://esri.github.io/calcite-web/documentation/">Calcite Web</a> - a web adatation of Calcite, the desktop framework for ArcGIS Pro. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme to their web pages and apps.</p>
-                 <p>To find out more about the breaking changes between v0.3.2 and the latest version, go to <a href="about.html" style="color:white; text-decoration: underline;">About</a>. For instructions on how to run this version, check out <a href="about.html#setup" style="color:white; text-decoration: underline;">Setup</a>.</p>
+                 <p>Calcite Bootstrap is an <a href="https://www.esri.com">ESRI</a> custom theme and a custom build system for <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a>. The theme is based on <a href="http://esri.github.io/calcite-web/documentation/">Calcite Web</a> - a web adatation of Calcite, the desktop framework for ArcGIS Pro. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme to their web pages and apps.</p>
+                 <p>To find out more about how to setup this theme or about the changes between v0.3.2 and the latest version, go to <a href="about.html">Get Started</a>.</p>
                </div>
 
                <div class="page-header">
                  <h1><a name="alerts"></a>Alerts</h1>
                </div>
+
+               <p class="documentation">There are 4 types of alerts:  <code>.alert-info</code>,<code>.alert-success</code>,<code>.alert-warning</code>,<code>.alert-danger</code>.</p>
 
                <div class="alert alert-success" role="alert">
                  <strong>Well done!</strong> You successfully read this important alert message.
@@ -108,9 +123,38 @@
                  <strong>Oh snap!</strong> Change a few things up and try submitting again.
                </div>
 
+               <p class="documentation">Writing an alert looks like:</p>
+<pre><code>&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;<br />&nbsp;&nbsp;&lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.<br />&lt;/div&gt;
+</code></pre>
+
+              <p class="documentation">Panels may also be given alert states; however, a panel alert state only affects the <code>.panel-heading</code> and border-color, so stick with alerts in error handling and form validation.</p>
+
+              <div class="panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Panel title</h3>
+                  </div>
+                  <div class="panel-body">
+                      Panel content
+                    </div>
+              </div>
+
+<pre><code>&lt;div class=&quot;panel panel-success&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;
+      &lt;h3 class=&quot;panel-title&quot;&gt;
+         Panel title
+      &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+         Panel content
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
                <div class="page-header">
                  <h1><a name="badges"></a>Badges</h1>
                </div>
+
+               <p class="documentation">Badges can be added to stand-alone links or used within Navs.</p>
 
                <p>
                  <a href="#">Inbox <span class="badge">42</span></a>
@@ -121,9 +165,14 @@
                  <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
                </ul>
 
+<pre><code>&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+
                <div class="page-header">
                  <h1><a name="breadcrumbs"></a>Breadcrumbs</h1>
                </div>
+
+               <p class="documentation">To achieve breadcrumb styling, use an ordered list with the <code>.breadcrumb</code> class. This will inject the forward slash in between link items as well as bold the active item.</p>
 
                <ol class="breadcrumb">
                 <li><a href="#">Home</a></li>
@@ -131,19 +180,28 @@
                 <li class="active">Data</li>
                </ol>
 
+<pre><code>&lt;ol class=&quot;breadcrumb&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
                <div class="page-header">
                  <h1><a name="blockquote"></a>Blockquote + Lead</h1>
                </div>
 
                <blockquote>
-                 <p>Blockquote dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                 <p>Example using the <code>&lt;blockquote&gt;&lt;/blockquote&gt;</code> tags.</p>
                </blockquote>
 
-               <p class="lead">LEAD - Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+               <p class="lead" style="font-weight: 300;">This is simply a <code>&lt;p&gt;</code> with the <code>.lead</code> class on it.</p>
 
                <div class="page-header">
                  <h1><a name="buttons"></a>Buttons</h1>
                </div>
+
+               <p class="documentation">There are 7 types of buttons.</p>
 
                <p>
                  <button type="button" class="btn btn-lg btn-default">Default</button>
@@ -181,6 +239,60 @@
                  <button type="button" class="btn btn-xs btn-danger">Danger</button>
                  <button type="button" class="btn btn-xs btn-link">Link</button>
                </p>
+               <br />
+               <div class="table-responsive">
+                 <table class="table table-striped">
+                   <thead>
+                     <tr>
+                       <td>Button Class</td>
+                       <td>Style</td>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td><code>.btn-default</code></td>
+                       <td>white button, blue text/border</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-primary</code></td>
+                       <td>blue button, white text</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-info</code></td>
+                       <td>white button, gray text</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-success</code></td>
+                       <td>green button, white text</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-warning</code></td>
+                       <td>yellow button, gray text</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-danger</code></td>
+                       <td>white button, red text/border</td>
+                     </tr>
+                     <tr>
+                       <td><code>.btn-link</code></td>
+                       <td>transparent button, blue text</td>
+                     </tr>
+                  </tbody>
+                </table>
+               </div>
+
+               <p class="documentation">Button size can be changed by including <code>.btn-xs</code>, <code>.btn-sm</code>, and <code>.btn-lg</code>. By default all buttons and inputs use the equivalent of <code>.btn-md/.input-md</code>, although this is not explicitly set.</p>
+<pre><code>  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+</code></pre>
+
+              <p class="documentation">Anything using button classes can be disabled. Both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> will require the <code>.disabled</code> class in order to inherit disabled styling. However, only actual <code>&lt;button&gt;</code> can be disabled from selection with the <code>disabled</code> property. Rather than attempting to disable a link with button classes, one should use the <code>.btn-link</code> class to make their <code>&lt;button&gt;</code> appear to be a text link instead.</p>
+
                <p>
                  <button disabled type="button" class="btn btn-default disabled">Default</button>
                  <button disabled type="button" class="btn btn-primary disabled">Primary</button>
@@ -214,6 +326,9 @@
                <div class="page-header">
                  <h1><a name="carousel"></a>Carousel</h1>
                </div>
+
+               <p class="documentation">For implementation of carousel, refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#carousel">Bootstrap Documentation</a>.</p>
+               <p class="documentation">Carousels require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
 
                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                  <ol class="carousel-indicators">
@@ -249,6 +364,9 @@
                  <h1><a name="dropdown"></a>Dropdown menus</h1>
                </div>
 
+               <p class="documentation">For implementation of dropdown menu, refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#dropdowns">Bootstrap Documentation</a>.</p>
+               <p class="documentation">Dropdown menus require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
+
                <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Dropdown
@@ -266,6 +384,10 @@
                 <div class="page-header">
                   <h1><a name="inputs"></a>Form - Validation States (Labels Visible)</h1>
                 </div>
+
+                <p class="documentation">All related form elements belong inside a <code>.form-group</code>. This may include a <code>&lt;label&gt;</code>,<code>&lt;input&gt;</code>, and a <code>&lt;span&gt;</code> containing errors or help text. By appending <code>.has-error</code>,<code>.has-warning</code>, or <code>.has-success</code> on the <code>.form-group</code>, this will change the input border color to the corresponding warning and any <code>&lt;span&gt;</code> tags containing the <code>.help-block</code> class to the matching text-color of that input border. (When using <code>.help-block</code>, it must be used on <code>&lt;span&gt;</code> tags to inherit error colors. <code>&lt;div&gt;</code> will not work.)</p>
+
+                <p class="documentation">It is important to also use a <code>for</code> attribute on the label with a matching <code>id</code> on the input to associate the <code>&lt;label&gt;</code> with the <code>&lt;input&gt;</code> for assistive technologies. In addition, using <code>aria-describedby</code> with a matching <code>id</code> on any error messages will make sure assistive technologies relate the error to the correct input.</p>
 
                 <div class="form-group has-error">
                   <label class="control-label" for="inputError1">Input with error</label>
@@ -308,16 +430,30 @@
                   </div>
                 </div>
 
+<pre><code>&lt;div class="form-group has-error"&gt;
+  &lt;label class="control-label" for="inputError1"&gt;Input with error&lt;/label&gt;
+  &lt;input type="text" class="form-control" id="inputError1" aria-describedby="helpBlock2"&gt;
+  &lt;span id="helpBlock2" class="help-block"&gt;The best way to write accessible errors. If not doing it this way, errors should be sandwiched between associated label and input.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
                 <div class="page-header">
                     <h1>Form - Validation States (Labels Hidden)</h1>
                 </div>
+
+                <p class="documentation">Labels can be hidden from sighted users, but stay present for assistive technologies by using the <code>.sr-only</code> class on the <code>&lt;label&gt;</code>.</p>
 
                 <div class="form-group">
                   <label class="control-label sr-only" for="thing1">Home Address</label>
                   <input type="text" class="form-control" placeholder="Home Address" id="thing1">
                 </div>
 
-                <p style="margin: 10px auto;"></p>
+<pre><code>&lt;div class="form-group"&gt;
+  &lt;label class="control-label sr-only" for="thing1"&gt;Home Address&lt;/label&gt;
+  &lt;input type="text" class="form-control" placeholder="Home Address" id="thing1"&gt;
+&lt;/div&gt;</code></pre>
+
+                <h2>Alert Symbology</h2>
+                <p class="documentation">To display alert style icons, the <code>.with-addon-alert</code> class must be added to the <code>&lt;input&gt;</code> and the <code>&lt;span&gt;</code> displaying the glyphicon must use the corresponding <code>.input-group-addon</code> and as above there should be an <code>aria-describedby</code> on the <code>&lt;input&gt;</code> that associates it with an <code>id</code> on the <code>&lt;span&gt;</code>.</p>
 
                 <div class="input-group has-error">
                   <label class="control-label sr-only" for="inputError2">Input with error</label>
@@ -325,7 +461,11 @@
                   <span class="input-group-addon" id="error-state-addon"><i class="glyphicon glyphicon-warning-sign" aria-label="error occured"></i></span>
                 </div>
 
-                <p style="margin: 10px auto;"></p>
+<pre><code>&lt;div class="input-group has-error"&gt;
+  &lt;label class="control-label sr-only" for="inputError2"&gt;Input with error&lt;/label&gt;
+  &lt;input type="text" class="form-control with-addon-alert" placeholder="Email Address" id="inputError2" aria-describedby="error-state-addon"&gt;
+  &lt;span class="input-group-addon" id="error-state-addon"&gt;&lt;i class="glyphicon glyphicon-alert" aria-label="error occurred"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
 
                 <div class="input-group has-warning">
                   <label class="control-label sr-only" for="inputWarning2">Input with warning</label>
@@ -333,7 +473,11 @@
                   <span class="input-group-addon" id="warning-state-addon"><i class="glyphicon glyphicon-exclamation-sign" aria-label="non-valid format"></i></span>
                 </div>
 
-                <p style="margin: 10px auto;"></p>
+<pre><code>&lt;div class="input-group has-warning"&gt;
+  &lt;label class="control-label sr-only" for="inputWarning2"&gt;Input with warning&lt;/label&gt;
+  &lt;input type="text" class="form-control with-addon-alert" placeholder="Service Start Date" id="inputWarning2" aria-describedby="warning-state-addon"&gt;
+  &lt;span class="input-group-addon" id="warning-state-addon"&gt;&lt;i class="glyphicon glyphicon-exclamation-sign" aria-label="non-valid format"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
 
                 <div class="input-group has-success">
                   <label class="control-label sr-only" for="inputSuccess2">Input with success</label>
@@ -341,9 +485,18 @@
                   <span class="input-group-addon" id="success-state-addon"><i class="glyphicon glyphicon-ok" aria-label="well done"></i></span>
                 </div>
 
+<pre><code>&lt;div class="input-group has-success"&gt;
+  &lt;label class="control-label sr-only" for="inputSuccess2"&gt;Input with success&lt;/label&gt;
+  &lt;input type="text" placeholder="Pet's Name" class="form-control with-addon-alert" id="inputSuccess2" aria-describedby="success-state-addon"&gt;
+  &lt;span class="input-group-addon" id="success-state-addon"&gt;&lt;i class="glyphicon glyphicon-ok" aria-label="well done"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="labels"></a>Labels</h1>
                 </div>
+
+                <p class="documentation">Labels look very similar to badges, but use a less exaggerated border-radius and use the same colors for default, primary, success, info, warning, and danger as seen on buttons.</p>
+
                 <h1>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -351,7 +504,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h1>
+                </h1><br />
                 <h2>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -359,7 +512,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h2>
+                </h2><br />
                 <h3>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -367,7 +520,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h3>
+                </h3><br />
                 <h4>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -375,7 +528,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h4>
+                </h4><br />
                 <h5>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -383,7 +536,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h5>
+                </h5><br />
                 <h6>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -391,7 +544,7 @@
                   <span class="label label-info">Info</span>
                   <span class="label label-warning">Warning</span>
                   <span class="label label-danger">Danger</span>
-                </h6>
+                </h6><br />
                 <p>
                   <span class="label label-default">Default</span>
                   <span class="label label-primary">Primary</span>
@@ -401,9 +554,15 @@
                   <span class="label label-danger">Danger</span>
                 </p>
 
+<pre><code>&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="list-groups"></a>List groups</h1>
                 </div>
+
+                <p class="documentation">Calcite Web uses a gray stacked sidebar for tertiary navigation. This style can be achieved with a <code>.list-group</code> containing <code>.list-group-items</code> made into links.</p>
+                <p class="documentation">Supplemental classes that may be used within a <code>.list-group-item</code> are <code>.list-group-item-heading</code> and <code>.list-group-item-text</code>.</p>
+
                 <div class="row">
                   <div class="col-sm-4">
                     <ul class="list-group">
@@ -441,19 +600,44 @@
                       </a>
                     </div>
                   </div><!-- /.col-sm-4 -->
-                </div>
+                </div><!-- /row -->
 
                 <div class="page-header">
                   <h1><a name="modal"></a>Modals</h1>
                 </div>
 
-                <blockquote><p><em>Note: Modal styling has been hacked to show example, do not use in code. Refer to <a href="http://getbootstrap.com/javascript/#modals" target="_blank">Boostrap Documentation</a>.</em></p></blockquote>
-                <div class="modal" role="dialog" tabindex="-1" style="position:relative; display: block;"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <h4 class="modal-title">Modal title</h4> </div> <div class="modal-body"> <p>One fine body…</p> </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div>
+                <p class="documentation">Modal structure is very important to achieving a Calcite look. Within <code>.modal-content</code> there must be a <code>.modal-header</code> that contains the <code>.close</code> button and modal titles must use the <code>&lt;h4&gt;</code> element. In addition, the modal needs to use <code>.modal-body</code> for the main content and <code>.modal-footer</code> for any action buttons. If these three inner modal regions are not used, then the padding for entire modal will not be consistent.</p>
+                <p class="documentation">Cancel or Close buttons should use <code>.btn-default</code> and be positioned to the left of the dominant action button, which should use <code>.btn-primary</code>.</p>
+                <p class="documentation">For implementation of modals, refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#modals">Bootstrap Documentation</a>.</p>
 
+                <blockquote><p><em>Note: Modal styling has been hacked to show example.</em></p></blockquote>
+                <div class="modal" role="dialog" tabindex="-1" style="position:relative; display: block;"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <h4 class="modal-title">Modal title</h4> </div> <div class="modal-body"> <p>One fine body…</p> </div> <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save Changes</button> </div> </div> </div> </div>
+
+                <p class="documentation">Modals require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
+
+<pre><code>&lt;div class="modal fade" role="dialog" tabindex="-1"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button aria-label="Close" class="close" data-dismiss="modal" type="button"&gt;&lt;span aria-hidden="true"&gt;x&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button class="btn btn-default" data-dismiss="modal" type="button"&gt;Close&lt;/button&gt; &lt;button class="btn btn-primary" type="button"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+&lt;/div&gt;&lt;!-- /.modal --&gt;</code></pre>
 
                 <div class="page-header">
                   <h1><a name="navbar"></a>Navbars</h1>
                 </div>
+
+                <p class="documentation">To achieve the classic Calcite top navigation style, use Bootstrap's <code>.navbar-default</code> in conjunction with <code>.navbar-fixed</code> or <code>.navbar-static</code> to set whether it should remain affixed to the top of the page or scroll with the page. Using <code>.navbar-inverse</code> rather than <code>.navbar-default</code> will produce a dark gray navbar with white text. Use of the <code>.container</code> class within the navbar will keep navigation from going beyond a fixed width. Use of <code>.container-fluid</code> will produce a fluid-width navbar.</p>
+                <p class="documentation">The collapsing functionality of navbars requires inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
 
                 <nav class="navbar navbar-default">
                   <div class="container">
@@ -521,18 +705,73 @@
                   </div>
                 </nav>
 
+<pre><code>&lt;nav class="navbar navbar-default navbar-fixed-top" role="navigation"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"&gt;&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt;&lt;/button&gt; &lt;a class="navbar-brand" href="#"&gt;Bootstrap theme&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="navbar-collapse collapse" id="navbar"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+        &lt;li class="active"&gt;
+          &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#about"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"&gt;Dropdown &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Action&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Another action&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Something else here&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="divider" role="separator"&gt;&lt;/li&gt;
+            &lt;li class="dropdown-header"&gt;Nav header&lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;Separated link&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#"&gt;One more separated link&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;&lt;!--/.nav-collapse --&gt;
+  &lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/nav&gt;&lt;!-- /.navbar --&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="nav-pills"></a>Nav-Pills</h1>
                 </div>
+
+                <p class="documentation"><code>.nav-pills</code> is recommended for inline tertiary navigation in full-page layouts and can be used in conjunction with <code>.nav-stacked</code> to get a style very similar to the mobile view of <code>.navbar-default</code>.</p>
+
                 <ul class="nav nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#">Home</a></li>
                   <li role="presentation"><a href="#">Profile</a></li>
                   <li role="presentation"><a href="#">Messages</a></li>
                 </ul>
 
+<pre><code>&lt;ul class="nav nav-pills" role="tablist"&gt;
+  &lt;li role="presentation" class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="presentation"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="presentation"&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="subnav"></a>Subnav (Nav-Tabs)</h1>
                 </div>
+
+                <p class="documentation">For secondary navigation, <code>.nav-tabs[role="navigation"]</code> should be used for subnav within the navbar experience and <code>.nav-tabs[role="tablist"]</code> for standard tab interfaces. Wrapping <code>.nav-tabs</code> in <code>.secondary-nav</code> will remove the nav-tab bottom border for a cleaner line.</p>
+
                 <div class="secondary-nav">
                   <ul class="nav nav-tabs" role="navigation">
                     <li role="presentation" class="active"><a href="#">Home</a></li>
@@ -541,9 +780,57 @@
                   </ul>
                 </div>
 
+<pre><code>&lt;div class="secondary-nav"&gt;
+  &lt;ul class="nav nav-tabs" role="navigation"&gt;
+    &lt;li role="presentation" class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="presentation"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="presentation"&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="page-header">
+                  <h1><a name="tabs"></a>Tabs</h1>
+                </div>
+
+                <p class="documentation">Tab panes require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="home">Tab pane content</div>
+                  <div role="tabpanel" class="tab-pane" id="profile">Tab pane content</div>
+                  <div role="tabpanel" class="tab-pane" id="messages">Tab pane content</div>
+                  <div role="tabpanel" class="tab-pane" id="settings">Tab pane content</div>
+                </div>
+
+<pre><code>&lt;!-- Nav tabs --&gt;
+&lt;ul class="nav nav-tabs" role="tablist"&gt;
+  &lt;li role="presentation" class="active"&gt;&lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="presentation"&gt;&lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="presentation"&gt;&lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+  &lt;li role="presentation"&gt;&lt;a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Tab panes --&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;Tab pane content&lt;/div&gt;
+  &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;Tab pane content&lt;/div&gt;
+  &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;Tab pane content&lt;/div&gt;
+  &lt;div role="tabpanel" class="tab-pane" id="settings"&gt;Tab pane content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="pagination"></a>Pagination</h1>
                 </div>
+
+                <p class="documentation">For implementation of pagination, refer to <a href="https://getbootstrap.com/docs/3.3/components/#pagination-default">Bootstrap Documentation</a>.</p>
 
                 <nav>
                    <ul class="pagination">
@@ -597,6 +884,8 @@
                   <h1><a name="pager"></a>Pager</h1>
                 </div>
 
+                <p class="documentation">For implementation the pager, refer to <a href="https://getbootstrap.com/docs/3.3/components/#default-example">Bootstrap Documentation</a>.</p>
+
                 <nav aria-label="...">
                  <ul class="pager">
                    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
@@ -607,6 +896,8 @@
                 <div class="page-header">
                   <h1><a name="panels"></a>Panels</h1>
                 </div>
+
+                <p class="documentation">Panels are composed of three parts: <code>.panel-heading</code>,<code>.panel-body</code>, and <code>.panel-footer</code>; however, unlike modals, a given panel may include only one or all of these parts.</p>
 
                 <div class="row">
                   <div class="col-sm-4">
@@ -665,15 +956,33 @@
                   </div><!-- /.col-sm-4 -->
                 </div>
 
+<pre><code>&lt;div class="panel panel-default"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="panel-body"&gt;
+    Panel content
+  &lt;/div&gt;
+  &lt;div class="panel-footer"&gt;
+    Panel footer
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
                 <div class="page-header">
                   <h1><a name="popover"></a>Popovers</h1>
                 </div>
-                <blockquote><p><em>Note: Popover styling has been hacked to show example, do not use in code. Refer to <a href="http://getbootstrap.com/javascript/#popovers" target="_blank">Boostrap Documentation</a>.</em></p></blockquote>
+
+                <p class="documentation">For implementation of popovers, refer to <a href="http://getbootstrap.com/javascript/#popovers" target="_blank">Boostrap Documentation</a>.</p>
+                <p class="documentation">Popovers require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
+
+                <blockquote><p><em>Note: Popover styling has been hacked to show example, do not use the code of this popover.</em></p></blockquote>
                 <div class="popover" style="display:block; position: relative;"> <div class="arrow"></div> <h3 class="popover-title">Popover top</h3> <div class="popover-content"> <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p> </div> </div>
 
                 <div class="page-header">
                   <h1><a name="progressbar"></a>Progress bars</h1>
                 </div>
+
+                <p class="documentation">For implementation of progress bars, refer to <a href="https://getbootstrap.com/docs/3.3/components/#progress">Bootstrap Documentation</a>.</p>
 
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
@@ -699,29 +1008,16 @@
                   <div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
                 </div>
 
-                <div class="page-header">
-                  <h1><a name="tabs"></a>Tabs</h1>
-                </div>
 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="home">Tab pane content</div>
-                  <div role="tabpanel" class="tab-pane" id="profile">Tab pane content</div>
-                  <div role="tabpanel" class="tab-pane" id="messages">Tab pane content</div>
-                  <div role="tabpanel" class="tab-pane" id="settings">Tab pane content</div>
-                </div>
 
                  <div class="page-header">
                    <h1><a name="tables"></a>Tables</h1>
                  </div>
+
+                 <p class="documentation">All table styling should be handled automatically, except for <code>.blue-table</code> which is an additional class within the <em>calcite-bootstrap-expansion.scss</em> file that will achieve the blue table seen in Calcite Web.</p>
+                 <p class="documentation">Table customizations may occur by overwriting the table variables set by Calcite Bootstrap. For those using SASS, <code>$table-bg-accent</code> controls the alternating background row color. To get a mobile-friendly table, adding a <code>&lt;div class=&quot;table-responsive&quot;&gt;&lt;/div&gt;</code> around a <code>&lt;table&gt;</code> will allow horizontal scrolling of the table on small devices.</p>
+                 <p class="documentation">Alert background colors can also be added to table rows or cells by using <code>.active</code>,<code>.success</code>,<code>.info</code>,<code>.warning</code>,<code>.danger</code>.</p>
+                 <p class="documentation">For implementation of tables, refer to <a href="https://getbootstrap.com/docs/3.3/css/#tables">Bootstrap Documentation</a>.</p>
 
                  <div class="table-responsive">
                      <table class="table">
@@ -866,7 +1162,11 @@
                  <div class="page-header">
                    <h1><a name="tooltips"></a>Tooltips</h1>
                  </div>
-                 <blockquote><p><em>Note: Tooltip styling has been hacked to show example, do not use in code. Refer to <a href="http://getbootstrap.com/javascript/#tooltips" target="_blank">Boostrap Documentation</a>.</em></p></blockquote>
+
+                 <p class="documentation">For implementation of progress bars, refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#tooltips">Bootstrap Documentation</a>.</p>
+                 <p class="documentation">Tooltips require inclusion of Bootstrap 3.3 Javascript: <code>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js</code></p>
+
+                 <blockquote><p><em>Note: Tooltip styling has been hacked to show example, do not use the code of this tooltip.</em></p></blockquote>
                  <div class="tooltip" style="display: inline-block; position: relative; opacity: 1;" role="tooltip"> <div class="tooltip-arrow"></div> <div class="tooltip-inner"> Tooltip on the left </div> </div>
 
 
@@ -876,7 +1176,7 @@
                  <div class="well">
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
                  </div>
-
+                 <p style="padding: 30px;"></p>
       </div><!-- /col -->
     </div><!-- /container -->
   </div><!-- /row -->

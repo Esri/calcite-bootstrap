@@ -10,6 +10,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="styles/calcite-bootstrap.min.css">
+    <link rel="stylesheet" href="documentation.css">
   </head>
   <body>
       <!--[if lt IE 10]>
@@ -18,7 +19,7 @@
 
   <!-- Fixed navbar -->
    <nav class="navbar navbar-default navbar-fixed-top">
-     <div class="container">
+     <div class="container-fluid">
        <div class="navbar-header">
          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
            <span class="sr-only">Toggle navigation</span>
@@ -31,9 +32,9 @@
        <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
            <li><a href="index.html">Home</a></li>
-           <li><a href="about.html">Setup</a></li>
-           <li><a href="colors.html">Colors</a></li>
-           <li class="active"><a href="type.html">Typography</a></li>
+           <li><a href="about.html">Get Started</a></li>
+           <li><a href="colors.html">Color</a></li>
+           <li class="active"><a href="type.html">Type</a></li>
            <li><a href="patterns.html">Patterns</a></li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
@@ -44,22 +45,45 @@
        </div><!--/.nav-collapse -->
      </div>
    </nav>
-   <div class="row" style="padding-top: 100px;">
-     <div class="container theme-showcase" role="main">
+   <div class="row">
+     <div class="container-fluid theme-showcase" role="main">
 
          <div class="col-xs-12">
 
-          <div class="jumbotron" style="background: url('http://www.esri.com/~/media/ArcGISProducts/Home/hero-digital-transformation.jpg') no-repeat; color: #fff;">
-              <h1>Typography</h1>
-          </div>
+          <h1 class="subpage">Type</h1>
 
           <div class="page-header">
             <h2>Font-Family</h2>
           </div>
+          <p class="documentation">The recommended typeface to use with Calcite Bootstrap branding is <a href="http://esri.github.io/calcite-web/documentation/type/#avenir">Avenir Next</a>. However, due to licensing restrictions, the actual font files cannot be included in this theme. For those with access to Calcite Web, the <code>@import</code> for the web urls to Avenir Next can be added to your project. The <code>$font-family-sans-serif</code> variable can also be customized to use other fonts, else it will fall back to <em>Helvetica Neue, Helvetica, Arial, sans-serif</em>.</p>
+          <blockquote>
+<code>$font-family-sans-serif: 		"Avenir Next W01","Avenir Next", Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+<br />$font-family-serif:         "Lucida Grande", "Segoe UI", Arial, sans-serif;
+<br />$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
+<br />$font-family-base:          $font-family-sans-serif;</code>
+          </blockquote>
 
           <div class="page-header">
             <h2>Font Sizes</h2>
           </div>
+          <p class="documentation">Bootstrap configures all font-size variables from a base value. Assuming that the <code>$font-size-base</code> variable is set to <code>14px</code>, here is a reference on approximate sizes for all other text variables.</p>
+          <blockquote>
+<code>$font-size-base:				14px;
+<br />$font-size-small:       ceil(($font-size-base * 0.85)); // ~12px
+<br />$font-size-large:       ceil(($font-size-base * 1.25)); // ~18px
+<br />
+<br />$font-size-h1:					floor(($font-size-base * 2.6));  // ~36px
+<br />$font-size-h2:					floor(($font-size-base * 2.15)); // ~30px
+<br />$font-size-h3:					floor(($font-size-base * 2.0));  // ~28px
+<br />$font-size-h4:					ceil(($font-size-base * 1.7));   // ~24px
+<br />$font-size-h5:					ceil(($font-size-base * 1.55));  // ~22px
+<br />$font-size-h6:          ceil(($font-size-base * 1.14));  // ~16px</code>
+          </blockquote>
+          <p class="documentation">Included in the Calcite Bootstrap expansion are these two additional font-size variables.</p>
+          <blockquote>
+<code>$font-size-extra-small: 	floor(($font-size-base * 0.75)); //~10px
+<br />$font-size-extra-large:   ceil(($font-size-base * 1.4)); //~20px</code>
+          </blockquote>
 
         </div><!-- /col-12 -->
      </div><!-- /container -->

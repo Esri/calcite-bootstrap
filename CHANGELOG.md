@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 For information about how to add entries to this file, please read [Keep a CHANGELOG](http://keepachangelog.com/)
 
+# Unreleased
+
+### Added
+- Documentation pages for Getting Started, Color, Type, Patterns
+
+### Changed
+- Returned tab colors to using link-color vs button-color for more stability in determining text color in unknown situations
+
 # 0.4.3
 ### Changed
 - separated out nav-tabs styling vs subnav nav-tabs

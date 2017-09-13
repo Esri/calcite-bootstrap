@@ -10,6 +10,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="styles/calcite-bootstrap.min.css">
+    <link rel="stylesheet" href="documentation.css">
   </head>
   <body>
       <!--[if lt IE 10]>
@@ -18,7 +19,7 @@
 
   <!-- Fixed navbar -->
    <nav class="navbar navbar-default navbar-fixed-top">
-     <div class="container">
+     <div class="container-fluid">
        <div class="navbar-header">
          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
            <span class="sr-only">Toggle navigation</span>
@@ -31,9 +32,9 @@
        <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
            <li><a href="index.html">Home</a></li>
-           <li><a href="about.html">Setup</a></li>
+           <li><a href="about.html">Get Started</a></li>
            <li><a href="colors.html">Colors</a></li>
-           <li><a href="type.html">Typography</a></li>
+           <li><a href="type.html">Type</a></li>
            <li class="active"><a href="patterns.html">Patterns</a></li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
@@ -44,30 +45,30 @@
        </div><!--/.nav-collapse -->
      </div>
    </nav>
-   <div class="row" style="padding-top: 100px;">
-     <div class="container theme-showcase" role="main">
+   <div class="row">
+     <div class="container-fluid theme-showcase" role="main">
+      <a name="topofpage"></a>
 
          <div class="col-xs-12 col-sm-3">
            <div class="list-group-item active">Cards</div>
            <div class="list-group-item"><a href="#card-old">v0.3.2 Cards</a></div>
            <div class="list-group-item"><a href="#card-wide">Wide</a></div>
            <div class="list-group-item"><a href="#card-classic">Classic</a></div>
-           <div class="list-group-item"><a href="#card-classic">Circle Image</a></div>
-           <div class="list-group-item"><a href="#card-classic">Top Border</a></div>
-           <a href="#topofpage" class="btn btn-link" style="bottom: 10px; position: fixed;">Back to Top</a>
+           <div class="list-group-item"><a href="#card-shaped">Shaped</a></div>
+           <div class="list-group-item"><a href="#card-border">Top Border</a></div>
+           <div class="list-group-item"><a href="#card-profile">Cicle Profile</a></div>
+           <div class="list-group-item"><a href="#card-stat">Stat</a></div>
+           <div class="btn-block back-to-top"><a href="#topofpage" class="btn btn-link">Back to Top</a></div>
         </div><!-- /col-3 -->
 
         <div class="col-xs-12 col-sm-9">
-
-          <div class="jumbotron" style="background: url('http://www.esri.com/~/media/ArcGISProducts/Home/hero-digital-transformation.jpg') no-repeat; color: #fff;">
-              <h1>Patterns</h1>
-              <p>Note to Developers: In order to include these, your app must include the Calcite Bootstrap expansion files.</p>
-          </div>
+          <h1 class="subpage">Patterns</h1>
+          <p class="lead">Note to Developers: In order to include these, your app must include the Calcite Bootstrap expansion files.</p>
 
           <div class="row">
             <div class="col-xs-12">
               <div class="page-header">
-                <h2><a name="card-old"></a>v0.3.2 Style</h2>
+                <h1><a name="card-old"></a>v0.3.2 Style</h1>
                 <p>Note: This style is not mobile-friendly nor keyboard accessible. It can be made accessible by showing a button or wrapping an image in a link provided there is an aria-label that describes the link. <strong>Deprecated.</strong></p>
               </div>
             </div>
@@ -115,12 +116,27 @@
               </li>
             </ul>
           <div class="clearfix"></div>
-          </div><!-- /row -->
+          <div class="col-xs-12">
+<pre><code>&lt;ul class="cards-list"&gt;
+  &lt;li class="col-xs-12 col-sm-6 col-md-4"&gt;
+    &lt;div class="card center-block"&gt;
+      &lt;a href="#" target="_blank"&gt;&lt;img alt="Card Thumbnail" src="https://s3.amazonaws.com/geohub-assets/templates/public-engagement/survey-123-th.jpg"&gt;&lt;/a&gt;
+      &lt;div class="card-options"&gt;
+        &lt;a class="btn btn-default" href="#" target="_blank"&gt;Take Me There&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;h6&gt;Local Perspective&lt;/h6&gt;
+      &lt;p&gt;Hear from your community.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div><!-- col -->
+     </div><!-- /row -->
 
           <div class="row">
             <div class="col-xs-12">
               <div class="page-header">
-                <h2>v0.4.3+ Styles</h2>
+                <h1>v0.4.3+ Styles</h1>
+                <p>The structure to achieve the four types of Calcite cards is displayed below. Critically, the cards must be wrapped in a <code>.calcite-web</code> class either at a container level or around the individual cards themselves.</p>
               </div>
             </div>
           </div>
@@ -129,7 +145,7 @@
 
             <div class="col-xs-12">
               <div class="page-header">
-                <h2><a name="card-classic"></a>Wide</h2>
+                <h2><a name="card-wide"></a>Wide</h2>
               </div>
             </div>
 
@@ -156,7 +172,28 @@
                  </div>
               </div>
 
-            </div><!-- /row -->
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12"&gt;
+&lt;div class="calcite-web"&gt;
+&lt;div class="card-base card-wide"&gt;
+  &lt;div class="card-wide-image-wrap"&gt;
+    &lt;img alt="Bridge Club, 1954" class="card-wide-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg"&gt;
+    &lt;div class="card-image-caption"&gt;
+      Florida, January 1954
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;h4&gt;&lt;a href="#"&gt;Wide Cards&lt;/a&gt;&lt;/h4&gt;
+    &lt;p&gt;Wide cards are just like standard cards except that they are displayed in landscape orientation. This is useful in situations where there is too much content to display well in a standard card.&lt;/p&gt;
+    &lt;p&gt;Generally wide cards are meant to be displayed one-up, not grouped.&lt;/p&gt;&lt;span class="glyphicon glyphicon-star"&gt;&lt;/span&gt; &lt;span class="glyphicon glyphicon-star"&gt;&lt;/span&gt; &lt;span class="glyphicon glyphicon-star"&gt;&lt;/span&gt; &lt;span class="glyphicon glyphicon-star-empty"&gt;&lt;/span&gt; &lt;span class="glyphicon glyphicon-star-empty"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div><!-- /col -->
+        </div><!-- /row -->
 
         <div class="row">
 
@@ -164,9 +201,10 @@
             <div class="page-header">
               <h2><a name="card-classic"></a>Classic</h2>
             </div>
+            <blockquote>For best results and mobile support, use <strong>736x414</strong> px for thumbnails. However, <strong>294x194</strong> px can be used for fixed <code>.col-xs-4</code> cards.</blockquote>
           </div>
 
-           <div class="col-xs-12 col-sm-4">
+           <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base">
                   <div class="card-image-wrap">
@@ -184,7 +222,7 @@
               </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                <div class="calcite-web">
                  <div class="card-base">
                    <div class="card-image-wrap">
@@ -204,7 +242,9 @@
                </div>
              </div>
 
-             <div class="col-xs-12 col-sm-4">
+             <div class="clearfix visible-md-block"></div>
+
+             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="calcite-web">
                   <div class="card-base">
                     <div class="card-image-wrap">
@@ -222,18 +262,42 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="clearfix"></div>
+                <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+&lt;div class="calcite-web"&gt;
+  &lt;div class="card-base"&gt;
+    &lt;div class="card-image-wrap"&gt;
+      &lt;img alt="Bridge Club, 1954" class="card-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge3.jpg"&gt;
+      &lt;div class="card-image-caption"&gt;
+        Florida, January 1954
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-content"&gt;
+      &lt;h4&gt;&lt;a href="#"&gt;Card with Image&lt;/a&gt;&lt;/h4&gt;
+      &lt;p&gt;Cards can single buttons or button groups with inline justified buttons.&lt;/p&gt;
+      &lt;div aria-label="actions" class="btn-group btn-group-justified" role="group"&gt;
+        &lt;a class="btn btn-default" href="#"&gt;Details&lt;/a&gt;&lt;a class="btn btn-primary" href="#"&gt;View&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div><!-- /col -->
           </div><!-- /row -->
+
+
 
           <div class="row">
 
             <div class="col-xs-12">
               <div class="page-header">
-                <h2><a name="card-circle"></a>Shaped</h2>
+                <h2><a name="card-shaped"></a>Shaped</h2>
               </div>
+              <blockquote>Note: This image is a transparent PNG that has been cropped in a circle.</blockquote>
             </div>
 
-               <div class="col-xs-12 col-sm-4">
+               <div class="col-xs-12 col-sm-6 col-md-4">
                   <div class="calcite-web">
                     <div class="card-base card-shaped">
                       <div class="card-image-wrap">
@@ -246,19 +310,33 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="clearfix"></div>
+                <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base card-shaped"&gt;
+      &lt;figure class="card-image-wrap"&gt;
+        &lt;img class="card-image" src="http://esri.github.io/calcite-web/assets/img/docs/bridge-circle.png"&gt;
+      &lt;/figure&gt;
+      &lt;div class="card-content"&gt;
+        &lt;p&gt;Another class &lt;code&gt;card-shaped&lt;/code&gt; allows for a stylized version of the card meant to work with geometrically-shaped images.&lt;/p&gt;&lt;a class="btn btn-default" href=""&gt;View Examples&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
             </div><!-- /row -->
 
           <div class="row">
 
           <div class="col-xs-12">
             <div class="page-header">
-              <h2><a name="card-top-bar"></a>Top Border</h2>
-              <p>To see the list of available preset top border colors, check out the <a href="https://github.com/Esri/calcite-bootstrap/blob/master/lib/sass/expansions/calcite-bootstrap-expansion.scss#L854">expansions file</a>.</p>
+              <h2><a name="card-border"></a>Top Border</h2>
+              <p>To change the color of the Top Border card, any of the Calcite color in their existing naming convention can be used in place of <code>.card-bar-purple-dark</code>. Therefore, to use <code>gray-lighter</code> the class would be <code>.card-bar-gray-lighter</code>. To see the list of available preset top border colors, check out the <a href="https://github.com/Esri/calcite-bootstrap/blob/master/lib/sass/expansions/calcite-bootstrap-expansion.scss#L854">expansions file</a>.</p>
             </div>
           </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base card-bar-purple-dark">
                   <div class="card-content">
@@ -269,18 +347,31 @@
                 </div>
               </div>
             </div>
-
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base card-bar-purple-dark"&gt;
+      &lt;div class="card-content"&gt;
+        &lt;h4&gt;Card with Colored Bar&lt;/h4&gt;
+        &lt;p&gt;Every color can in calcite can be used as a colored "bar" along the top of a card to provide a bit visual punch with &lt;code&gt;.card-bar-{color}&lt;/code&gt;.&lt;/p&gt;&lt;a class="btn btn-default" href=""&gt;What colors?&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div><!-- /col -->
           </div><!-- /row -->
 
           <div class="row">
 
           <div class="col-xs-12">
             <div class="page-header">
-              <h2><a name="card-circle-alt"></a>Circle</h2>
+              <h2><a name="card-circle"></a>Circle</h2>
             </div>
+            <blockquote>This card uses CSS to make the circular-crop on the image.</blockquote>
           </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base card-profile">
                    <div class="card-image-wrap">
@@ -296,53 +387,128 @@
                  </div>
                </div>
              </div>
-
-          </div><!-- /row -->
+             <div class="cleafix"></div>
+             <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base card-profile"&gt;
+      &lt;div class="card-image-wrap"&gt;&lt;img alt="profile image" class="card-img-circle center-block" src="https://randomuser.me/api/portraits/men/75.jpg"&gt;&lt;/div&gt;
+      &lt;div class="card-content text-center"&gt;
+        &lt;h4&gt;Mike Parker&lt;/h4&gt;
+        &lt;p&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;&lt;span class="social-share-links"&gt;&lt;a href="#"&gt;&lt;i class="glyphicon glyphicon-link"&gt;&lt;/i&gt; LinkedIn&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div><!-- /col -->
+         </div><!-- /row -->
 
           <div class="row">
 
             <div class="col-xs-12">
               <div class="page-header">
-                <h2><a name="card-stat-style"></a>Statistic</h2>
+                <h2><a name="card-stat"></a>Statistic</h2>
+                <p>The three associated states with this card are: <strong>ontrack, info, failing</strong>. To change the card to reflect these states, there are two places that classes need to be updated. Inside the <code>.measure-icon</code> class, the <code>&lt;span&gt;</code> needs one of three classes: <code>.status-ontrack-bg</code>,<code>.status-info-bg</code>,<code>.status-failing-bg</code> and the complimentary class that should also be applied alongside <code>.card-content</code> should be <code>.status-ontrack</code>,<code>.status-info</code>,<code>.status-failing</code>. Choice of <a href="https://getbootstrap.com/docs/3.3/components/#glyphicons">glyphicon</a> is flexible as color is attached to the <code>&lt;i&gt;</code> tag.</p>
               </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base measure-card">
                   <div class="measure-icon"><span class="status-ontrack-bg"></span><i class="glyphicon glyphicon-home"></i></div>
-                   <h3>Public Housing Occupancy Rate</h3>
                    <div class="card-content status-ontrack">
+                     <h3>Public Housing Occupancy Rate</h3>
                      <h4>88.8</h4>
-                     <p><i class="glyphicon glyphicon-triangle-top status-ontrack-text"></i> percent occupied</p>
+                     <p><i class="glyphicon glyphicon-chevron-up" aria-label="increase"></i> percent occupied</p>
                      <div class="citation">Source: <a href="#">Davenport Housing Authority</a></div>
                    </div><!-- /card-content -->
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base measure-card">
                   <div class="measure-icon"><span class="status-info-bg"></span><i class="glyphicon glyphicon-home"></i></div>
-                   <h3>Public Housing Occupancy Rate</h3>
-                   <h4><span class="status-info-text">88.8</span></h4>
-                   <div class="measure-subtext"><i class="glyphicon glyphicon-triangle-top status-info-text"></i> percent occupied</div>
-                   <div class="measure-citation">Source: <a href="#">Davenport Housing Authority</a></div>
+                  <div class="card-content status-info">
+                     <h3>Residents Assisted by Federal Programs</h3>
+                     <h4>1,011</h4>
+                     <p><i class="glyphicon glyphicon-stats" aria-label="stat"></i> residents assisted</p>
+                     <div class="citation">Source: <a href="#">Davenport Housing Authority</a></div>
+                 </div><!-- /card-content -->
                 </div>
               </div>
             </div>
 
-            <div class="col-xs-12 col-sm-4">
+            <div class="clearfix visible-md-block"></div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="calcite-web">
                 <div class="card-base measure-card">
                   <div class="measure-icon"><span class="status-failing-bg"></span><i class="glyphicon glyphicon-file"></i></div>
-                   <h3>Rental Inspections Completed</h3>
-                   <h4><span class="status-failing-text">88.8</span></h4>
-                   <div class="measure-subtext"><i class="glyphicon glyphicon-triangle-top status-failing-text"></i> percent occupied</div>
-                   <div class="measure-citation">Source: <a href="#">Davenport Housing Authority</a></div>
+                  <div class="card-content status-failing">
+                     <h3>Rental Inspections Completed</h3>
+                     <h4>14</h4>
+                     <p><i class="glyphicon glyphicon-chevron-down" aria-label="decrease"></i> last month</p>
+                     <div class="citation">Source: <a href="#">Davenport Housing Authority</a></div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+<pre><code>&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base measure-card"&gt;
+      &lt;div class="measure-icon"&gt;
+        &lt;span class="status-ontrack-bg"&gt;&lt;/span&gt;&lt;i class="glyphicon glyphicon-home"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="card-content status-ontrack"&gt;
+        &lt;h3&gt;Public Housing Occupancy Rate&lt;/h3&gt;
+        &lt;h4&gt;88.8&lt;/h4&gt;
+        &lt;p&gt;&lt;i class="glyphicon glyphicon-chevron-up" aria-label="increase"&gt;&lt;/i&gt; percent occupied&lt;/p&gt;
+        &lt;div class="citation"&gt;
+          Source: &lt;a href="#"&gt;Davenport Housing Authority&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base measure-card"&gt;
+      &lt;div class="measure-icon"&gt;
+        &lt;span class="status-info-bg"&gt;&lt;/span&gt;&lt;i class="glyphicon glyphicon-home"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="card-content status-info"&gt;
+        &lt;h3&gt;Residents Assisted by Federal Programs&lt;/h3&gt;
+        &lt;h4&gt;1,011&lt;/h4&gt;
+        &lt;p&gt;&lt;i class="glyphicon glyphicon-stats" aria-label="stat"&gt;&lt;/i&gt; residents assisted&lt;/p&gt;
+        &lt;div class="citation"&gt;
+          Source: &lt;a href="#"&gt;Davenport Housing Authority&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clearfix visible-md-block"&gt;&lt;/div&gt;
+&lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+  &lt;div class="calcite-web"&gt;
+    &lt;div class="card-base measure-card"&gt;
+      &lt;div class="measure-icon"&gt;
+        &lt;span class="status-failing-bg"&gt;&lt;/span&gt;&lt;i class="glyphicon glyphicon-file"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class="card-content status-failing"&gt;
+        &lt;h3&gt;Rental Inspections Completed&lt;/h3&gt;
+        &lt;h4&gt;14&lt;/h4&gt;
+        &lt;p&gt;&lt;i class="glyphicon glyphicon-chevron-down" aria-label="decrease"&gt;&lt;/i&gt; last month&lt;/p&gt;
+        &lt;div class="citation"&gt;
+          Source: &lt;a href="#"&gt;Davenport Housing Authority&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div><!-- /col -->
 
           </div><!-- /row -->
 
