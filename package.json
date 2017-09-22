@@ -6,6 +6,7 @@
     "start": "node_modules/.bin/watch-run -p 'lib/sass/**/*.scss' npm run build-css",
     "build-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss dist/css/calcite-bootstrap.css",
     "postbuild-css": "node_modules/.bin/node-sass --include-path ./node_modules/bootstrap-sass/assets/stylesheets lib/sass/calcite-bootstrap.scss | node_modules/.bin/cleancss -o dist/css/calcite-bootstrap.min.css && cp dist/css/calcite-bootstrap.min.css docs/styles/calcite-bootstrap.min.css",
+    "copy-to-docs": "cp dist/css/calcite-bootstrap.min.css docs/styles/calcite-bootstrap.min.css",
     "build": "npm run clean && npm run build-css && cp -r lib/sass dist/sass && cp -r ./node_modules/bootstrap-sass/assets/fonts/bootstrap dist/fonts",
     "clean": "rm -rf dist"
   },
@@ -26,7 +27,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "clean-css-cli": "^4.1.9"
   },
   "devDependencies": {
     "browser-sync": "^2.2.1",

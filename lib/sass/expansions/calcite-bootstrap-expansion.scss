@@ -433,8 +433,11 @@ span.label-warning {
 // │ Navbar  │
 // └─────────┘
 
-.navbar {
+.navbar,
+.navbar-default,
+.navbar-inverse {
   border: 0px;
+  border-style: none;
 }
 
 .navbar-default .navbar-nav {
@@ -452,7 +455,8 @@ span.label-warning {
      }
    }
    li.active a,
-   li a.active {
+   li a.active,
+   li.active a:hover {
      color: $navbar-default-link-hover-color;
      background-image: linear-gradient(to bottom,transparent 92%, $navbar-default-link-hover-color 93%, $navbar-default-link-hover-color 100%);
      text-decoration: none;
@@ -497,13 +501,13 @@ span.label-warning {
 
 .nav-tabs[role="navigation"] > li > a,
 .nav-tabs[role="tablist"] > li > a {
-  background-color: $btn-primary-bg;
-  color: $btn-primary-color;
+  background-color: $link-color;
+  color: $body-bg;
    &:hover,
    &:focus,
    &.focus {
-    background-color: $btn-primary-hover;
-    border-bottom-color: $btn-primary-hover;
+    background-color: $link-hover-color;
+    border-bottom-color: $link-hover-color;
     text-decoration: none;
     box-shadow: 0 2px 0 $white inset;
    }
@@ -594,7 +598,6 @@ span.label-warning {
 // ┌─────────────┐
 // │ Pagination  │
 // └─────────────┘
-
 
 .pagination > li > a {
   border: 0px;
@@ -698,6 +701,7 @@ table.table-blue {
     background-color: $white;
     border: $border-stroke;
     border-color: $calcite-gray-light;
+    color: $text-color;
     text-align: center;
     width: 255px;
     height: 296px;
@@ -705,6 +709,10 @@ table.table-blue {
   img {
     height: 133px;
     max-width: 200px;
+  }
+  h3 {
+    font-size: 25px;
+    color: $text-color;
   }
   h6 {
     font-weight: 500;
@@ -755,6 +763,7 @@ table.table-blue {
   position: relative;
   background: $white;
   box-shadow: $calcite-box-shadow;
+  margin-bottom: 15px;
   }
 
   .card-image-wrap {
@@ -942,4 +951,79 @@ table.table-blue {
     .card-bar-brown-dark {
       border-top: 3px solid $calcite-brown-core;
     }
-}
+
+    .card-profile .card-image-wrap img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .measure-card {
+      overflow: hidden;
+      h3 {
+        font-size: $font-size-large;
+        margin: 5px 0px 5px 0px;
+        padding-right: 45px;
+        text-align: left;
+      }
+      h4 {
+        font-size: ($font-size-base * 3);
+      }
+      .measure-icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+          span {
+          position: absolute;
+          z-index: 8;
+          top: -40px;
+          left: 5px;
+          width: 100px;
+          height: 100px;
+          line-height: 120px;
+          border-radius: 50%;
+          }
+          .glyphicon {
+            padding-left: 10px;
+            color: $white;
+            z-index: 9;
+            font-size: $font-size-h4;
+          }
+        }
+
+      .status-failing-bg {
+        background-color: $brand-danger;
+      }
+      .status-failing {
+        i, h4 {
+          color: $brand-danger;
+        }
+      }
+
+      .status-info-bg {
+        background-color: $brand-primary;
+      }
+      .status-info {
+        i, h4 {
+          color: $brand-primary;
+        }
+      }
+
+      .status-ontrack-bg {
+        background-color: $brand-success;
+      }
+      .status-ontrack {
+        i, h4 {
+          color: $brand-success;
+        }
+      }
+
+      .citation {
+        font-size: $font-size-small;
+      }
+
+    } //measure card
+}//calcite-web

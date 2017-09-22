@@ -1,0 +1,104 @@
+/*
+Calcite Bootstrap Documentation Styles
+(Not part of theme; only for documentation site.)
+*/
+
+.theme-showcase {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.theme-showcase .lead {
+  font-weight: 400;
+}
+
+p.documentation {
+  margin: 15px auto;
+}
+.page-header p,
+p.documentation {
+  font-size: 16px;
+}
+.subpage {
+  margin-top: 0px;
+  font-size: 50px;
+}
+.jumbotron {
+  background-color: #050E2B;
+  color: #fff;
+}
+.jumbotron a {
+  color: white;
+  text-decoration: underline;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 80%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+pre {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.back-to-top {
+  bottom: 1px;
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  z-index: 500;
+}
+.color-pallet {
+  margin-bottom: 15px;
+}
+.color-pallet .card-image-wrap {
+  height: 150px;
+  padding: 10px;
+}
+.color-pallet .white {
+  color: #ffffff;
+}
+.color-pallet .black{
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-right: 0px;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}

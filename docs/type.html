@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calcite Bootstrap</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="styles/calcite-bootstrap.min.css">
+    <link rel="stylesheet" href="documentation.css">
+  </head>
+  <body>
+      <!--[if lt IE 10]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+  <!-- Fixed navbar -->
+   <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="index.html">Calcite-Bootstrap</a>
+       </div>
+       <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="about.html">Get Started</a></li>
+           <li><a href="colors.html">Color</a></li>
+           <li class="active"><a href="type.html">Type</a></li>
+           <li><a href="patterns.html">Patterns</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/Esri/calcite-bootstrap/issues">Issues</a></li>
+            <li><a href="https://github.com/Esri/calcite-bootstrap/blob/master/CHANGELOG.md">Change Log</a></li>
+            <li><a href="https://github.com/Esri/calcite-bootstrap">Github Repo</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </nav>
+   <div class="row">
+     <div class="container-fluid theme-showcase" role="main">
+
+         <div class="col-xs-12">
+
+          <h1 class="subpage">Type</h1>
+
+          <div class="page-header">
+            <h2>Font-Family</h2>
+          </div>
+          <p class="documentation">The recommended typeface to use with Calcite Bootstrap branding is <a href="http://esri.github.io/calcite-web/documentation/type/#avenir">Avenir Next</a>. However, due to licensing restrictions, the actual font files cannot be included in this theme. For those with access to Calcite Web, the <code>@import</code> for the web urls to Avenir Next can be added to your project. The <code>$font-family-sans-serif</code> variable can also be customized to use other fonts, else it will fall back to <em>Helvetica Neue, Helvetica, Arial, sans-serif</em>.</p>
+          <blockquote>
+<code>$font-family-sans-serif: 		"Avenir Next W01","Avenir Next", Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+<br />$font-family-serif:         "Lucida Grande", "Segoe UI", Arial, sans-serif;
+<br />$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace;
+<br />$font-family-base:          $font-family-sans-serif;</code>
+          </blockquote>
+
+          <div class="page-header">
+            <h2>Font Sizes</h2>
+          </div>
+          <p class="documentation">Bootstrap configures all font-size variables from a base value. Assuming that the <code>$font-size-base</code> variable is set to <code>14px</code>, here is a reference on approximate sizes for all other text variables.</p>
+          <blockquote>
+<code>$font-size-base:				14px;
+<br />$font-size-small:       ceil(($font-size-base * 0.85)); // ~12px
+<br />$font-size-large:       ceil(($font-size-base * 1.25)); // ~18px
+<br />
+<br />$font-size-h1:					floor(($font-size-base * 2.6));  // ~36px
+<br />$font-size-h2:					floor(($font-size-base * 2.15)); // ~30px
+<br />$font-size-h3:					floor(($font-size-base * 2.0));  // ~28px
+<br />$font-size-h4:					ceil(($font-size-base * 1.7));   // ~24px
+<br />$font-size-h5:					ceil(($font-size-base * 1.55));  // ~22px
+<br />$font-size-h6:          ceil(($font-size-base * 1.14));  // ~16px</code>
+          </blockquote>
+          <p class="documentation">Included in the Calcite Bootstrap expansion are these two additional font-size variables.</p>
+          <blockquote>
+<code>$font-size-extra-small: 	floor(($font-size-base * 0.75)); //~10px
+<br />$font-size-extra-large:   ceil(($font-size-base * 1.4)); //~20px</code>
+          </blockquote>
+
+        </div><!-- /col-12 -->
+     </div><!-- /container -->
+  </div><!-- /row -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+ </body>
+</html>

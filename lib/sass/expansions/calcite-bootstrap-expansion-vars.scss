@@ -9,23 +9,23 @@
 // │ Buttons  │
 // └──────────┘
 
-$btn-background-hover:     darken($link-color, 10%) !default;
-$btn-color-hover:          setPrimaryBtnTextColor($btn-background-hover) !default;
+$btn-background-hover:     darken($link-color, 10%);
+$btn-color-hover:          setPrimaryBtnTextColor($btn-background-hover);
 
-$btn-primary-hover:				 darken($link-color, 10%) !default;
-$btn-info-hover:				   $calcite-gray-light !default;
-$btn-danger-hover:				 $brand-danger !default;
-$btn-danger-text-hover:		 $white !default;
-$btn-warning-hover:				 $calcite-yellow-dark !default;
+$btn-primary-hover:				 darken($link-color, 10%);
+$btn-info-hover:				   $calcite-gray-light;
+$btn-danger-hover:				 $brand-danger;
+$btn-danger-text-hover:		 $white;
+$btn-warning-hover:				 $calcite-yellow-dark;
 
 // ┌───────┐
 // │ Cards │
 // └───────┘
 
-$card-border-stroke-top:    3px solid !default;
+$card-border-stroke-top:    3px solid;
 $thumbnail-caption-overlay: $transparent-white !default;
 $thumbnail-caption-color:   $true-black !default;
-$thumbnail-caption-padding: 9px !default;
+$thumbnail-caption-padding: 9px;
 $thumbnail-caption-size:    $font-size-base !default;
 
 // ┌─────────┐
@@ -43,7 +43,7 @@ $footer-text-color:				$off-black !default;
 
 $form-bg:						       $off-white !default;
 $border-stroke:					   1px solid !default;
-$input-label:              $off-black;
+$input-label:              $off-black !default;
 
 // ┌──────────────┐
 // │ Iconography  │
@@ -55,35 +55,35 @@ $icon-font-path: '../assets/fonts/' !default;
 // │ Jumbotron │
 // └───────────┘
 
-$jumbotron-top-margin:			0px !default
+$jumbotron-top-margin:			0px !default;
 
 // ┌──────────┐
 // │ Sidebar  │
 // └──────────┘
 
-$sidebar-bg-color:          $body-bg !default;
-$sidebar-shadow:				    $calcite-gray-lighter !default;
+$sidebar-bg-color:          $body-bg;
+$sidebar-shadow:				    $calcite-gray-lighter;
 
 // ┌──────────┐
 // │ Shadows  │
 // └──────────┘
 
 $box-shadow-color:				  $body-bg !default;
-$box-shadow-present:		    none !default;
-$calcite-box-shadow:        0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05) !default;
+$box-shadow-present:		    none;
+$calcite-box-shadow:        0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05);
 
 // ┌─────────┐
 // │ Tables  │
 // └─────────┘
 
-$table-color:               $text-color !default; //text color
+$table-color:               $text-color !default;
 
 // ┌────────────┐
 // │ Typography │
 // └────────────┘
 
-$font-size-extra-small: 	floor(($font-size-base * 0.75)) !default; //~10px
-$font-size-extra-large:   ceil(($font-size-base * 1.4)) !default; //~20px
+$font-size-extra-small: 	floor(($font-size-base * 0.75)); //~10px
+$font-size-extra-large:   ceil(($font-size-base * 1.4)); //~20px
 
 // ┌────────┐
 // │ Wells  │
