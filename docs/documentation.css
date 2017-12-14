@@ -64,6 +64,11 @@ pre {
 .color-pallet .black{
   color: #000000;
 }
+.hex,
+.rgb {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 
 @media (max-width: 992px) {
     .navbar-header {
