@@ -1,6 +1,6 @@
 # Calcite Bootstrap
 
-**Calcite Bootstrap** is a custom theme and a custom build system for [Bootstrap](http://getbootstrap.com). The theme is based on **Calcite** - a geo-centric design framework created by ESRI. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.
+**Calcite Bootstrap** is a custom theme and a custom build system for [Bootstrap](http://getbootstrap.com). The theme is based on **Calcite** - a geo-centric design framework created by Esri. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.
 
 For more info about this framework, go to the **[documentation site](http://esri.github.io/calcite-bootstrap/)**
 
@@ -147,6 +147,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's [license.txt](https://github.com/Esri/calcite-bootstrap/blob/master/license.txt) file.
-
-[](Esri Tags: Web Mapping ArcGIS Design Basemaps Bootstrap Calcite JavaScript Calcite Bootstrap)
-[](Esri Language: CSS)
