@@ -132,7 +132,8 @@ Most of the process is automated, but we have left two manual steps to ensure th
 1. run `npm publish <url to tar.gz file>` - this will push the update to npm.
 
 ## Licensing
-Copyright 2015 Esri
+
+Copyright (c) 2015 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -146,4 +147,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://github.com/Esri/calcite-bootstrap/blob/master/license.txt) file.
+A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
