@@ -1,3 +1,5 @@
+### This project is deprecated and is not recommended for future development.
+
 # Calcite Bootstrap
 
 **Calcite Bootstrap** is a custom theme and a custom build system for [Bootstrap](http://getbootstrap.com). The theme is based on **Calcite** - a geo-centric design framework created by Esri. Calcite Bootstrap was built for developers who have experience working with Bootstrap and would like to integrate the Calcite theme and build system to their web pages and apps.
